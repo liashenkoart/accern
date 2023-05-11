@@ -101,6 +101,11 @@ a {
   line-height: 1.66;
 }
 
+.text-medium-white {
+  font-size: 1.125rem;
+  color: $white;
+}
+
 .text-italic {
   font-style: italic;
 }
@@ -164,6 +169,12 @@ a {
   font-size: 2.25rem;
   font-weight: 300;
   color: $dark;
+  line-height: normal;
+}
+
+.text-title-white-sm {
+  font-size: 2.25rem;
+  color: $white;
   line-height: normal;
 }
 
@@ -233,6 +244,7 @@ a {
   .text-title {font-size: 1.25rem;line-height: 1.3;}
   .text-medium {font-size: 0.875rem;line-height: 1.714;}
   .text-medium-strong {font-size: 0.875rem;line-height: 1.714;}
+  .text-medium-white {font-size: 1rem;}
   .text-subtitle-adv {font-size: 0.875rem;line-height: 1.714;}
   .text-sub-label {font-size: 1rem;}
   .text-gray-medium {font-size: 0.8125rem;line-height: 1.3;}
@@ -251,6 +263,7 @@ a {
   .text-title-el-white {font-size: 2rem;}
   .text-title-light {font-size: 1.625rem;}
   .text-title-light-sm {font-size: 1.225rem;}
+  .text-title-white-sm {font-size: 1.225rem;}
   .text-title-el-white-md {font-size: 1.5rem;}
 }
 @include media-breakpoint-down(md) {

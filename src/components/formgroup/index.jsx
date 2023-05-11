@@ -7,7 +7,7 @@ import Icon from "../icon";
 import "./FormGroup.scss"
 import { useEffect } from "react";
 
-const FormGroup = ({ className, controlId, as, type, placeholder, required, name, pattern }) => {
+const FormGroup = ({ className, controlId, as, type, placeholder, required, name, pattern, equal }) => {
 
   const [active, setActive] = useState(false);
   const [value, setValue] = useState("");
@@ -24,6 +24,7 @@ const FormGroup = ({ className, controlId, as, type, placeholder, required, name
 
     switch (name) {
       case "email":
+      case "email_confirmation":
         bootstrapValidate(inputR.current, 'email:', setValidaion);
         break;
       case "name":

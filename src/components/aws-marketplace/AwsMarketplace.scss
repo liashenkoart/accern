@@ -1,0 +1,34 @@
+@import "../../styles/global/variables.scss";
+
+$aws-spacer: 2rem;
+
+.aws-marketplace {
+  width: calc(100% - 60px);
+
+  &-fields {
+    padding-left: $aws-spacer;
+
+    >* {
+      padding: $aws-spacer 0;
+      border-bottom: 1px solid $border-color;
+
+      &:last-child{
+        border-bottom: none;
+      }
+    }
+  }
+
+  &-title {
+    background-image: url(../../assets/img/aws-shape.png);
+    background-size: cover;
+    padding: $aws-spacer;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    width: 100%;
+  }
+}

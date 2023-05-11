@@ -1,0 +1,14 @@
+@import "../../../styles/global/variables.scss";
+
+.aws-hero {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-top: $app-top-padding;
+
+
+
+  @include media-breakpoint-down(sm) {
+
+  }
+}

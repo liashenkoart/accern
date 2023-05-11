@@ -154,7 +154,7 @@ export const settings = {
     { name: "Terms of Use", link: "/terms_of_use", component: "Terms", excludeNav: true },
     { name: "Support policy", link: "/support_policy", component: "Policy", excludeNav: true },
     { name: "Privacy", link: "/privacy", component: "Privacy", excludeNav: true },
-    { name: "Documentation", link: "/documentation", component: "Documentation", excludeNav: true, isFluid: true }
+    { name: "Aws Registration", link: "/aws-registration", component: "AwsRegistration", excludeNav: true }
   ],
 
   footer: {

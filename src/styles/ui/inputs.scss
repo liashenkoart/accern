@@ -1,0 +1,235 @@
+@import '../global/variables.scss';
+
+input.input-shadow {
+  background-color: $white;
+  border-color: $white;
+  box-shadow: $shadow-2;
+}
+
+@-webkit-keyframes autofill {
+  to {background: transparent;}
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+  -webkit-animation-name: autofill !important;
+  -webkit-animation-fill-mode: both !important;
+}
+
+.select-code{
+  font-size: 0.75rem;
+  color: $black;
+
+  .acr-select__control {
+    background-color: transparent;
+    .acr-select__indicators {
+      background-color: transparent;
+  
+      .acr-select__indicator {
+        color: $primary;
+        transform-origin: center center;
+        transition: transform $transition ease;
+      }
+    }
+
+    &.acr-select__control--menu-is-open {
+      .acr-select__indicators {
+        .acr-select__indicator {
+          transform: rotate(-180deg);
+        }
+      }
+    }
+  }
+
+  .acr-select__value-container {
+    padding-top: 0;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+  }
+
+  .acr-select__single-value {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: $white;
+    display: flex;
+    align-items: center;
+
+    .app-icon {
+      font-size: 0.875rem;
+    }
+
+    >* {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .acr-select__control {
+    border-radius: 0;
+    border-color: transparent;
+    outline: none;
+    box-shadow: none;
+
+    &:hover {
+      border-color: transparent;
+      outline: none;
+      box-shadow: none;
+    }
+  }
+
+  .acr-select__indicator-separator {
+    display: none;
+  }
+
+  .acr-select__menu {
+    z-index: 2;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: $shadow-4;
+  }
+
+  .acr-select__menu-list {
+    padding: 0;
+    border:none;
+    box-shadow: none;
+    max-height: 500px;
+    background-color: $code-light;
+  }
+
+  .acr-select__option {
+    padding: 0.8rem 1rem;
+    display: flex;
+    color: $white;
+    align-items: center;
+    background-color: transparent;
+
+    &:hover {
+      background-color: $code-active;
+    }
+
+    .app-icon {
+      font-size: 1rem;
+    }
+
+    >* {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.select{
+  font-size: 1.125rem;
+  color: $black;
+
+  .acr-select__control {
+    background-color: transparent;
+    
+    .acr-select__indicators {
+      margin-right: 1rem;
+      background-color: transparent;
+  
+      .acr-select__indicator {
+        color: $primary;
+        transform-origin: center center;
+        transition: transform $transition ease;
+      }
+    }
+
+    &.acr-select__control--menu-is-open {
+      .acr-select__indicators {
+        .acr-select__indicator {
+          transform: rotate(-180deg);
+        }
+      }
+    }
+  }
+
+  .acr-select__value-container {
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+  }
+
+  .acr-select__single-value {
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: $dark;
+    display: flex;
+    align-items: center;
+
+    .app-icon {
+      font-size: 0.875rem;
+    }
+
+    >* {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .acr-select__control {
+    border-color: $border-color;
+    border-radius: 0;
+    outline: none;
+    box-shadow: none;
+
+    &:hover, &:active {
+      border-color: $border-color;
+      outline: none;
+      box-shadow: none;
+    }
+  }
+
+  .acr-select__indicator-separator {
+    display: none;
+  }
+
+  .acr-select__menu {
+    z-index: 2;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: $shadow-4;
+  }
+
+  .acr-select__menu-list {
+    padding: 0;
+    border:none;
+    box-shadow: none;
+    max-height: 500px;
+  }
+
+  .acr-select__option {
+    padding: 0.8rem 1.6rem;
+    display: flex;
+    color: $dark;
+    align-items: center;
+
+    &.acr-select__option--is-selected {
+      background-color: $primary;
+      color: $white;
+
+      &:hover {
+        background-color: $primary;
+      }
+    }
+
+    &:hover {
+      background-color: rgba($primary, 0.1);
+    }
+
+    .app-icon {
+      font-size: 1rem;
+    }
+
+    >* {
+      display: flex;
+      align-items: center;
+    }
+  }
+}

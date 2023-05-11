@@ -1,0 +1,46 @@
+@import "../../../styles/global/variables.scss";
+
+.footer {
+  .footer-columns {
+    display: flex;
+    justify-content: space-between;
+
+    ul {
+      padding-right: 1rem;
+
+      &:last-child {
+        padding-right: 0;
+        padding-left: 1rem;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    .footer-columns {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+
+      ul {
+        width: 33.33%;
+        padding-right: 0;
+  
+        &:last-child {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    .footer-columns {
+
+      ul {
+        width: 50%;
+  
+        &:last-child {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+}

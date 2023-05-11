@@ -1,0 +1,40 @@
+@import "../../styles/global/variables.scss";
+
+.mt-request {
+    margin-top: 7rem;
+
+    @include media-breakpoint-down(md) {
+        margin-top: 2rem;
+    }
+}
+
+.success-animated-icon {
+    width: 175px;
+    height: 175px;
+    background-color: rgba($primary, 0.1);
+    border-radius: 50%;
+    font-size: 6rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+
+    polyline {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+    }
+
+    &.active {
+        polyline {
+            animation: dash 2s $transition-timing forwards;
+            animation-delay: 1s;
+        }
+    }
+}
+
+@keyframes dash {
+    to {
+        stroke-dashoffset: 0;
+    }
+}

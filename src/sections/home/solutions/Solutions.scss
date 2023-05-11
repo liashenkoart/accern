@@ -1,0 +1,19 @@
+@import "../../../styles/global/variables.scss";
+
+.solutions {
+
+  @include media-breakpoint-down(sm) {
+    .shape-lines {
+      display: none;
+    }
+
+    .block {
+      text-align: center;
+
+      h3 {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+}

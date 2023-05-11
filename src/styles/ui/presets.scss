@@ -1,0 +1,188 @@
+.preset-img-1 {
+  width: 50vw;
+  height: auto;
+
+  img {
+    width: 100%;
+  }
+
+  @include media-breakpoint-down(md) {
+    width: 100%;
+    height: auto;
+    margin-top: 2rem;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.preset-img-5 {
+  width: 110%;
+  height: auto;
+
+  img {
+    width: 100%;
+  }
+
+  @include media-breakpoint-down(md) {
+    width: 100%;
+    height: auto;
+    margin-top: 2rem;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.preset-img-2 {
+  width: 112px;
+  height: 60px;
+
+  img {
+    width: 112px;
+    height: auto;
+  }
+}
+
+.preset-img-3 {
+  width: 100px;
+
+  img {
+    width: 100px;
+    height: auto;
+  }
+}
+
+.preset-img-4 {
+  width: 130px;
+
+  img {
+    width: 130px;
+    height: auto;
+  }
+}
+
+.preset-img-6 {
+  width: 68px;
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.preset-illustration {
+  img {
+    max-width: 100%;
+  }
+}
+
+.preset-illustration-1 {
+  img {
+    max-width: 60vw;
+  }
+}
+
+.preset-map {
+  width: 80vw;
+  position: relative;
+  left: -20vw;
+  height: 60vh;
+  z-index: -1;
+
+  .preset-map-top-gradient {
+    content: "";
+    display: block;
+    height: 20%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background: linear-gradient(to bottom,rgba($white, 1) 0%,rgba($white, 0) 100%);
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 40%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: linear-gradient(to right,rgba($white, 1) 30%,rgba($white, 0) 100%);
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    height: 30%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background: linear-gradient(to top,rgba($white, 1) 0%,rgba($white, 0) 100%);
+  }
+
+
+  img {
+    width: 100%;
+  }
+
+  @include media-breakpoint-down(md) {
+    width: 100%;
+    left: 0;
+    margin-top: 2rem;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .preset-illustration {
+    padding-left: 2rem;
+    img {
+      max-width: 60vw;
+    }
+  }
+
+  .preset-img-3 {
+    width: 70px;
+
+    img {
+      width: 70px;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .preset-img-3 {
+    width: 70px;
+
+    img {
+      width: 70px;
+    }
+  }
+
+  .preset-img-4 {
+    width: 100px;
+
+    img {
+      width: 100px;
+    }
+  }
+
+  .preset-illustration-1,
+  .preset-illustration {
+    width: 100%;
+    padding-left: 0;
+    img {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+@import "../../../styles/global/variables.scss";
+
+.cta {
+  border: 1px solid $border-color;
+  padding: 4rem;
+
+  @include media-breakpoint-down(md) {
+    padding: 2rem;
+  }
+}

@@ -1,0 +1,63 @@
+@import "../global/variables.scss";
+
+.link-arrow {
+  color: $primary;
+  cursor: pointer;
+  
+  .app-icon {
+    font-size: 0.75rem;
+    transition: transform $transition ease;
+  }
+
+  &:hover {
+    color: $primary;
+
+    .app-icon {
+      transform: translateX(10px);
+    }
+  }
+}
+
+.link-simple {
+  color: $primary;
+  cursor: pointer;
+  transition: opacity $transition ease;
+  
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.link-block {
+  border: 1px solid $border-color;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:1.6rem 2rem;
+  transition: all $transition ease;
+
+  &:hover {
+    border-color: transparent;
+    box-shadow: $shadow-5;
+
+    h4 {
+      color: $primary;
+    }
+  }
+
+  p {
+    color: $darker;
+    margin-bottom: 0 !important;
+  }
+
+  h4 {
+    font-weight: 500;
+    margin-bottom: 0rem !important;
+    transition: color $transition ease;
+  }
+
+  .app-icon{
+    flex-shrink: 0;
+  }
+}

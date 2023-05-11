@@ -1,0 +1,44 @@
+@import "../../../styles/global/variables.scss";
+
+.awards {
+  position: relative;
+  
+  .blocks {
+   position: relative;
+  }
+
+  @include media-breakpoint-down(md) {
+    .preset-img-2 {
+      height: 50px;
+    }
+
+    .p-ef {
+      padding-bottom: 0;
+    }
+
+    .blocks {
+      padding-bottom: 0;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin-bottom: 0;
+
+      .block {
+        width: 33.33%;
+        margin-bottom: 3rem;
+      }
+     }
+  }
+
+  @include media-breakpoint-down(sm) {
+    .blocks {
+      flex-direction: column;
+
+      .block {
+        width: 100%;
+        padding-left: 10vw;
+        padding-right: 10vw;
+        margin-bottom: 3rem;
+      }
+     }
+  }
+}

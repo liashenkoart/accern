@@ -1,0 +1,31 @@
+@import "../../styles/global/variables.scss";
+
+.modal-custom {
+  .form {
+    min-height: 200px;
+  }
+}
+
+.form {
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    border: none;
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+  }
+}
+
+.form-message {
+  transform: translateY(-100px);
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  pointer-events: none;
+  transition: transform $transition ease, opacity $transition ease;
+
+  &.active {
+    transform: translateY(-50%);
+    opacity: 1;
+  }
+}

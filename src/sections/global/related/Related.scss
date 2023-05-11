@@ -1,0 +1,67 @@
+@import "../../../styles/global/variables.scss";
+
+.related {
+   background-color: $cover;
+
+   .related-column {
+     padding: 4rem;
+     border: 1px solid $border-color;
+     cursor: pointer;
+     position: relative;
+     transition: all $transition ease;
+
+     &::after{
+       content: '';
+       display: block;
+       width: 16px;
+       height: 100%;
+       position: absolute;
+       left: 0;
+       top: 0;
+       opacity: 0;
+       background:url(../../../assets/img/shape-primary-h.svg);
+       background-position: center center;
+       background-size: cover;
+       background-repeat: no-repeat;
+       transition: opacity $transition ease;
+     }
+
+     &:hover {
+       box-shadow: $shadow-5;
+       border-color: transparent;
+       background-color: $white;
+
+       &::after{
+         opacity: 1;
+       }
+
+       .related-link {
+         opacity: 1;
+         transform: translateX(0);
+       }
+     }
+   }
+
+   .related-link {
+     display: flex;
+     justify-content: flex-end;
+     color: $primary;
+     font-size: 1.2rem;
+   }
+
+  @include media-breakpoint-down(md) {
+    .row {
+      >*{
+        &:last-child{
+          .related-column {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+    .related-column {
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+  }
+}

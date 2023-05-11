@@ -1,0 +1,10 @@
+@import "../../../styles/global/variables.scss";
+
+.cover {
+  .cover-bg {
+    background-position: center center !important;
+    background-size: cover !important;
+    width: 100%;
+    height: 520px;
+  }
+}

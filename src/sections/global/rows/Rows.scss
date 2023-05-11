@@ -1,0 +1,137 @@
+@import "../../../styles/global/variables.scss";
+
+.rows {
+  &.reduced-margin {
+    .sect-spacer {
+      &:first-child {
+        padding-top: $section-spacer/2;
+      }
+    }
+  }
+
+  &.small-title {
+    h2 {
+      font-size: 2.25rem;
+    }
+  }
+
+  &.bordered {
+    .row {
+      padding-bottom: 6rem;
+      padding-top: 6rem;
+      border-bottom: 1px solid $border-color;
+    }
+
+    .preset-illustration {
+      width: 100%;
+      padding: 0 4rem;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .mudule-block {
+      &:last-child{
+        .row {
+          border: none;
+        }
+      }
+    }
+  }
+
+  &.small-description {
+    p {
+      font-size: 1rem;
+      font-weight: 300;
+    }
+  }
+
+  &.rows-middle {
+    p{
+      margin-bottom: 0 !important;
+    }
+  }
+
+  &.remove-padding {
+    .mudule-block {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    .row {
+      margin-left: 0;
+      margin-right: 0;
+
+      >div {
+        padding: 0;
+      }
+    }
+
+    .mudule-block.reverse {
+      .row{
+        >div{
+          &:nth-child(1){
+            padding-left: 4rem;
+          }
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    &.reduced-margin {
+      .sect-spacer {
+        &:first-child {
+          padding-top: 0;
+        }
+      }
+    }
+
+    &.small-title {
+      h2 {
+        font-size: 1.75rem;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    .first-row {
+      padding-top: 4rem;
+    }
+
+    &.remove-padding {
+      .row {
+        margin-bottom: 5rem;
+      }
+
+      .mudule-block {
+        &:last-child{
+          .row {
+            margin-bottom: 0;
+          }          
+        }
+      }
+  
+      .mudule-block.reverse {
+        .row{
+          >div{
+            &:nth-child(1){
+              padding-left: 0;
+            }
+          }
+        }
+      }
+    }
+    &.bordered {
+      .row {
+        padding-bottom: 3rem;
+        padding-top: 3rem;
+        margin-bottom: 0;
+      }
+      .preset-illustration {
+        padding: 0;
+      }
+    }
+  }
+}

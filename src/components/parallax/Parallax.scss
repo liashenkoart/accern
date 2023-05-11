@@ -1,0 +1,79 @@
+@import "../../styles/global/variables.scss";
+
+.parallax {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &.primary {
+    > div {
+      .parallax-shape {
+        position: absolute;
+        width: 1000px;
+        height: 25%;
+        background-color: $primary-darker;
+        opacity: 18%;
+        transform: rotate(45deg);
+        transform-origin: center center;
+      }
+
+      &:nth-child(1) {
+        .parallax-shape {
+          transform-origin: center left;
+          opacity: 8%;
+          bottom: 50px;
+          left: 5%;
+        }
+      }
+
+      &:nth-child(2) {
+        .parallax-shape {
+          transform-origin: center left;
+          opacity: 18%;
+          bottom: 500px;
+          left: 0%;
+        }
+      }
+
+      &:nth-child(3) {
+        .parallax-shape {
+          height: 35%;
+          transform-origin: center left;
+          opacity: 4%;
+          bottom: 700px;
+          left: 30%;
+        }
+      }
+
+      &:nth-child(4) {
+        .parallax-shape {
+          height: 35%;
+          transform-origin: center left;
+          opacity: 6%;
+          bottom: 500px;
+          left: 65%;
+        }
+      }
+
+      &:nth-child(5) {
+        .parallax-shape {
+          transform-origin: center left;
+          opacity: 14%;
+          bottom: 600px;
+          left: 70%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,109 @@
+@import "../../styles/global/variables.scss";
+
+.effect {
+  position: relative;
+
+  &.primary {
+    &::after{
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      cursor: pointer;
+      border: 1px solid $primary;
+      z-index: -1;
+    }
+  
+    &:hover {
+      &::after{
+        transition: all $transition*2 ease;
+        transform: scale(1.5);
+        opacity: 0;
+      }
+    }
+  }
+
+  &.primary-angle {
+    cursor: pointer;
+    > button {
+      border-left: none;
+
+      &:after{
+        display: none;
+      }
+    }
+
+    .shape {
+      position: absolute;
+      left: -1.4rem;
+      overflow: hidden;
+      width: 1.4rem;
+      height: 100%;
+
+      &:after{
+        content: '';
+        position: absolute;
+        bottom: 0.5px;
+        height: 100%;
+        width: 1.4rem;
+        left: 0.7rem;
+        transform: skewX(-20deg);
+        border-left: 1px solid $primary-border;
+        border-bottom: 1px solid $primary;
+        transition: all $transition ease;
+      }
+      &:before{
+        content: '';
+        position: absolute;
+        bottom: 0.5px;
+        height: 0.7rem;
+        left: 1.5px;
+        z-index: 1;
+        transform: skewX(-20deg);
+        transform-origin: left bottom;
+        border-left: 1px solid $primary;
+        transition: all $transition ease;
+      }
+    }
+
+    &::after{
+      content: '';
+      display: block;
+      width: calc(100% + 1.4rem);
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: -1.4rem;
+      cursor: pointer;
+      border: 1px solid $primary;
+      border-left: none;
+      z-index: -1;
+    }
+  
+    &:hover {
+
+      > button {
+        background-color: $primary;
+        color: $white;
+      }
+
+      &::after{
+        transition: transform $transition*2 ease, opacity $transition*2 ease;
+        transform: scale(1.5);
+        border-left: 1px solid $primary;
+        opacity: 0;
+      }
+
+      > * {
+        &:after{
+          background-color: $primary;
+        }
+      }
+    }
+  }
+  
+
+}

@@ -1,0 +1,118 @@
+@import "../../../styles/global/variables.scss";
+
+.documentation-viewer {
+  width: 100%;
+  height: calc(100vh - #{$header-height});
+  border-top: 1px solid $border-color;
+
+  > * {
+    height: 100%;
+    > * {
+      height: 100%;
+      > * {
+        height: 100%;
+      }
+    }
+  }
+
+  .documentation-sidebar-w {
+    width: 320px;
+    max-width: 320px;
+  }
+
+  .documentation-content-w {
+    width: calc(100% - 320px);
+  }
+
+  .documentation-sidebar{
+    height: 100%;
+
+    .scoll-bar {
+      padding:0;
+      overflow-y: visible;
+    }
+  }
+
+  .documentation-sidebar-toggler {
+    border-bottom-right-radius: 50%;
+    border-top-right-radius: 50%;
+    background-color: rgba($white, 0.7);
+    align-items: center;
+    justify-content: center;
+    font-size: 0.875rem;
+    color: $primary;
+    width: 2.4rem;
+    height: 2.4rem;
+    border: 1px solid $border-color;
+    position: absolute;
+    right: -2rem;
+    top: 40px;
+    z-index: 11;
+    display: none;
+  }
+
+  .scoll-bar {
+    height: 100%;
+  }
+
+  @include media-breakpoint-down(md) {
+    height: calc(100vh);
+    border-top: none;
+
+    .documentation-sidebar-w {
+      width: 100%;
+      max-width: 100%;
+      flex-basis: auto;
+    }
+  
+    .documentation-content-w {
+      width: 100%;
+      flex-basis: auto;
+    }
+
+    .h-md-auto {
+      height: auto;
+    }
+
+    .scoll-bar {
+      padding-left: 0;
+    }
+
+    .documentation-sidebar-toggler {
+      display: flex;
+
+      &.active {
+        right: 0;
+        border: none;
+        background-color: transparent;
+
+        .app-icon {
+          transform: rotate(-180deg);
+        }
+      }
+    }
+
+    .documentation-sidebar {
+      background-color: $white;
+      position: fixed;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      transform: translateX(-100%);
+      transition: transform $transition $transition-timing;
+      z-index: 11;
+
+      .scoll-bar {
+        overflow: visible !important;
+      }
+
+      &.active {
+        transform: translateX(0);
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding-top: 0;
+  }
+}

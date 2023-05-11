@@ -1,0 +1,80 @@
+@import "../global/variables.scss";
+
+.btn {
+  border: 1px solid $primary;
+  background-color: $primary;
+  font-size: 0.875rem;
+  letter-spacing: 0.164375rem;
+  color: $white;
+  display: inline-block;
+  text-transform: uppercase;
+  position: relative;
+  outline: none;
+  white-space: nowrap;
+  line-height: $input-btn-line-height;
+  padding: $input-btn-padding-y $input-btn-padding-x;
+  transition: all $transition ease;
+
+  &[disabled] {
+    pointer-events: none;
+    opacity: 0.7;
+  }
+
+  &:hover {
+    background-color: transparent;
+    color: $primary;
+  }
+
+  &:active, &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  &.btn-light {
+    background-color: $white;
+    color: $primary;
+
+    &:hover {
+      background-color: transparent;
+      color: $white;
+      border-color: $white;
+    }
+  }
+
+  &.btn-outline-primary {
+    background-color: transparent;
+    color: $primary;
+
+    &:hover {
+      background-color: $primary;
+      color: $white;
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    font-size: 0.8125rem;
+  }
+
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+  }
+}
+
+.btn-icon {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  outline: none;
+  user-select: none;
+  color: $body-color;
+  transition: color $transition ease;
+
+  &:active, &:focus {
+    outline: none;
+    user-select: none;
+  }
+
+  &:hover {
+    color: $primary;
+  }
+}

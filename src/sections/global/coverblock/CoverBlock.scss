@@ -1,0 +1,21 @@
+@import "../../../styles/global/variables.scss";
+
+.cover-block {
+  margin-top: $section-spacer*0.75;
+
+  h2 {
+    line-height: 1.3;
+  }
+
+  .cover-block-icon {
+    position: relative;
+    z-index: 1;
+    height: 42px;
+    width: auto;
+    margin-bottom: 1.6rem;
+  }
+
+  @include media-breakpoint-down(md) {
+    margin-top: $section-spacer*0.5;
+  }
+}

@@ -1,0 +1,115 @@
+@import "../../../styles/global/variables.scss";
+
+$theme-gray-color-1: #33425B;
+$theme-gray-color-2: #A467A0;
+$case-studies-spacer:  5rem;
+
+.case-studies {
+
+  h3 {
+    max-width: 500px;
+    padding-bottom:  $case-studies-spacer*0.4;
+  }
+
+  &.purple {
+    .case-studies-row {
+      .case-studies-c1 {
+        background-color: $theme-gray-color-2;
+      }
+      .case-studies-c2 {
+        background: url(../../../assets/img/case-studie-cover-2.svg);
+      }
+    }
+  }
+
+  .case-studies-row {
+    display: flex;
+    align-items: stretch;
+
+    .case-studies-c1 {
+      background-color: $theme-gray-color-1;
+      width: 70%;
+      padding-top: $case-studies-spacer;
+      padding-left: $case-studies-spacer;
+      padding-bottom: $case-studies-spacer;
+      padding-right: $case-studies-spacer/2;
+    }
+
+    .case-studies-c2 {
+      background: url(../../../assets/img/case-studie-cover-1.svg);
+      background-position: center center;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30%;
+
+      img {
+        max-height: 110px;
+        max-width: 200px;
+      }
+    }
+  }
+
+  .case-studies-stats {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $white;
+    padding-top:  $case-studies-spacer*0.5;
+    border-top: 1px solid rgba($lgray-adv, 0.3);
+  }
+
+  @include media-breakpoint-down(lg) {
+    .case-studies-row {
+
+      .case-studies-c2 {
+  
+        img {
+          max-height: 80px;
+          max-width: 160px;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    .case-studies-row {
+      flex-direction: column;
+
+      .case-studies-c1 {
+        width: 100%;
+      }
+
+      .case-studies-c2 {
+        width: 100%;
+        padding: $case-studies-spacer*0.5;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    .case-studies-row {
+      .case-studies-c1 {
+        padding-top: $case-studies-spacer*0.5;
+        padding-left: $case-studies-spacer*0.5;
+        padding-bottom: $case-studies-spacer*0.5;
+        padding-right: $case-studies-spacer*0.5;
+      }
+    }
+    .case-studies-stats {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      >* {
+        margin-bottom: 2rem;
+
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

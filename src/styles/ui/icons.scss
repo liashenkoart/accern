@@ -1,0 +1,90 @@
+.rect-primary {
+  background-color: $primary;
+  width: 4.5rem;
+  height: 4.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all $transition ease;
+}
+
+.icon-big {
+  height: 6.25rem;
+  width: auto;
+}
+
+.icon-medium {
+  width: auto;
+  height: 4.5rem;
+}
+
+.icon-carousel {
+  width: auto;
+  height: 2.5rem;
+}
+
+.icon-carousel-2 {
+  width: auto;
+  height: 2rem;
+}
+
+.icon-carousel-3 {
+  width: auto;
+  height: 1.5rem;
+}
+
+.icon-carousel-4 {
+  width: auto;
+  height: 3.5rem;
+}
+
+.icon-carousel-5 {
+  width: auto;
+  height: 5rem;
+}
+
+.icon-carousel-6 {
+  width: auto;
+  height: 3rem;
+}
+
+.icon-small {
+  width: 2.25rem;
+  height: auto;
+}
+
+.icon-tiny {
+  height: 1.25rem;
+  width: auto;
+}
+
+.icon-stiny {
+  height: 1rem;
+  width: auto;
+}
+
+.icon-error {
+  background-color: rgba($error, 0.2);
+  color: $error;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@include media-breakpoint-down(sm) {
+  .icon-medium {
+    height: 3.5rem;
+  }
+  .icon-big {
+    height: 5rem;
+  }
+}

@@ -1,0 +1,84 @@
+@import "../../styles/global/variables.scss";
+
+.search {
+  padding: 2rem;
+  padding-left: 0;
+  position: relative;
+  border-bottom: 1px solid $border-color;
+
+  .search-result {
+    position: absolute;
+    bottom: 2rem;
+    left: 0;
+    background-color: $white;
+    transform: translateY(100%);
+    box-shadow: $shadow-5;
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 2rem);
+    z-index: 10;
+
+    a {
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      border-bottom: 1px solid $border-color;
+
+
+      &.active {
+        background-color: rgba($primary, 0.2);
+      }
+
+      h4 {
+        font-size: 1rem;
+        font-weight: 500;
+        transition: color $transition ease;
+      }
+
+      span {
+        font-weight: 0.875rem;
+      }
+
+      &:hover {
+        h4 {
+          color: $primary;
+        }
+      }
+    }
+  }
+
+  .search-input {
+    position: relative;
+  }
+
+  .search-clear {
+    position: absolute;
+    right: 1rem;
+    color: $dark;
+    top: 50%;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transform: translateY(-50%);
+    transition: opacity $transition ease;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  ::placeholder {
+    font-weight: 400;
+    color: $gray;
+  }
+
+  .search-icon {
+    position: absolute;
+    top: 50%;
+    left: 1.4rem;
+    transform: translateY(-50%);
+    color: $primary;
+  }
+
+  input {
+    padding-left: 3.4rem;
+  }
+}

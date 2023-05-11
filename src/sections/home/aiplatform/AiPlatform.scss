@@ -1,0 +1,13 @@
+@import "../../../styles/global/variables.scss";
+
+.aiplatform {
+
+  @include media-breakpoint-down(sm) {
+    h4 {
+      font-size: 0.875rem;
+    }
+    .shape-lines {
+      display: none;
+    }
+  }
+}

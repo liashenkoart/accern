@@ -1,0 +1,37 @@
+@import "../../../styles/global/variables.scss";
+
+.module-blocks {
+
+  &.blocks-type-2 {
+    .block-icn {
+      width: auto;
+      height: 3.25rem;
+    }
+
+    h4 {
+      font-size: 1.625rem;
+    }
+
+    p {
+      font-size: 1rem;
+      max-width: 460px;
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    &.blocks-type-2 {
+      h4 {
+        font-size: 1.225rem;
+      }
+      p {
+        font-size: 0.875rem;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    .shape-dots-medium {
+      display: none;
+    }
+  }
+}

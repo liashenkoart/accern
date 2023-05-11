@@ -1,0 +1,10 @@
+@import "../../../styles/global/variables.scss";
+
+.advantages {
+  @include media-breakpoint-down(sm) {
+
+    .shape-lines{
+      display: none;
+    }
+  }
+}

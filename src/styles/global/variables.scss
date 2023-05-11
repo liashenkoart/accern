@@ -1,0 +1,147 @@
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/mixins";
+
+$primary:                     #1063FE;
+$primary-border:              #3278fe;
+$primary-dark:                #0044CE;
+$primary-darker:              #011D6C;
+$primary-active:              rgba(#0531AD, 0.2);
+$primary-cover:               rgba(#1063FE, 0.08);
+$primary-adv:                 #042a89;
+$secondary:                   #88c217;
+$success:                     $secondary;
+$light:                       #F6F7F9;
+$warning:                     #ffc107;
+$info:                        #17a2b8;
+$danger:                      #FB7F54;
+$error:                       #EC0924;
+$white:                       #fff;
+$dark:                        #000000;
+$cover:                       #fafafa;
+$gray:                        #8C94A5;
+$lgray:                       #D8DDE2;
+$dgray:                       #272727;
+$lighter:                     #D8DDE2;
+$darker:                      #585C66;
+$cover-adv:                   #D8D8D8;
+
+$code-dark:                   #001241;
+$code-darker:                 #000f37;
+$code-light:                  #193889;
+$code-active:                 #0C2B7B;
+$lgray-adv:                   #E4E8EB;
+$gray-adv:                    #B2BBC6;
+
+$theme-colors: ();
+
+$theme-colors: map-merge(
+  (
+    "primary":    $primary,
+    "secondary":  $secondary,
+    "success":    $success,
+    "info":       $info,
+    "warning":    $warning,
+    "danger":     $danger,
+    "light":      $light,
+    "dark":       $dark,
+    "cover":      $cover,
+    "gray":       $gray,
+    "gray-adv":   $gray-adv,
+    "primary-cover":$primary-cover,
+    "error":       $error,
+  ),
+  $theme-colors
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 820px,
+  lg: 1040px,
+  xl: 1430px
+);
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 868px,
+  lg: 1100px,
+  xl: 1500px
+);
+
+$border-color:                  $lgray;
+$border-color-2:                $lgray-adv;
+$body-bg:                       $white;
+
+$font-family-base:              "IBM Plex Sans", sans-serif;
+$body-color:                    $darker;
+
+$headings-color:                $dark;
+$font-weight-base:              400;
+$headings-font-weight:          300;
+
+$h1-font-size:                  $font-size-base * 3.25;
+$h2-font-size:                  $font-size-base * 3;
+$h3-font-size:                  $font-size-base * 1.625;
+$h4-font-size:                  $font-size-base * 1.25;
+$h5-font-size:                  $font-size-base * 1.1;
+$h6-font-size:                  $font-size-base;
+
+$badge-font-size:               75%;
+$badge-font-weight:             500;
+$badge-padding-y:               .6em;
+$badge-padding-x:               .8em;
+$badge-border-radius:            0;
+
+$headings-line-height:          1.25;
+
+$transition:                    300ms;
+
+$yiq-contrasted-threshold:      200;
+
+$app-top-padding:               6.125rem;
+
+$app-padding:                   $app-top-padding 0 0 0;
+$header-height:                 100px;
+$header-height-md:              70px;
+
+$gutter:                        30px;
+
+$input-btn-padding-y:           1.0375rem;
+$input-btn-padding-x:           1.633rem;
+$input-btn-focus-width:         0;
+$input-btn-focus-box-shadow:    none;
+
+$link-color:                    $primary;
+$link-hover-color:              rgba($primary, 0.5);
+$link-hover-decoration:         none;
+
+$transition-timing:             cubic-bezier(.76,0,.175,1);
+
+$line-height-base:              1.5;
+
+$input-btn-line-height:         1.3rem;
+
+$section-spacer:                6.25rem;
+
+$shadow-1:                      0px 28px 45px rgba(0, 0, 0, 0.2);
+$shadow-2:                      0 28px 45px 0 rgba(109, 111, 113, 0.2);
+$shadow-3:                      0px 28px 45px rgba($primary, 0.2);
+$shadow-4:                      0 20px 30px 0 rgba(109, 111, 113, 0.15);
+$shadow-5:                      0 28px 45px 0 rgba(109, 111, 113, 0.1);
+
+$modal-md:                      700px;
+
+$progress-height:               0.375rem;
+$progress-bg:                   rgba($primary, 0.1);
+
+$modal-header-border-color:     transparent;
+$modal-header-border-width:     0;
+$modal-header-padding:          0;
+$modal-inner-padding:           0;
+$modal-content-border-width:    0;
+$modal-content-bg:              transparent;
+$modal-backdrop-opacity:        .8;
+
+$item-spacer-x:                    1.6rem;
+$item-spacer-y:                    1.2rem;

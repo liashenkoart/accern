@@ -1,0 +1,32 @@
+@import "../../styles/global/variables.scss";
+
+.mudule-block {
+
+  &.reverse {
+    .row {
+      flex-direction: row-reverse !important;
+    }
+  }
+  
+  @include media-breakpoint-down(md) {
+    &.reverse {
+      .row {
+        flex-direction: row !important;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    &.reverse {
+      .row.flex-column-reverse {
+        flex-direction: column-reverse !important;
+      }
+    }
+    
+
+    &.sect-spacer {
+      padding-bottom: $section-spacer/4;
+      padding-top: $section-spacer/4;
+    }
+  }
+}

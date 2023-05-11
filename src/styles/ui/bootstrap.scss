@@ -1,0 +1,514 @@
+@import "../global/variables.scss";
+
+.w-480 {
+  width: 480px;
+
+  @include media-breakpoint-down(md) {
+    width: 100%;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .w-md-100 {
+    width: 100% !important;
+  }
+}
+.mw-100p {
+  max-width: 100px;
+}
+.mw-200 {
+  max-width: 200px;
+}
+.mw-250 {
+  max-width: 250px;
+}
+.mw-340 {
+  max-width: 340px;
+}
+.mw-300 {
+  max-width: 300px;
+}
+.mw-400 {
+  max-width: 400px;
+}
+.mw-440 {
+  max-width: 440px;
+}
+.mw-480 {
+  max-width: 480px;
+}
+.mw-500 {
+  max-width: 500px;
+}
+.mw-550 {
+  max-width: 550px;
+}
+.mw-540 {
+  max-width: 540px;
+}
+.mw-580 {
+  max-width: 580px;
+}
+.mw-700 {
+  max-width: 700px;
+}
+.mw-800 {
+  max-width: 800px;
+}
+.mw-850 {
+  max-width: 850px;
+}
+.mw-900 {
+  max-width: 900px;
+}
+.mw-1000 {
+  max-width: 1000px;
+}
+.font-weight-medium {
+  font-weight: 500;
+}
+.mt-dw {
+  margin-top: 2rem;
+}
+.mb-dw {
+  margin-bottom: 2rem;
+}
+.mt-d {
+  margin-top: 2rem;
+
+  @include media-breakpoint-down(md) {
+    margin-top: 1rem;
+  }
+}
+.mb-d {
+  margin-bottom: 2rem;
+
+  @include media-breakpoint-down(md) {
+    margin-bottom: 1rem;
+  }
+}
+.pb-d {
+  padding-bottom: 2rem;
+}
+.pt-d {
+  padding-top: 2rem;
+}
+.pt-7vh {
+  padding-top: 7vh;
+}
+.pb-4vh {
+  padding-bottom: 4vh;
+}
+.pb-g {
+  padding-bottom: $gutter;
+}
+.mb-4vh {
+  margin-bottom: 4vh;
+}
+.mt-n-1 {
+  margin-top: -2.5rem;
+}
+.z-1 {
+  position: relative;
+  z-index: 1;
+}
+
+.lh-1 {
+  line-height: 1;
+}
+
+.mt-s {
+  margin-top: $section-spacer;
+
+  @include media-breakpoint-down(md) {
+    margin-top: $section-spacer/2;
+  }
+}
+
+.mb-s {
+  margin-bottom: $section-spacer;
+
+  @include media-breakpoint-down(md) {
+    margin-bottom: $section-spacer/2;
+  }
+}
+
+.mt-d2 {
+  margin-top: 4rem;
+
+  @include media-breakpoint-down(md) {
+    margin-top: 2rem;
+  }
+}
+
+.mt-n-50 {
+  margin-top: -50px !important;
+
+  @include media-breakpoint-down(md) {
+    margin-top: 0 !important;
+  }
+}
+
+.p-ef {
+  padding: 3rem 4.4rem;
+
+  @include media-breakpoint-down(md) {
+    padding: 2rem $gutter/2;
+  }
+}
+
+.p-ef-adv {
+  padding: 5rem 4.4rem;
+
+  @include media-breakpoint-down(md) {
+    padding: 2rem $gutter/2;
+  }
+}
+
+.p-ef-2 {
+  padding: 5rem 6rem;
+
+  @include media-breakpoint-down(md) {
+    padding: 2rem $gutter/2;
+  }
+}
+
+.mb-spacer {
+  margin-bottom: $section-spacer;
+
+  @include media-breakpoint-down(md) {
+    margin-bottom: $section-spacer/2;
+  }
+}
+
+h4 {
+  font-weight: 400;
+}
+
+.sect-spacer {
+  padding: $section-spacer 0;
+  position: relative;
+
+  @include media-breakpoint-down(md) {
+    padding: $section-spacer/2 0;
+  }
+}
+
+.sect-spacer-2 {
+  padding: $section-spacer * 1.5 0;
+  position: relative;
+
+  @include media-breakpoint-down(md) {
+    padding: $section-spacer 0;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: $section-spacer/2 0;
+  }
+}
+
+.status-online,
+.status-offline {
+  position: relative;
+  padding-right: 1rem;
+  display: inline-block;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: $success;
+  }
+}
+
+.progress {
+  width: 100%;
+
+  .progress-bar {
+    border-radius: 2rem;
+    transform: scaleX(0);
+    transform-origin: center left;
+    transition: transform $transition * 4 $transition-timing;
+    transition-delay: $transition * 3;
+  }
+
+  &.active {
+    .progress-bar {
+      transform: scaleX(1);
+    }
+  }
+}
+
+.status-offline {
+  &::after {
+    background-color: $danger;
+  }
+}
+
+.form-control {
+  border: 1px solid $light;
+  background-color: $light;
+  padding: $input-btn-padding-y $input-btn-padding-x;
+  line-height: $input-btn-line-height;
+  outline: none;
+  color: $dark;
+  padding-left: 1rem;
+  width: 100%;
+  font-weight: 500;
+  font-family: $font-family-base;
+  letter-spacing: 0.05rem;
+
+  &::placeholder {
+    color: $lgray;
+  }
+
+  &.theme-light {
+    background-color: transparent;
+    border-color: $primary-border;
+    color: $white;
+
+    &::placeholder {
+      color: rgba($white, 0.6);
+    }
+  }
+}
+
+.list-simple {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  li {
+    line-height: 2em;
+    color: $dark;
+    font-size: 0.875rem;
+
+    a,
+    span {
+      opacity: 0.5;
+      color: $dark;
+      transition: opacity $transition ease;
+    }
+
+    &:hover {
+      a {
+        opacity: 1;
+      }
+    }
+  }
+
+  a {
+    line-height: 2em;
+  }
+}
+
+.op-07 {
+  opacity: 0.7;
+}
+.op-08 {
+  opacity: 0.8;
+}
+.op-0 {
+  opacity: 0;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.mask {
+  width: calc(100% + 200px);
+  margin-left: -100px;
+  overflow: hidden;
+  padding: 0 100px;
+
+  @include media-breakpoint-down(md) {
+    width: 100%;
+    margin-left: 0;
+    padding: 0;
+  }
+}
+
+.modal-custom {
+  .modal-close {
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    font-size: 1.2rem;
+    margin: 0;
+    z-index: 2;
+    color: $white;
+    cursor: pointer;
+    pointer-events: all;
+    transition: all $transition ease;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  .modal-content {
+    overflow: hidden;
+  }
+
+  .modal-padding {
+    padding: 5rem;
+  }
+
+  @include media-breakpoint-down(lg) {
+    .modal-padding {
+      padding: 3rem;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    .modal-padding {
+      padding: 2rem 1rem;
+    }
+    .app-icon {
+      color: $dark;
+    }
+  }
+}
+
+.section-spacer-top {
+  margin-top: $section-spacer;
+}
+
+.op-05 {
+  opacity: 0.5;
+}
+
+.custom-collapse {
+  h4 {
+    transition: color $transition ease;
+  }
+
+  &.without-padding {
+    .custom-collapse-item {
+      padding-left: 0;
+      padding-right: 0;
+      padding-bottom: $item-spacer-y;
+      transition: padding $transition ease;
+
+      &.active {
+        padding-bottom: 0;
+      }
+    }
+    .custom-collapse-label {
+      padding-left: $item-spacer-x;
+      padding-right: $item-spacer-x;
+    }
+  }
+
+  &.static-shadow-arrow {
+    .custom-collapse-item {
+      transition: box-shadow $transition ease;
+      &:hover  {
+        box-shadow: $shadow-5;
+        .custom-collapse-label {
+          .app-icon {
+            color: $primary;
+          }
+        }
+      }
+      .custom-collapse-label {
+        .app-icon {
+          color: $darker;
+          font-size: 1rem;
+        }
+      }
+      &.active {
+        .custom-collapse-label {
+          .app-icon {
+            color: $primary;
+            transform: rotate(0);
+          }
+        }
+      }
+    }
+  }
+
+  .custom-collapse-negative {
+    width: calc(100% + 1.9rem);
+    margin-left: -1.9rem;
+    padding: 0 $item-spacer-x;
+  }
+  .custom-collapse-item {
+    padding: $item-spacer-y $item-spacer-x;
+    border: 1px solid $border-color-2;
+    margin-bottom: 1rem;
+
+    &.active {
+      .custom-collapse-label {
+        color: $primary;
+
+        h4 {
+          color: $primary;
+        }
+
+        .app-icon {
+          transform: rotate(90deg);
+        }
+      }
+    }
+  }
+
+  .custom-collapse-label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: $dark;
+    user-select: none;
+    transition: color $transition ease;
+
+    .app-icon {
+      font-size: 0.7rem;
+      margin-right: 1rem;
+      color: $primary;
+      transition: transform $transition ease;
+    }
+
+    &:hover {
+      color: $primary;
+
+      h4 {
+        color: $primary;
+      }
+    }
+  }
+
+  .custom-collapse-content {
+    font-size: 0.875rem;
+    color: $dark;
+    padding-top: 1rem;
+    padding-right: 1rem;
+    padding-left: 1.9rem;
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .mw-lg-380 {
+    max-width: 380px;
+  }
+  .mw-lg-230 {
+    max-width: 230px;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .mw-md-100 {
+    max-width: 100%;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .badge {
+    font-size: 60%;
+    padding: $badge-padding-y * 0.8 $badge-padding-x * 0.8;
+  }
+}

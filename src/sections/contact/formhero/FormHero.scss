@@ -1,0 +1,113 @@
+@import "../../../styles/global/variables.scss";
+
+.form-hero {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: -$app-top-padding;
+  margin-bottom: -$gutter;
+  padding-top: $app-top-padding;
+
+  .shape-homehero {
+    z-index: 1;
+  }
+
+  .adress-box {
+    display: flex;
+    position: relative;
+    align-items: stretch;
+    color: $dark;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    transition: all $transition ease;
+
+    > * {
+      border: 1px solid $border-color;
+      padding: 3rem;
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      &:first-child {
+        width: 240px;
+        height: 100%;
+        justify-content: center;
+        flex-shrink: 0;
+
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          width: 40%;
+          height: 70%;
+          background-color: transparent;
+          transition: all $transition ease;
+        }
+      }
+
+      &:last-child {
+        width: 100%;
+        border-left: none;
+      }
+    }
+
+    svg {
+      position: relative;
+      z-index: 1;
+      height: 92px;
+      width: auto;
+      fill: $dark;
+      transition: fill $transition ease;
+    }
+
+    &.active {
+      box-shadow: $shadow-2;
+
+      > * {
+        border-color: transparent;
+
+        &:first-child {
+          &::after {
+            background-color: $primary-active;
+          }
+        }
+
+        &:first-child {
+          color: $white;
+          background-color: $primary;
+        }
+      }
+
+      svg {
+        fill: $white;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    .adress-box {
+      > * {
+        padding: 2rem;
+        &:first-child {
+          width: 180px;
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    .adress-box {
+      > * {
+        padding: 1rem;
+        &:first-child {
+          width: 120px;
+          height: 100%;
+        }
+      }
+    }
+  }
+}

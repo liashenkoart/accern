@@ -1,0 +1,29 @@
+@import "../../../styles/global/variables.scss";
+
+.quote {
+
+  .quote-author {
+    display: flex;
+    align-items: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid $border-color;
+
+    .quote-author-img {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-right: 1rem;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+
+  }
+}

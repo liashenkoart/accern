@@ -1,0 +1,269 @@
+@import "../global/variables.scss";
+
+a {
+  transition: color $transition ease;
+}
+
+.text-label {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: $dark;
+  letter-spacing: 0.164rem;
+  margin-bottom: 0.5rem;
+}
+
+.text-small {
+  font-size: 0.875rem;
+}
+
+.text-small-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.109375rem;
+  text-transform: uppercase;
+}
+
+.text-subtitle-adv {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.text-sub-label {
+  font-size: 1.25rem;
+}
+
+.text-label-primary {
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  line-height: 1;
+  color: $primary;
+  letter-spacing: 0.06rem;
+}
+
+.text-title {
+  font-size: 1.5625rem;
+  font-weight: 400;
+}
+
+.text-label-light {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: $dark;
+  opacity: 0.4;
+  letter-spacing: 0.164rem;
+  transition: all $transition ease;
+
+  &:hover {
+    color: $dark;
+    opacity: 1;
+  }
+}
+
+.text-subtitle {
+  font-size: 1.375rem;
+}
+
+.text-subtitle-strong {
+  font-size: 1.375rem;
+  font-weight: 500;
+}
+
+.text-light-mid {
+  font-size: 0.9375rem;
+  font-weight: 300;
+
+  strong {
+    font-weight: 500;
+  }
+}
+
+.text-label-big {
+  font-size: 0.9375rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: $gray;
+  letter-spacing: 0.164rem;
+}
+
+.text-gray-medium {
+  font-weight: 500;
+  letter-spacing: 0.03125rem;
+}
+
+.text-light {
+  color: $white;
+}
+
+.text-medium {
+  font-size: 1.125rem;
+  line-height: 1.66;
+}
+
+.text-italic {
+  font-style: italic;
+}
+
+.text-medium-strong {
+  font-size: 1.125rem;
+  line-height: 1.66;
+  font-weight: 500;
+}
+
+.text-medium-link {
+  font-size: 1.125rem;
+  line-height: 1.66;
+}
+
+.text-primary-sub-title {
+  font-size: 1.125rem;
+  color: $primary;
+  line-height: 1.66;
+}
+
+.text-strong {
+  font-size: 1.5rem;
+  line-height: 1.25;
+  color: $dark;
+}
+
+.text-small-light {
+  font-size: 0.875rem;
+  font-weight: 300;
+}
+
+.text-tiny {
+  font-size: 0.75rem;
+}
+
+.text-large {
+  font-size: 2.625rem;
+  font-weight: 400;
+  color: $dark;
+  line-height: 1.38;
+}
+
+.text-title-white {
+  font-size: 2.625rem;
+  font-weight: 300;
+  color: $white;
+
+  strong {
+    font-weight: 400;
+  }
+}
+
+.text-title-light {
+  font-size: 2.625rem;
+  font-weight: 300;
+  color: $dark;
+}
+
+.text-title-light-sm {
+  font-size: 2.25rem;
+  font-weight: 300;
+  color: $dark;
+  line-height: normal;
+}
+
+.text-title-el-white {
+  font-size: 3rem;
+  font-weight: 200;
+  line-height: 1.3;
+  color: $white;
+}
+
+.text-title-el-white-md {
+  font-size: 2rem;
+  font-weight: 200;
+  line-height: 1.3;
+  color: $white;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-300 {
+  font-weight: 300;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.text-sub-title {
+  font-size: 1.875rem;
+  font-weight: 400;
+}
+
+.text-sub-title-large {
+  font-size: 2rem;
+  font-weight: 500;
+  color: $dark;
+}
+
+.text-medium-light {
+  font-size: 1.75rem;
+  color: $white;
+
+  a {
+    color: inherit;
+  }
+}
+
+.text-large-light {
+  font-size: 2rem;
+  font-weight: 400;
+  color: $white;
+  line-height: 1.5;
+
+  a {
+    color: inherit;
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  h1 {font-size: 2.875rem;line-height: 1.3;}
+  h2 {font-size: 2.5rem;line-height: 1.3;}
+  h3 {font-size: 1.25rem;line-height: 1.9;}
+  h4 {font-size: 1.125rem;line-height: 1.3;}
+  .text-large {font-size: 2rem;}
+  .text-title {font-size: 1.25rem;line-height: 1.3;}
+  .text-medium {font-size: 0.875rem;line-height: 1.714;}
+  .text-medium-strong {font-size: 0.875rem;line-height: 1.714;}
+  .text-subtitle-adv {font-size: 0.875rem;line-height: 1.714;}
+  .text-sub-label {font-size: 1rem;}
+  .text-gray-medium {font-size: 0.8125rem;line-height: 1.3;}
+  .text-label {font-size: 0.8125rem;}
+  .text-small {font-size: 0.8125rem;}
+  .link-arrow {font-size: 0.875rem;}
+  .text-medium-link {font-size: 1rem;}
+  .text-primary-sub-title {font-size: 1rem;}
+  .text-strong {font-size: 1.125rem;}
+  .text-subtitle-strong {font-size: 1.125rem;}
+  .text-sub-title {font-size: 1.3rem;}
+  .text-sub-title-large {font-size: 1.5rem;}
+  .text-label-primary {font-size: 1rem;}
+  .text-large-light{font-size: 1.625rem;}
+  .text-title-white {font-size: 1.625rem;}
+  .text-title-el-white {font-size: 2rem;}
+  .text-title-light {font-size: 1.625rem;}
+  .text-title-light-sm {font-size: 1.225rem;}
+  .text-title-el-white-md {font-size: 1.5rem;}
+}
+@include media-breakpoint-down(md) {
+  h3 {font-size: 1.25rem;line-height: 1.55;}
+}
+@include media-breakpoint-down(sm) {
+
+  h1 {font-size: 1.875rem;line-height: 1.3;}
+  h2 {font-size: 1.875rem;line-height: 1.3;}
+  h3 {font-size: 1rem;line-height: 1.75;}
+  h4 {font-size: 1.125rem;line-height: 1.3;}
+  .text-label-light {font-size: 0.75rem; }
+  .text-medium {font-size: 0.8125rem;line-height: 1.846;}
+  .text-medium-link {font-size: 1.125rem;}
+  .text-primary-sub-title {font-size: 1.125rem;}
+}

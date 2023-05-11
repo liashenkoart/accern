@@ -1,0 +1,13 @@
+@import "../../../styles/global/variables.scss";
+
+.block-adv {
+  background-color: $primary;
+  padding-bottom: $section-spacer*1.5;
+  margin-top: $section-spacer*2;
+  position: relative;
+
+  @include media-breakpoint-down(lg) {
+    margin-top: $section-spacer;
+    padding-bottom: $section-spacer/2;
+  } 
+}

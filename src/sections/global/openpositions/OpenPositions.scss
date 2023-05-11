@@ -1,0 +1,56 @@
+@import "../../../styles/global/variables.scss";
+
+.open-positions {
+
+  .open-position-item {
+    padding: 3rem;
+    border: 1px solid $border-color;
+    margin-bottom: 1.4rem;
+    cursor: pointer;
+    display: block;
+    color: inherit;
+    opacity: 1;
+    transition: all $transition ease;
+
+    h4 {
+      transition: color $transition ease;
+    }
+
+    .app-icon {
+      transition: color $transition ease;
+    }
+
+    &:hover {
+      box-shadow: $shadow-5;
+      border-color: transparent;
+
+      h4 {
+        color: $primary;
+      }
+
+      .open-position-item-content {
+        max-height: 100px;
+      }
+
+      .app-icon {
+        color: $primary;
+      }
+    }
+
+    .open-position-item-content {
+      
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height $transition*2 ease;
+
+      >* {
+        padding-top: 1.5rem;
+      }
+    }
+
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+
+}

@@ -1,0 +1,31 @@
+@import "../styles/global/variables.scss";
+
+.app {
+  padding: $app-padding;
+  overflow: hidden;
+}
+
+.scoll-bar {
+  height: 100vh;
+}
+
+#app .scrollbar-track {
+  background-color: transparent;
+  z-index: 11;
+}
+
+#app .scrollbar-track.scrollbar-track-x {
+  display: none !important;
+}
+
+#app .scrollbar-thumb {
+  width: 3px;
+  left: 2px;
+  background-color: $primary;
+}
+
+@include media-breakpoint-down(md) {
+  .app {
+    padding-top: $header-height-md;
+  }
+}

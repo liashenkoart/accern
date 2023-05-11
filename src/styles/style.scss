@@ -1,0 +1,29 @@
+@import 'global/fonts.scss';
+@import 'global/variables.scss';
+
+@import "../../node_modules/bootstrap/scss/reboot";
+@import "../../node_modules/bootstrap/scss/type";
+@import "../../node_modules/bootstrap/scss/grid";
+@import "../../node_modules/bootstrap/scss/utilities";
+@import "../../node_modules/bootstrap/scss/navbar";
+@import "../../node_modules/bootstrap/scss/nav";
+@import "../../node_modules/bootstrap/scss/badge";
+@import "../../node_modules/bootstrap/scss/progress";
+@import "../../node_modules/bootstrap/scss/transitions";
+@import "../../node_modules/bootstrap/scss/modal";
+@import "../../node_modules/bootstrap/scss/close";
+@import "../../node_modules/bootstrap/scss/tables";
+
+@import 'ui/buttons.scss';
+@import 'ui/inputs.scss';
+@import 'ui/texts.scss';
+@import 'ui/bootstrap.scss';
+@import 'ui/presets.scss';
+@import 'ui/blocks.scss';
+@import 'ui/links.scss';
+@import 'ui/icons.scss';
+@import 'ui/effects.scss';
+@import 'ui/shapes.scss';
+@import 'ui/tables.scss';
+
+@import 'global/base.scss';

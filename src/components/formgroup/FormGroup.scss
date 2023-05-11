@@ -1,0 +1,104 @@
+@import "../../styles/global/variables.scss";
+
+
+.form-group{
+  &.advanced {
+    background-color: transparent;
+    position: relative;
+    border-color: transparent;
+
+    label {
+      color: rgba($dark, 0.4);
+      text-transform: uppercase;
+      letter-spacing: 0.164rem;
+      position: absolute;
+      font-size: 0.875rem;
+      top: 1.1rem;
+      left: 1rem;
+      transition: transform $transition ease;
+    }
+
+    &.is-valid {
+      input, textarea {
+        color: $dark;
+      }
+      &:after {
+        background-color: $dark;
+        transform: scaleX(1);
+      }
+    }
+
+    &.is-invalid {
+      input, textarea {
+        color: $error;
+      }
+      &:after {
+        background-color: $error;
+        transform: scaleX(1);
+      }
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $border-color;
+      z-index: 1;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      transform: scaleX(0);
+      transform-origin: center left;
+      background-color: $primary;
+      transition: transform $transition*2 $transition-timing ;
+      z-index: 2;
+    }
+
+    &.not-empty {
+      label {
+        transform: translateY(-1.8rem);
+      }
+    }
+
+    &.active {
+      &:after {
+        transform: scaleX(1);
+      }
+
+      label {
+        transform: translateY(-1.8rem);
+      }
+    }
+
+    input, textarea {
+      background-color: transparent;
+      border-color: transparent;
+      font-size: 1rem;
+      font-weight: 500;
+      color: $dark;
+    }
+    
+    @include media-breakpoint-down(md) {
+      label {
+        font-size: 0.8125rem;
+      }
+  
+      &.active {
+        label {
+          transform: translateY(-1.4rem);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,388 @@
+@import "../../styles/global/variables.scss";
+
+$package-spacer: 2rem;
+$option-spacer: 1.2rem 1.6rem;
+
+.packages {
+  .container,
+  .container-fluid {
+    .row {
+      > * {
+        .packages-vm {
+          opacity: 0;
+        }
+
+        &:first-child {
+          .packages-vm {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  .packages-table {
+    table-layout: fixed;
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .packages-row {
+    display: flex;
+  }
+
+  .packages-col {
+    width: 33.3%;
+  }
+
+  .packages-column-1 {
+    width: 30%;
+    position: relative;
+  }
+  .packages-column-2 {
+    width: 70%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+
+    > * {
+      &:first-child {
+        .package-border-rb.included {
+          border-left: 1px solid $border-color;
+        }
+      }
+
+      &:last-child {
+        .package-feature-groups.inner {
+          border-right: 1px solid $border-color;
+        }
+      }
+    }
+  }
+
+  .package-border-rb {
+    border-right: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+  }
+
+  .package-border-lb {
+    border-left: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+  }
+
+  .package-feature-groups {
+    padding-top: $package-spacer/2;
+    padding-bottom: $package-spacer * 0.8;
+    border-left: 1px solid $border-color;
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+
+    .package-feature-group {
+      border-bottom: 1px solid $border-color;
+      border-color: transparent;
+      padding: $package-spacer/2 $package-spacer/2;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
+    &.inner {
+      .package-feature-group {
+        border-color: $border-color;
+      }
+    }
+  }
+
+  .packages-col-wide {
+    display: table-cell;
+    width: 30%;
+    position: relative;
+  }
+
+  .package-feature-label {
+    padding: $package-spacer/4 $package-spacer;
+    color: $dark;
+  }
+
+  .package-feature-item {
+    color: $dark;
+    padding: $package-spacer/10 $package-spacer * 1.4;
+    white-space: nowrap;
+
+    &.center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.875rem;
+      line-height: 1.5rem;
+
+      span {
+        &:first-child {
+          margin-right: 0.5rem;
+        }
+      }
+
+      .app-icon {
+        font-size: 0.875rem;
+      }
+    }
+  }
+
+  .packages-cover {
+    width: 100%;
+    background-color: rgba($primary, 0.08);
+    height: 120px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: flex;
+    align-items: center;
+    margin-top: 112px;
+  }
+
+  @include media-breakpoint-down(lg) {
+    .package-feature-label {
+      padding: $package-spacer/4 1rem;
+    }
+
+    .packages-cover {
+      padding-left: 1rem;
+    }
+
+    .package-feature-item {
+      padding: $package-spacer/10 1rem;
+      font-size: 0.875rem;
+
+      &.center {
+        line-height: inherit;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    .packages-column-1 {
+      display: none;
+    }
+    .packages-column-2 {
+      width: 100%;
+    }
+    .packages-row-cover {
+      white-space: normal;
+    }
+
+    .container,
+    .container-fluid {
+      .row {
+        > * {
+          .packages-vm {
+            opacity: 1;
+          }
+
+          &:first-child {
+            .packages-vm {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    .package-feature-label {
+      text-align: center;
+
+      > * {
+        font-size: 1rem;
+      }
+    }
+    .packages-col {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+    .package-border-rb.included {
+      border-left: 1px solid $border-color;
+    }
+    .package-feature-groups.inner {
+      border-right: 1px solid $border-color;
+    }
+  }
+}
+
+.package {
+  border-top: 1px solid $border-color;
+  border-right: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
+  cursor: pointer;
+  width: 100%;
+  background-color: $white;
+  position: relative;
+  z-index: 1;
+  transition: border $transition ease, box-shadow $transition ease, transform 0s linear;
+
+  &.with-shadow {
+    box-shadow: $shadow-5;
+  }
+
+  &.first {
+    border-left: 1px solid $border-color;
+    .app-icon {
+      color: $gray;
+    }
+  }
+
+  .package-title-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    opacity: 1;
+    background-color: $white;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center center;
+  }
+
+  &.highlighted {
+    .package-title {
+      h3 {
+        color: $white;
+      }
+
+      .text-tiny {
+        color: $white;
+      }
+
+      &::after {
+        opacity: 0;
+      }
+
+      .app-icon {
+        color: $white;
+      }
+    }
+  }
+
+  &:hover {
+    border-color: transparent;
+    box-shadow: $shadow-5;
+  }
+
+  h3 {
+    line-height: 1;
+    transition: color $transition ease;
+  }
+
+  .package-description {
+    display: block;
+  }
+
+  .package-title {
+    width: 100%;
+    height: 110px;
+    padding: $package-spacer;
+    position: relative;
+    display: flex;
+    transition: background-color $transition ease;
+
+    p {
+      margin-top: 0.3rem;
+      margin-bottom: 0;
+      transition: color $transition ease;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: calc(100% - #{$package-spacer});
+      bottom: 0;
+      right: 0;
+      height: 1px;
+      background-color: $border-color-2;
+      transition: opacity $transition ease;
+    }
+  }
+
+  .package-content {
+    padding-left: $package-spacer;
+    padding-right: $package-spacer;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .app-icon {
+    font-size: 1.375rem;
+    width: auto;
+    color: $primary;
+    margin-top: 0.1rem;
+    transition: color $transition ease;
+  }
+
+  @include media-breakpoint-down(sm) {
+    border-left: 1px solid $border-color;
+
+    .package-title-bg {
+      opacity: 1;
+    }
+
+    .package-title {
+      h3 {
+        color: $white;
+      }
+
+      .text-tiny {
+        color: $white;
+      }
+
+      &::after {
+        opacity: 0;
+      }
+
+      .app-icon {
+        color: $white;
+      }
+    }
+  }
+}
+
+.package-option {
+  padding: $option-spacer;
+  border: 1px solid $border-color;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: $dark;
+
+  .app-icon {
+    font-size: 0.875rem;
+    color: $primary;
+  }
+
+  > div {
+    display: flex;
+    align-items: center;
+
+    &:first-child {
+      .app-icon {
+        font-size: 0.7rem;
+      }
+    }
+  }
+}
+
+.package-options {
+  padding: $option-spacer;
+  border: 1px solid $border-color;
+  color: $dark;
+
+  .app-icon {
+    font-size: 0.7rem;
+    color: $primary;
+  }
+}

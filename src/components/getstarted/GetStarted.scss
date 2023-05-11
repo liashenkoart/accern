@@ -1,0 +1,25 @@
+@import "../../styles/global/variables.scss";
+
+.get-started {
+  margin-bottom: $section-spacer;
+
+  .icon-error {
+    right: 1rem;
+
+    background-color: $white;
+  }
+
+  form {
+    height: calc(#{$input-btn-line-height} + #{$input-btn-padding-y*2} + 2px);
+  }
+
+  @include media-breakpoint-down(md) {
+
+    form{
+      max-width: 480px;
+      margin: 0 auto;
+      height: auto;
+    }
+
+  }
+}

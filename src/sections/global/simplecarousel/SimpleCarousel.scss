@@ -1,0 +1,109 @@
+@import "../../../styles/global/variables.scss";
+
+.simple-carousel-container {
+  padding: 50px 29px;
+  width: calc(100% + 58px);
+  margin-left: -29px;
+  overflow: hidden;
+
+  .swiper-container {
+    overflow: visible;
+  }
+  .swiper-wrapper {
+    align-items: stretch;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding: 20px 29px;
+  }
+}
+
+.simple-carousel {
+  margin: $section-spacer * 0.8 0;
+  margin-bottom: 0;
+
+  .simple-block {
+    user-select: none;
+    padding: 0 2rem;
+    height: 120px !important;
+    border: 1px solid $border-color;
+    color: inherit;
+    transition: all $transition ease;
+
+    .simple-block-img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      position: relative;
+
+      >* {
+        position: relative;
+
+        &.simple-block-img-absolute{
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          z-index: 1;
+          transition: opacity $transition ease;
+        }
+      }
+    }
+
+    .text-label {
+      opacity: 0.7;
+      margin-bottom: 0.2rem;
+      transition: color $transition ease;
+    }
+
+    .text-medium {
+      color: $dark;
+      transition: color $transition ease;
+    }
+
+    .text-subtitle-strong {
+      transition: color $transition ease;
+    }
+
+    .text-small {
+      transition: all $transition ease;
+    }
+
+    &:hover {
+      border-color: transparent;
+      box-shadow: $shadow-4;
+
+      .simple-block-img {
+        >* {
+          &.simple-block-img-absolute{
+            opacity: 0;
+          }
+        }
+      }
+
+      .text-label,
+      .text-medium,
+      .text-subtitle-strong {
+        color: $white;
+      }
+
+      .text-small {
+        color: $white;
+        opacity: 0.7;
+      }
+
+
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    margin: $section-spacer/2 0;
+
+    .simple-block {
+
+      &:hover {
+        box-shadow: none;
+      }
+    }
+  }
+}

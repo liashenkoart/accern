@@ -1,0 +1,9 @@
+@import "../../../styles/global/variables.scss";
+
+.industry {
+  @include media-breakpoint-down(sm) {
+    .shape-dots-medium {
+      display: none;
+    }
+  }
+}

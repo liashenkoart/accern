@@ -5,21 +5,30 @@ import { settings } from "../../data/settings";
 import { Context } from "../../context/context";
 import Icon from "../icon";
 import { OpenModal } from "../../services/modalsManager";
-import {filterIt} from "../../utils/scripts";
+import { filterIt } from "../../utils/scripts";
+import Shape10p from "../animations/shape10p";
 
 import "./Header.scss"
 
-const Header = ({ scroll, isFluid }) => {
+const Header = ({ isFluid }) => {
 
   const [direction, setDirection] = useState("down");
-  const [lastPos, setLastPos] = useState(scroll);
+  const [scrollTop, setScrollTop] = useState(0);
+  const [lastPos, setLastPos] = useState(0);
   const [subActive, setSubActive] = useState(false);
   const [subs, setSubs] = useState(settings.navigation.map(() => false));
   const [isActiveMobile, setIsActiveMobile] = useState(false);
-  const { dispatchModals, page } = useContext(Context);
+  const { dispatchModals, page, scrollB } = useContext(Context);
+  const [navPosition, setNavPosition] = useState([]);
 
   useEffect(() => {
-    if (lastPos > scroll) {
+    if (scrollB) scrollB.scrollbar.addListener((status) => {
+      setScrollTop(status.offset.y)
+    });
+  }, [scrollB])
+
+  useEffect(() => {
+    if (lastPos > scrollTop) {
       setDirection("up");
       setSubActive(false);
 
@@ -28,39 +37,64 @@ const Header = ({ scroll, isFluid }) => {
       setSubActive(false);
     }
 
-    if (scroll < 500) setDirection("");
+    if (scrollTop < 500) setDirection("");
 
-    setLastPos(scroll);
-  }, [scroll]);
+    setLastPos(scrollTop);
+  }, [scrollTop]);
 
   const renderSubLink = (link) => {
-    return (link.link ? <Link onClick={hideAll} className={`nav-sub-link ${link.icon ? "with-icon" : ""}`} to={link.link}>
-      {link.icon && <div><img src={`../../assets/img/${link.icon}`} alt="" /></div>}
-      <div><h4 className="text-medium-link">{link.name}</h4><p className="mb-0 mw-200">{link.description}</p></div>
+    return (link.link ? <Link onClick={hideAll} className={`nav-sub-link ${!link.description ? "align-items-center" : ""} ${link.icon ? "with-icon" : ""}`} to={link.link}>
+      {link.icon && <div className="nav-sub-link-icon"><img src={`../../assets/img/${link.icon}`} alt="" /></div>}
+      <div><h4 className={`text-medium-link ${!link.description ? "mb-0" : ""}`}>{link.name}</h4><p className="mb-0 mw-200">{link.description}</p></div>
       {link.isSimple ? <Icon variant="arrow-right" /> : null}
     </Link>
-      : <div className={`nav-sub-link cursor-pointer ${link.icon ? "with-icon" : ""}`}>
-        {link.icon && <div><img src={`../../assets/img/${link.icon}`} alt="" /></div>}
-        <div><h4 className="text-medium-link">{link.name}</h4><p className="mb-0 mw-200">{link.description}</p></div>
+      : <div className={`nav-sub-link ${!link.description ? "align-items-center" : ""} cursor-pointer ${link.icon ? "with-icon" : ""}`}>
+        {link.icon && <div className="nav-sub-link-icon"><img src={`../../assets/img/${link.icon}`} alt="" /></div>}
+        <div><h4 className={`text-medium-link ${!link.description ? "mb-0" : ""}`}>{link.name}</h4><p className="mb-0 mw-200">{link.description}</p></div>
         {link.isSimple ? <Icon variant="arrow-right" /> : null}
       </div>)
   }
 
-  const renderSub = (sub, i) => {
-    return (
-      <div className={`nav-sub-mask ${subs[i] ? "active" : ""}`} onClick={handleClickSub}>
-        <div className="nav-sub">
-          <Container>
+  const renderNav = (sub, i) => {
+    switch (sub.variant) {
+      case "simple":
+        return <div className={`nav-sub`} style={{ left: `${navPosition[i]}px` }}>
+          <Shape10p />
+          {sub.columns.map((column, i) => (
+            <div key={`nlk-${i}`} className={`column-link-cont ${column.className ? column.className : ""}`}>
+              <div className="column-link">
+                {column.label && <div className={`nav-label-padding mb-2 ${column.label ? "border-bottom" : ""}`}><span className="text-label">{column.label}</span></div>}
+                <div>
+                  {column.links.map((link, i) => (
+                    <div key={`s-${i}`} className={`nav-simple-link ${link.orderMobile ? `${`order-${link.orderMobile}`} ${`order-lg-${i + 1}`}` : ""} ${link.isSimple ? "simple-link" : ""} ${link.isComing ? "coming-link" : ""}`}>
+                      {renderSubLink(link)}
+                      <Icon className="nav-sub-link-arrow" variant="arrow-right" />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      case "auto-width":
+        return <div className="nav-sub" style={{ left: `${navPosition[i]}px` }}>
+          <Shape10p />
+          <div className="nav-sub-shape"><img src="../assets/img/menu-shape.svg" alt="" /></div>
+          <Container fluid>
             <Row>
               {sub.columns.map((column, i) => (
-                <Col key={`nlk-${i}`} lg={column.size} className={`column-link-cont ${i != 0 ? "pl-5 pr-5" : "pr-0"} pb-5 ${column.className ? column.className : ""}`}>
+                <Col key={`nlk-${i}`} lg={column.size} className={`column-link-cont pt-4 pb-4 ${column.className ? column.className : ""}`}>
                   <div className="column-link">
-                    <div className={`nav-label-padding mb-2 ${column.label ? "border-bottom" : ""}`}><span className="text-label">{column.label}</span></div>
-                    <div className={`blocks margin-negative-1 ${column.size > 4 ? column.size < 12 ? column.size == 9 ? "columns-3" : "columns-2" : "columns-4" : "columns-1"}`}>
+                    {column.label && <div className={`nav-label-padding mb-2 ${column.label ? "border-bottom" : ""}`}><span className="text-label fw-300 text-dark">{column.label}</span></div>}
+                    <div className={`${column.size > 4 ? column.size < 12 ? column.size == 9 ? "columns-3" : "columns-2" : "columns-4" : "columns-1"}`}>
                       {column.links.map((link, i) => (
-                        <div key={`s-${i}`} className={`block shadow-link ${link.orderMobile ? `${`order-${link.orderMobile}`} ${`order-lg-${i + 1}`}` : ""} ${link.isSimple ? "simple-link" : ""} ${link.isComing ? "coming-link" : ""}`}>
-                          {renderSubLink(link)}
-                        </div>
+                        link.label ?
+                          <div  key={`s-${i}`} className={`nav-label-padding-inner mb-2 ${link.label ? "border-bottom" : ""}`}><span className="text-label fw-300 text-dark">{link.label}</span></div>
+                          :
+                          <div key={`s-${i}`} className={`nav-simple-link pl-0 pr-0 ${link.variant ? link.variant : ""} ${link.orderMobile ? `${`order-${link.orderMobile}`} ${`order-lg-${i + 1}`}` : ""} ${link.isSimple ? "simple-link" : ""} ${link.isComing ? "coming-link" : ""}`}>
+                            {renderSubLink(link)}
+                            <Icon className="nav-sub-link-arrow" variant="arrow-right" />
+                          </div>
                       ))}
                     </div>
                   </div>
@@ -69,6 +103,40 @@ const Header = ({ scroll, isFluid }) => {
             </Row>
           </Container>
         </div>
+      default:
+        return <div className="nav-sub">
+          <Shape10p />
+          <div className="nav-sub-shape"><img src="../assets/img/menu-shape.svg" alt="" /></div>
+          <Container>
+            <Row>
+              {sub.columns.map((column, i) => (
+                <Col key={`nlk-${i}`} lg={column.size} className={`column-link-cont ${i != 0 ? "pl-3 pr-3" : "pr-3"} pb-4 ${column.className ? column.className : ""}`}>
+                  <div className="column-link">
+                    {column.label && <div className={`nav-label-padding mb-2 ${column.label ? "border-bottom" : ""}`}><span className="text-label fw-300 text-dark">{column.label}</span></div>}
+                    <div className={`${column.size > 4 ? column.size < 12 ? column.size == 9 ? "columns-3" : "columns-2" : "columns-4" : "columns-1"}`}>
+                      {column.links.map((link, i) => (
+                        link.label ?
+                          <div className={`nav-label-padding-inner mb-2 ${link.label ? "border-bottom" : ""}`}><span className="text-label fw-300 text-dark">{link.label}</span></div>
+                          :
+                          <div key={`s-${i}`} className={`nav-simple-link pl-0 pr-0 ${link.variant ? link.variant : ""} ${link.orderMobile ? `${`order-${link.orderMobile}`} ${`order-lg-${i + 1}`}` : ""} ${link.isSimple ? "simple-link" : ""} ${link.isComing ? "coming-link" : ""}`}>
+                            {renderSubLink(link)}
+                            <Icon className="nav-sub-link-arrow" variant="arrow-right" />
+                          </div>
+                      ))}
+                    </div>
+                  </div>
+                </Col>
+              ))}
+            </Row>
+          </Container>
+        </div>
+    }
+  }
+
+  const renderSub = (sub, i) => {
+    return (
+      <div className={`nav-sub-mask ${sub.variant ? sub.variant : ""} ${subs[i] ? "active" : ""}`} onClick={handleClickSub}>
+        {renderNav(sub, i)}
       </div>
     )
   }
@@ -77,8 +145,13 @@ const Header = ({ scroll, isFluid }) => {
     if (!e.target.closest(".nav-sub")) hideAll();
   }
 
-  const handleClickLink = (i) => {
+  const handleClickLink = (i, e) => {
     let temp = [];
+    const oldPositions = navPosition;
+    const navBox = e.target.getBoundingClientRect();
+    oldPositions[i] = navBox.left + navBox.width / 2;
+
+    setNavPosition(oldPositions);
 
     hideAll(false);
 
@@ -124,14 +197,14 @@ const Header = ({ scroll, isFluid }) => {
                           !nav.excludeNav &&
                           <Nav.Item key={`nav-${i}`}>
                             {nav.link ? <Link onClick={() => hideAll(true)} className={`nav-link ${nav.isDisabled ? "disabled" : ""}`} to={nav.link}>{nav.name}</Link>
-                              : <div className={`nav-link ${nav.isDisabled ? "disabled" : ""} cursor-pointer ${subs[i] ? "sub-active" : ""}`} onClick={() => nav.sub ? handleClickLink(i) : null}>
+                              : <div className={`nav-link ${nav.isDisabled ? "disabled" : ""} cursor-pointer ${subs[i] ? "sub-active" : ""}`} onClick={(e) => nav.sub ? handleClickLink(i, e) : null}>
                                 {nav.name}{nav.sub && <Icon variant="chevron-down" />}
                               </div>}
                             {nav.sub && renderSub(nav.sub, i)}
                           </Nav.Item>
                         ))}
                       </Nav>
-                      {settings.headerButton && settings.headerButton.isActive ? settings.headerButton.modal ? <Button className="ml-0 ml-lg-4 w-auto w-md-100" variant="primary" onClick={() => OpenModal(settings.headerButton.modal, dispatchModals)}>{settings.headerButton.name}</Button> : <Link className="ml-0 ml-lg-4 w-auto w-md-100 btn btn-primary" to={settings.headerButton.link}>{settings.headerButton.name}</Link> : null}
+                      {settings.headerButton && settings.headerButton.isActive ? settings.headerButton.modal ? <Button className="ml-0 ml-lg-4 w-auto w-md-100" variant="neutral" onClick={() => OpenModal(settings.headerButton.modal, dispatchModals)}>{settings.headerButton.name} <Icon variant="arrow-right"/></Button> : <Link className="ml-0 ml-lg-4 w-auto w-md-100 btn btn-neutral" to={settings.headerButton.link}>{settings.headerButton.name}</Link> : null}
                     </Col>
                   </Row>
                 </Container>

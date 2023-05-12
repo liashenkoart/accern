@@ -4,10 +4,11 @@ import DocumentationViewer from "../sections/global/documentationviewer";
 import Footer from "../sections/global/footer";
 import { page } from "../data/pages/documentation";
 import Seo from "../components/seo";
+import SEO from "../data/seo.json";
 
 import VisibilitySensor from '../utils/react-visibility-sensor';
 
-const Documentation = () => {
+const Documentation = ({path}) => {
 
   const sections = [
     {component: DocumentationViewer, page: page},
@@ -15,7 +16,7 @@ const Documentation = () => {
 
   return (
     <div>
-      <Seo seo={page.seo} />
+      <Seo seo={SEO[path] ? SEO[path] : SEO["/"]} />
       {sections.map((section, i) => (
         <VisibilitySensor partialVisibility={true} once={true} key={`p-${i}`}>
           {({ isVisible }) =>

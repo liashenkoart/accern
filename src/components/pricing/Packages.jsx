@@ -1,7 +1,8 @@
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect, useContext } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Package from "../../components/pricing/Package";
 import { filterIt } from "../../utils/scripts";
+import { Context } from "../../context/context";
 import Icon from "../icon";
 
 import "./Pricing.scss";
@@ -9,6 +10,14 @@ import "./Pricing.scss";
 const Packages = ({ data, className }) => {
 
   const packagesContainer = useRef();
+  const [scrollTop, setScrollTop] = useState(0);
+  const { scrollB } = useContext(Context);
+
+  useEffect(()=>{
+    if(scrollB) scrollB.scrollbar.addListener((status) => {
+      setScrollTop(status.offset.y)
+    });
+  },[scrollB])
 
   const getFeatureDetail = (features, id) => {
     const feature = filterIt(features, id, "id");

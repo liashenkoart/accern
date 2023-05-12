@@ -6,11 +6,11 @@ import Seo from "../components/seo";
 import Rows from "../sections/global/rows";
 import Related from "../sections/global/related";
 import CTA from "../sections/global/cta";
-import DownloadReport from "../components/downloadreport";
+import SEO from "../data/seo.json";
 
 import VisibilitySensor from '../utils/react-visibility-sensor';
 
-const AssetManagament = () => {
+const AssetManagament = ({path}) => {
 
   const sections = [
     {component: CoverBlock, page: page.hero},
@@ -23,7 +23,7 @@ const AssetManagament = () => {
 
   return (
     <div>
-      <Seo seo={page.seo} />
+      <Seo seo={SEO[path] ? SEO[path] : SEO["/"]} />
       {sections.map((section, i) => (
         <VisibilitySensor partialVisibility={true} once={true} key={`p-${i}`}>
           {({ isVisible }) =>
@@ -31,7 +31,6 @@ const AssetManagament = () => {
           }
         </VisibilitySensor>
       ))}
-      <DownloadReport />
     </div>
   );
 }

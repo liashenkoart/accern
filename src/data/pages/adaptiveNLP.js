@@ -1,17 +1,10 @@
 export const page = {
-  seo: {
-    title: "Accern - Adaptive NLP Models ",
-    meta: [
-      { name: "description", content: "Accern - Adaptive NLP Models " },
-      { property: "og:title", content: "Accern - Adaptive NLP Models " }
-    ],
-  },
-
   hero: {
     label: "Adaptive NLP Models",
     title: "The Largest Collection of <strong>Adaptive NLP Models</strong>",
     description: "Browse our collection of proprietary and third-party NLP models, which are powered by adaptive machine-learning. You can retrain any of our models or upload your own.",
     img: "adaptive-models-illustration.svg",
+    variant: "fluid",
     button: {
       name: "GET A DEMO",
       modal: "request"

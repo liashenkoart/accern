@@ -1,11 +1,4 @@
 export const page = {
-  seo: {
-    title: "Accern - Aws Registration",
-    meta: [
-      { name: "description", content: "Accern - Aws Registration" },
-      { property: "og:title", content: "Accern - Aws Registration" }
-    ],
-  },
   hero: {
     isForm: true,
     form: {
@@ -13,6 +6,11 @@ export const page = {
       title: "Complete Registration",
       message: "That's All, thank you!",
       button: "Submit",
+      succesModal: {
+        name: "awsSuccess",
+        title: "Thank you for selecting Accern!",
+        description: "One of our representatives will contact you within 24 hours with your login details and access to additional resources on how to build your AI use cases. "
+      },
       fields: [
         { name: "first_name", type: "text", placeholder: "Name", className: "advanced", required: true, pattern: ".{2,}" },
         { name: "last_name", type: "text", placeholder: "Last", className: "advanced", required: true, pattern: ".{2,}" },

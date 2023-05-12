@@ -1,11 +1,4 @@
 export const page = {
-  seo: {
-    title: "Accern - Insurance",
-    meta: [
-      { name: "description", content: "Accern - Insurance" },
-      { property: "og:title", content: "Accern - Insurance" }
-    ],
-  },
   hero: {
     label: "Accern for Insurance",
     title: "<strong>AI-powered insights</strong> for risk management, underwriting, claims, and distribution",

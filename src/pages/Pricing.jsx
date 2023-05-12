@@ -7,11 +7,11 @@ import ThemedBlock from "../sections/global/themedblock";
 import FAQ from "../sections/global/faq";
 import { page } from "../data/pages/pricing";
 import Seo from "../components/seo";
-import RequestQuote from "../components/requestquote";
+import SEO from "../data/seo.json";
 
 import VisibilitySensor from '../utils/react-visibility-sensor';
 
-const Pricing = () => {
+const Pricing = ({path}) => {
 
   const sections = [
     {component: CoverBlock, page: page.hero},
@@ -25,7 +25,7 @@ const Pricing = () => {
 
   return (
     <div>
-      <Seo seo={page.seo} />
+      <Seo seo={SEO[path] ? SEO[path] : SEO["/"]} />
       {sections.map((section, i) => (
         <VisibilitySensor partialVisibility={true} once={true} key={`p-${i}`}>
           {({ isVisible }) =>
@@ -33,7 +33,6 @@ const Pricing = () => {
           }
         </VisibilitySensor>
       ))}
-      <RequestQuote />
     </div>
   );
 }

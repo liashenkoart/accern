@@ -5,10 +5,11 @@ import Blocks from "../sections/global/blocks";
 import Rows from "../sections/global/rows";
 import { page } from "../data/pages/deployments";
 import Seo from "../components/seo";
+import SEO from "../data/seo.json";
 
 import VisibilitySensor from '../utils/react-visibility-sensor';
 
-const Deployments = () => {
+const Deployments = ({path}) => {
 
   const sections = [
     {component: Hero, page: page.hero},
@@ -19,7 +20,7 @@ const Deployments = () => {
 
   return (
     <div>
-      <Seo seo={page.seo} />
+      <Seo seo={SEO[path] ? SEO[path] : SEO["/"]} />
       {sections.map((section, i) => (
         <VisibilitySensor partialVisibility={true} once={true} key={`p-${i}`}>
           {({ isVisible }) =>

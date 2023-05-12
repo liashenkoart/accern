@@ -1,6 +1,8 @@
 @import "../../../styles/global/variables.scss";
 
 .footer {
+  margin-top: $section-spacer;
+
   .footer-columns {
     display: flex;
     justify-content: space-between;
@@ -15,7 +17,100 @@
     }
   }
 
+  .footer-brands {
+    img {
+      filter: invert(100%);
+      opacity: 0.5;
+    }
+  }
+
+  .footer-socials {
+    font-size: 1.125rem;
+
+    a {
+      margin-right: 0.5rem;
+      color: $primary;
+
+      .app-icon {
+        color: $primary;
+        transition: color $transition ease;
+      }
+
+      &:hover {
+        .app-icon {
+          color: $white;
+        }
+      }
+    }
+  }
+
+  .footer-cta-container {
+    border-bottom: 1px solid rgba($white, 0.15);
+    padding-bottom: 4rem;
+    margin-bottom: 4rem;
+  }
+
+  .footer-shape {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+
+  .footer-shape-top {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .footer-inner {
+    position: relative;
+    background-color: $dark;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 10px;
+      background: url(../../../assets/img/shape-nav.svg);
+      background-position: center center;
+    }
+  }
+
+  .footer-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    li {
+      line-height: 2em;
+      color: $white;
+      font-size: 0.875rem;
+
+      a,
+      span {
+        color: $gray;
+        transition: color $transition ease;
+
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+
+    a {
+      line-height: 2em;
+    }
+  }
+
   @include media-breakpoint-down(md) {
+    .footer-inner {
+      padding-bottom: 9rem;
+    }
     .footer-columns {
       flex-wrap: wrap;
       justify-content: flex-start;
@@ -23,7 +118,7 @@
       ul {
         width: 33.33%;
         padding-right: 0;
-  
+
         &:last-child {
           padding-left: 0;
         }
@@ -33,10 +128,9 @@
 
   @include media-breakpoint-down(sm) {
     .footer-columns {
-
       ul {
         width: 50%;
-  
+
         &:last-child {
           padding-left: 0;
         }

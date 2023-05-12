@@ -2,8 +2,10 @@ export const page = {
   seo: {
     title: "Accern - Data",
     meta: [
-      {name: "description", content: "Accern - Data"},
-      {property: "og:title", content: "Accern - Data"}
+      { name: "description", content: "Data" },
+      { property: "og:title", content: "Data" },
+      { property: "og:description", content: "We are accelerating AI adoption for enterprises with a no-code development platform."},
+      { property: "og:image", content: "../../assets/img/logo.svg" },
     ],
   },
   hero: {
@@ -11,7 +13,8 @@ export const page = {
     title: "Select Datasets for Your <strong>AI Solutions</strong>",
     titleCL: "mw-580",
     description: "Accern comes integrated with one of the largest unstructured news, reports, and social media data marketplaces. In addition, you can upload your internal documents or existing data subscriptions to Accern to build your AI solutions.",
-    img: "data-hero-illustration.svg",
+    img: "data-illustration.svg",
+    variant: "fluid",
     button: {
       name: "GET A DEMO",
       modal: "request"

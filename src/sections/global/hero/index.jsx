@@ -22,13 +22,13 @@ const Hero = ({ isVisible, page }) => {
   }
 
   return (
-    <div className={`hero sect-spacer ${isVisible ? "active" : ''}`}>
+    <div className={`hero sect-spacer ${page.className ? page.className : ""} ${isVisible ? "active" : ''}`}>
       <Container>
         <Row>
           <Col lg={6} className="d-flex align-items-center justify-content-center justify-content-lg-start">
             <div className="">
               <div className="position-relative mt-5 mb-5 mt-lg-0 mb-lg-0">
-                <div className="shape-homehero-2"><img src="../../assets/img/dots-medium-4.svg" alt="" /></div>
+                {page.isSmallShape ? <div className="shape-homehero-4"><img src="../../assets/img/dots-medium-3.svg" alt="" /></div> : <div className="shape-homehero-2"><img src="../../assets/img/dots-medium-4.svg" alt="" /></div> }
                 <div className="mb-2 text-center text-md-left"><span className="text-label">{page.label}</span></div>
                 {!page.strings && <h1 className={`mb-4 text-center text-md-left ${page.titleCL ? page.titleCL : "mw-550"}`} dangerouslySetInnerHTML={{ __html: page.title }}></h1>}
                 {page.strings &&
@@ -70,7 +70,7 @@ const Hero = ({ isVisible, page }) => {
             </div>
           </Col>
           <Col lg={6}>
-            <div className="preset-img-5">
+            <div className={`${page.variant == "fluid" ? "preset-img-1" : "preset-img-5"}`}>
               <img src={`../../assets/img/${page.img}`} alt="" />
             </div>
           </Col>

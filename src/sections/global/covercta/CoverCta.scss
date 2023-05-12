@@ -1,0 +1,77 @@
+@import "../../../styles/global/variables.scss";
+
+$cover-cta-spacer: 3rem;
+
+.cover-cta {
+
+  &-logo {
+    height: 35px;
+    width: auto;
+  }
+
+  .app-icon {
+    color: $white;
+    transition: opacity $transition ease;
+  }
+
+  &-inner {
+    position: relative;
+    padding-top: $cover-cta-spacer;
+    padding-bottom: $cover-cta-spacer;
+
+    .cover-cta-bg {
+      width: 60%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 0;
+      background-position: center center !important;
+      background-size: cover !important;
+    }
+
+    .cover-cta-content {
+      padding: $cover-cta-spacer;
+      width: 50%;
+      height: 100%;
+      display: block;
+      background-position: center center !important;
+      background-size: cover !important;
+      margin-left: 50%;
+      color: $white;
+      position: relative;
+      z-index: 1;
+      cursor: pointer;
+
+      &:hover {
+        .app-icon {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    .cover-cta-bg {
+      width: 80%;
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    .cover-cta-content {
+      width: 80%;
+      margin-left: 20%;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    .cover-cta-bg {
+      width: 100%;
+    }
+    .cover-cta-content {
+      width: 90%;
+      padding: $cover-cta-spacer/2;
+      margin-left: 5%;
+    }
+  }
+}

@@ -1,17 +1,11 @@
 export const page = {
-  seo: {
-    title: "Accern - Auto Taxonomy",
-    meta: [
-      {name: "description", content: "Accern - Auto Taxonomy"},
-      {property: "og:title", content: "Accern - Auto Taxonomy"}
-    ],
-  },
   hero: {
     label: "AutoML Taxonomy",
     title: "Build industry taxonomy using <strong>AutoML</strong>",
     titleCL: "mw-580",
     description: "Accern provides a taxonomy generator that can help you build specific industry taxonomy at scale using AutoML. You can also use our pre-built taxonomy to get started immediately, or simply upload your own.",
     img: "taxonomy-illustration.svg",
+    variant: "fluid",
     button: {
       name: "GET A DEMO",
       modal: "request"

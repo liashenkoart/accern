@@ -1,11 +1,4 @@
 export const page = {
-  seo: {
-    title: "Accern - Banking Solution ",
-    meta: [
-      { name: "description", content: "Accern - Banking Solution" },
-      { property: "og:title", content: "Accern - Banking Solution" }
-    ],
-  },
   hero: {
     label: "Accern for Banking",
     title: "<strong>AI-powered insights</strong> for Retail, Commercial and Investment Banks.",

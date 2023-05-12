@@ -13,9 +13,11 @@ import { settings } from "../data/settings";
 import Loader from "../components/loader/Loader";
 import Scrollbar from 'react-smooth-scrollbar';
 import ReactDynamicImport from "react-dynamic-import";
-import RequestTrial from "../components/requesttrial";
-import RequestSuccess from "../components/requesttrial/success";
-import GetInTouch from "../components/getintouch";
+import Modals from "../components/modals";
+import SmoothScrollbar from 'smooth-scrollbar';
+import StopScrollPlugin from "../utils/plugins/ScrollStop";
+
+SmoothScrollbar.use(StopScrollPlugin);
 
 const _hsq = window._hsq = window._hsq || [];
 
@@ -49,6 +51,10 @@ const App = () => {
 
   const [page, setPage] = useState({ currentPage: window.location.pathname, previousPage: null });
   const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    if(scrollB) state.isSelectFocus ? scrollB.scrollbar.updatePluginOptions('stop', { open: true }) : scrollB.scrollbar.updatePluginOptions('stop', { open: false });
+  },[state.isSelectFocus])
 
   useEffect(() => {
 
@@ -116,7 +122,7 @@ const App = () => {
   const importComponent = (name, link, data, i) => {
     const loader = () => import(`../pages/${name}`);
     const Component = ReactDynamicImport({ loader });
-
+    
     return <Component key={`r-${i}`} path={link} data={data}/>
   }
 
@@ -145,8 +151,8 @@ const App = () => {
 
   return (
     <Context.Provider value={{ dispatchLayout, pages, dispatchPages, notification, dispatchNotifi, modals, dispatchModals, userMail, dispatchUserMail, scroll, page, scrollB }}>
-      <Header scroll={scroll} state={state.headerState} isFluid={state.isFluid} />
-      <Scrollbar className="scoll-bar" ref={e => { if (e) { setScrollB(e); e.scrollbar.track.xAxis.element.remove(); } }} onScroll={e=>setScroll(e.offset.y)}>
+      <Header state={state.headerState} isFluid={state.isFluid} />
+      <Scrollbar className="scoll-bar" ref={e => { if (e) { setScrollB(e); e.scrollbar.track.xAxis.element.remove(); } }}>
         <div className="app">
           <ContentLoader preloadStatus={state.preloadStatus} />
           <PosedRouter isPause={state.isPause} isDisabledPreloader={state.isDisabledPreloader}>
@@ -154,9 +160,7 @@ const App = () => {
           </PosedRouter>
         </div>
       </Scrollbar>
-      <RequestTrial />
-      <RequestSuccess />
-      <GetInTouch />
+      <Modals />
       <Loader loaderState={state.loadderState} />
     </Context.Provider >
   );

@@ -72,6 +72,17 @@
   }
 }
 
+.preset-icon-lg {
+  font-size: 2.875rem;
+  height: 92px;
+  width: auto;
+}
+
+.preset-icon-md {
+  height: 52px;
+  width: auto;
+}
+
 .preset-illustration {
   img {
     max-width: 100%;
@@ -139,6 +150,12 @@
     img {
       width: 100%;
     }
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .preset-icon-lg {
+    height: 62px;
   }
 }
 

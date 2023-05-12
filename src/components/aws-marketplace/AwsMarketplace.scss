@@ -30,5 +30,13 @@ $aws-spacer: 2rem;
 
   @include media-breakpoint-down(md) {
     width: 100%;
+
+    &-fields {
+      padding-left: $aws-spacer;
+  
+      >* {
+        padding: $aws-spacer 0;
+      }
+    }
   }
 }

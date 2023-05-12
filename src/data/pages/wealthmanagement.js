@@ -1,11 +1,4 @@
 export const page = {
-  seo: {
-    title: "Accern - Wealth Management ",
-    meta: [
-      { name: "description", content: "Accern - Wealth Management" },
-      { property: "og:title", content: "Accern - Wealth Management" }
-    ],
-  },
   hero: {
     label: "Accern for Wealth Management",
     title: "<strong>AI-powered insights</strong> for Wealth Advisors and Retail Brokers.",

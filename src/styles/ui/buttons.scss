@@ -6,7 +6,9 @@
   font-size: 0.875rem;
   letter-spacing: 0.164375rem;
   color: $white;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   text-transform: uppercase;
   position: relative;
   outline: none;
@@ -14,6 +16,22 @@
   line-height: $input-btn-line-height;
   padding: $input-btn-padding-y $input-btn-padding-x;
   transition: all $transition ease;
+
+  .app-icon {
+    margin-left:1rem;
+    font-size: 0.75rem;
+  }
+
+  &.btn-neutral {
+    background-color: rgba($primary, 0.1);
+    color: $primary;
+    border-color: transparent;
+
+    &:hover {
+      background-color: $primary;
+      color: $white;
+    }
+  }
 
   &[disabled] {
     pointer-events: none;
@@ -51,12 +69,42 @@
     }
   }
 
+  &.btn-outline-light {
+    background-color: transparent;
+    color: $primary;
+    border-color: $border-color;
+
+    &:hover {
+      background-color: $primary;
+      color: $white;
+    }
+  }
+
   @include media-breakpoint-down(lg) {
     font-size: 0.8125rem;
   }
 
   @include media-breakpoint-down(sm) {
     width: 100%;
+  }
+}
+
+.btn-filter {
+  background-color: rgba($primary, 0.1);
+  color: $primary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: all $transition ease;
+
+  &:hover {
+    background-color: $primary;
+    color: $white;
   }
 }
 

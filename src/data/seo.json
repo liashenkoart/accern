@@ -1,0 +1,244 @@
+{
+  "/": {
+    "title": "Accern",
+    "meta": [
+      { "name": "description", "content": "Accern" },
+      { "property": "og:title", "content": "Accern" },
+      { "property": "og:description", "content": "We are accelerating AI adoption for enterprises with a no-code development platform."},
+      { "property": "og:image", "content": "logo-thumb.png" }
+    ]
+  },
+  "/data": {
+    "title": "Accern - Data",
+    "meta": [
+      { "name": "description", "content": "Select Datasets for Your AI Solutions" },
+      { "property": "og:title", "content": "Accern - Data" },
+      { "property": "og:description", "content": "Select Datasets for Your AI Solutions"},
+      { "property": "og:image", "content": "data-illustration.png" }
+    ]
+  },
+  "/adaptive-nlp":{
+    "title": "Accern - Adaptive NLP Models ",
+    "meta": [
+      { "name": "description", "content": "The Largest Collection of Adaptive NLP Models" },
+      { "property": "og:title", "content": "Accern - Adaptive NLP Models " },
+      { "property": "og:description", "content": "The Largest Collection of Adaptive NLP Models"},
+      { "property": "og:image", "content": "adaptive-models-illustration.png" }
+    ]
+  },
+  "/asset-management":{
+    "title": "Accern - Asset Management",
+    "meta": [
+      { "name": "description", "content": "Make better investment decisions with AI-powered insights for Active Managers, Passive Managers and Hedge Funds." },
+      { "property": "og:title", "content": "Accern - Asset Management" },
+      { "property": "og:description", "content": "Make better investment decisions with AI-powered insights for Active Managers, Passive Managers and Hedge Funds."},
+      { "property": "og:image", "content": "asset-management-img-1-thumb.png" }
+    ]
+  },
+  "/asset-owners":{
+    "title": "Accern - Asset Owners",
+    "meta": [
+      { "name": "description", "content": "Asset Owners" },
+      { "property": "og:title", "content": "Accern - Asset Owners" },
+      { "property": "og:description", "content": "Asset Owners"}
+    ]
+  },
+  "/auto-taxonomy":{
+    "title": "Accern - Auto Taxonomy",
+    "meta": [
+      { "name": "description", "content": "Build industry taxonomy using AutoML" },
+      { "property": "og:title", "content": "Accern - Auto Taxonomy" },
+      { "property": "og:description", "content": "Build industry taxonomy using AutoML"},
+      { "property": "og:image", "content": "taxonomy-illustration-thumb.png" }
+    ]
+  },
+  "/aws-registration":{
+    "title": "Accern - Aws Registration",
+    "meta": [
+      { "name": "description", "content": "Accern AI Platform Registration" },
+      { "property": "og:title", "content": "Accern - Aws Registration" },
+      { "property": "og:description", "content": "Accern AI Platform Registration"},
+      { "property": "og:image", "content": "logo-thumb.png" }
+    ]
+  },
+  "/banking":{
+    "title": "Accern - Banking",
+    "meta": [
+      { "name": "description", "content": "AI-powered insights for Retail, Commercial and Investment Banks." },
+      { "property": "og:title", "content": "Accern - Banking" },
+      { "property": "og:description", "content": "AI-powered insights for Retail, Commercial and Investment Banks."},
+      { "property": "og:image", "content": "banking-img-1-thumb.png" }
+    ]
+  },
+  "/banking-solution":{
+    "title": "Accern - Banking Solution",
+    "meta": [
+      { "name": "description", "content": "AI-powered insights for Retail, Commercial and Investment Banks." },
+      { "property": "og:title", "content": "Accern - Banking Solution" },
+      { "property": "og:description", "content": "AI-powered insights for Retail, Commercial and Investment Banks."},
+      { "property": "og:image", "content": "banking-img-1-thumb.png" }
+    ]
+  },
+  "/blog":{
+    "title": "Accern - Blog",
+    "meta": [
+      { "name": "description", "content": "Blog" },
+      { "property": "og:title", "content": "Accern - Blog" },
+      { "property": "og:description", "content": "Blog"},
+      { "property": "og:image", "content": "logo-thumb.png" }
+    ]
+  },
+  "/blog-list":{
+    "title": "Accern - Blog List",
+    "meta": [
+      { "name": "description", "content": "Blog List" },
+      { "property": "og:title", "content": "Accern - Blog" },
+      { "property": "og:description", "content": "Blog List"},
+      { "property": "og:image", "content": "logo-thumb.png" }
+    ]
+  },
+  "/company":{
+    "title": "Accern - Company",
+    "meta": [
+      { "name": "description", "content": "A world-class, data-driven team" },
+      { "property": "og:title", "content": "Accern - Company" },
+      { "property": "og:description", "content": "A world-class, data-driven team"},
+      { "property": "og:image", "content": "company-illustration-thumb.png" }
+    ]
+  },
+  "/contact":{
+    "title": "Accern - Contact",
+    "meta": [
+      { "name": "description", "content": "Contact Us" },
+      { "property": "og:title", "content": "Accern - Contact" },
+      { "property": "og:description", "content": "Contact Us"},
+      { "property": "og:image", "content": "contact-thumb.png" }
+    ]
+  },
+  "/deployments":{
+    "title": "Accern - Deployments",
+    "meta": [
+      { "name": "description", "content": "Secured Flexible Deployment Options" },
+      { "property": "og:title", "content": "Accern - Deployments" },
+      { "property": "og:description", "content": "Secured Flexible Deployment Options"},
+      { "property": "og:image", "content": "deployment-illustration-thumb.png" }
+    ]
+  },
+  "/documentation":{
+    "title": "Accern - Product Documentation",
+    "meta": [
+      { "name": "description", "content": "Product Documentation" },
+      { "property": "og:title", "content": "Accern - Product Documentation" },
+      { "property": "og:description", "content": "Product Documentation"},
+      { "property": "og:image", "content": "logo-thumb.png" }
+    ]
+  },
+  "/insurance":{
+    "title": "Accern - Insurance",
+    "meta": [
+      { "name": "description", "content": "AI-powered insights for risk management, underwriting, claims, and distribution" },
+      { "property": "og:title", "content": "Accern - Insurance" },
+      { "property": "og:description", "content": "AI-powered insights for risk management, underwriting, claims, and distribution"},
+      { "property": "og:image", "content": "insurance-img-1-thumb.png" }
+    ]
+  },
+  "/integrations":{
+    "title": "Accern - Integrations",
+    "meta": [
+      { "name": "description", "content": "Seamlessly Integrate Accern in your workflow" },
+      { "property": "og:title", "content": "Accern - Integrations" },
+      { "property": "og:description", "content": "Seamlessly Integrate Accern in your workflow"},
+      { "property": "og:image", "content": "integrations-illustrations-thumb.png" }
+    ]
+  },
+  "/marketplace":{
+    "title": "Accern - Marketplace",
+    "meta": [
+      { "name": "description", "content": "AI Use Cases" },
+      { "property": "og:title", "content": "Accern - Marketplace" },
+      { "property": "og:description", "content": "AI Use Cases"},
+      { "property": "og:image", "content": "logo-thumb.png" }
+    ]
+  },
+  "/newsroom":{
+    "title": "Accern - News Room",
+    "meta": [
+      { "name": "description", "content": "Stay up to date with Accern's company news and media coverage." },
+      { "property": "og:title", "content": "Accern - News Room" },
+      { "property": "og:description", "content": "Stay up to date with Accern's company news and media coverage."},
+      { "property": "og:image", "content": "logo-thumb.png" }
+    ]
+  },
+  "/support_policy":{
+    "title": "Accern - Technical Support and Maintenance Policy",
+    "meta": [
+      { "name": "description", "content": "Technical Support and Maintenance Policy" },
+      { "property": "og:title", "content": "Accern - Technical Support and Maintenance Policy" },
+      { "property": "og:description", "content": "Technical Support and Maintenance Policy"},
+      { "property": "og:image", "content": "logo-thumb.png" }
+    ]
+  },
+  "/terms_of_use":{
+    "title": "Accern - Terms of Use",
+    "meta": [
+      { "name": "description", "content": "Terms of Use" },
+      { "property": "og:title", "content": "Accern - Terms of Use" },
+      { "property": "og:description", "content": "Terms of Use"},
+      { "property": "og:image", "content": "logo-thumb.png" }
+    ]
+  },
+  "/pricing":{
+    "title": "Accern - Pricing",
+    "meta": [
+      { "name": "description", "content": "Flexible plans that grow with you." },
+      { "property": "og:title", "content": "Accern - Pricing" },
+      { "property": "og:description", "content": "Flexible plans that grow with you."},
+      { "property": "og:image", "content": "logo-thumb.png" }
+    ]
+  },
+  "/private-markets":{
+    "title": "Accern - Private Markets",
+    "meta": [
+      { "name": "description", "content": "AI-powered insights for Private Equity and Venture Capital." },
+      { "property": "og:title", "content": "Accern - Private Markets" },
+      { "property": "og:description", "content": "AI-powered insights for Private Equity and Venture Capital."},
+      { "property": "og:image", "content": "private-markets-img-1-thumb.png" }
+    ]
+  },
+  "/quantitative-managers":{
+    "title": "Accern - Quantitative Managers",
+    "meta": [
+      { "name": "description", "content": "Quantitative Managers" },
+      { "property": "og:title", "content": "Accern - Quantitative Managers" },
+      { "property": "og:description", "content": "Quantitative Managers"},
+      { "property": "og:image", "content": "logo-thumb.png" }
+    ]
+  },
+  "/user-story-next-alpha":{
+    "title": "Accern - Next Alpha",
+    "meta": [
+      { "name": "description", "content": "Accern assists Next Alpha in becoming one of the best-performing hedge funds" },
+      { "property": "og:title", "content": "Accern - Next Alpha" },
+      { "property": "og:description", "content": "Accern assists Next Alpha in becoming one of the best-performing hedge funds"},
+      { "property": "og:image", "content": "next-alpha-thumb.png" }
+    ]
+  },
+  "/user-story-fundomate":{
+    "title": "Accern - Fundomate",
+    "meta": [
+      { "name": "description", "content": "Accern helps Fundomate automate business funding and assess risk." },
+      { "property": "og:title", "content": "Accern - Fundomate" },
+      { "property": "og:description", "content": "Accern helps Fundomate automate business funding and assess risk."},
+      { "property": "og:image", "content": "fundomate-thumb.png" }
+    ]
+  },
+  "/wealth-management":{
+    "title": "Accern - Wealth Management",
+    "meta": [
+      { "name": "description", "content": "AI-powered insights for Wealth Advisors and Retail Brokers." },
+      { "property": "og:title", "content": "Accern - Wealth Management" },
+      { "property": "og:description", "content": "AI-powered insights for Wealth Advisors and Retail Brokers."},
+      { "property": "og:image", "content": "wealth-management-img-1-thumb.png" }
+    ]
+  }
+}

@@ -2,6 +2,10 @@
 
 .open-positions {
 
+  .acr-select__control {
+    border-color: transparent;
+  }
+
   .open-position-item {
     padding: 3rem;
     border: 1px solid $border-color;

@@ -1,0 +1,17 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="16" cy="16" r="16" fill="#FF9874"/>
+<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="32" height="32">
+<circle cx="16" cy="16" r="16" fill="white"/>
+</mask>
+<g mask="url(#mask0)">
+<g style="mix-blend-mode:hard-light" opacity="0.597726">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M6.4428 34.6738L2.99106 28.7209L24.9423 16.1021L28.3941 22.055L6.4428 34.6738Z" fill="#D3582E"/>
+</g>
+<g style="mix-blend-mode:hard-light">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M16.4759 -9.72961L22.4416 -6.30014L5.7407 28.9371L-0.225037 25.5076L16.4759 -9.72961Z" fill="white"/>
+</g>
+<g style="mix-blend-mode:hard-light">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9.85328 3.50188L15.8062 0.0501424L28.425 22.0014L22.4721 25.4531L9.85328 3.50188Z" fill="#D3582E"/>
+</g>
+</g>
+</svg>

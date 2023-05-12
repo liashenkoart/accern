@@ -9,10 +9,11 @@ import { page } from "../data/pages/careers";
 import Seo from "../components/seo";
 import OpenPositions from "../sections/global/openpositions";
 import GetStarted from "../components/getstarted";
+import SEO from "../data/seo.json";
 
 import VisibilitySensor from '../utils/react-visibility-sensor';
 
-const Careers = () => {
+const Careers = ({path}) => {
 
   const sections = [
     {component: Hero, page: page.hero},
@@ -28,7 +29,7 @@ const Careers = () => {
 
   return (
     <div>
-      <Seo seo={page.seo} />
+      <Seo seo={SEO[path] ? SEO[path] : SEO["/"]} />
       {sections.map((section, i) => (
         <VisibilitySensor partialVisibility={true} once={true} key={`p-${i}`}>
           {({ isVisible }) =>

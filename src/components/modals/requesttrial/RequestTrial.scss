@@ -1,0 +1,9 @@
+@import "../../../styles/global/variables.scss";
+
+.mt-request {
+    margin-top: 7rem;
+
+    @include media-breakpoint-down(md) {
+        margin-top: 2rem;
+    }
+}

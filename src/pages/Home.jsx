@@ -11,12 +11,11 @@ import BlockAdv from "../sections/global/blockadv";
 import Blocks from "../sections/global/blocks";
 import { page } from "../data/pages/homepage";
 import Seo from "../components/seo";
-import DownloadFile from "../components/downloadfile";
-import RequestCaseStudy from "../components/requestcasestudy";
+import SEO from "../data/seo.json";
 
 import VisibilitySensor from '../utils/react-visibility-sensor';
 
-const Home = () => {
+const Home = ({path}) => {
 
   const sections = [
     { component: HomeHero, page:page.hero },
@@ -33,7 +32,7 @@ const Home = () => {
 
   return (
     <div>
-      <Seo seo={page.seo} />
+      <Seo seo={SEO[path] ? SEO[path] : SEO["/"]} />
       {sections.map((section, i) => (
         <VisibilitySensor partialVisibility={true} once={true} key={`p-${i}`}>
           {({ isVisible }) =>
@@ -41,8 +40,6 @@ const Home = () => {
           }
         </VisibilitySensor>
       ))}
-      <DownloadFile />
-      <RequestCaseStudy />
     </div>
   );
 }

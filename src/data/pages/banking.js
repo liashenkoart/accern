@@ -1,11 +1,4 @@
 export const page = {
-  seo: {
-    title: "Accern - Banking",
-    meta: [
-      {name: "description", content: "Accern - Banking"},
-      {property: "og:title", content: "Accern - Banking"}
-    ],
-  },
   hero: {
     label: "Banking",
     title: "Explore our",

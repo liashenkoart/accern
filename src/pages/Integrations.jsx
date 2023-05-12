@@ -5,10 +5,11 @@ import Blocks from "../sections/global/blocks";
 import ThemedBlock from "../sections/global/themedblock";
 import { page } from "../data/pages/integrations";
 import Seo from "../components/seo";
+import SEO from "../data/seo.json";
 
 import VisibilitySensor from '../utils/react-visibility-sensor';
 
-const Integrations = () => {
+const Integrations = ({path}) => {
 
   const sections = [
     {component: Hero, page: page.hero},
@@ -20,7 +21,7 @@ const Integrations = () => {
 
   return (
     <div>
-      <Seo seo={page.seo} />
+      <Seo seo={SEO[path] ? SEO[path] : SEO["/"]} />
       {sections.map((section, i) => (
         <VisibilitySensor partialVisibility={true} once={true} key={`p-${i}`}>
           {({ isVisible }) =>

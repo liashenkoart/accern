@@ -10,6 +10,7 @@ header {
   display: flex !important;
   align-items: center;
   z-index: 10;
+  border-bottom: 1px solid $border-color;
   transition: all $transition * 2 cubic-bezier(0.175, 0.885, 0.32, 1.2);
 
   &.hide {
@@ -32,8 +33,13 @@ header {
   }
 
   .nav-label-padding {
-    padding-top: 3rem;
-    padding-bottom: 2rem;
+    padding-top: 2.4rem;
+    padding-bottom: 1.2rem;
+  }
+
+  .nav-label-padding-inner {
+    padding-top: 1rem;
+    padding-bottom: 1.2rem;
   }
 
   .nav-collapse {
@@ -105,20 +111,66 @@ header {
     overflow: hidden;
     transition: all $transition * 3 $transition-timing;
 
-    &::after {
-      content: "";
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 40px;
-      background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0) 100%);
-      background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0) 100%);
-      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0) 100%);
-      opacity: 0;
-      transition: opacity $transition ease;
-      transition-delay: $transition * 1.5;
+    &.auto-width {
+      .nav-sub-link-icon {
+        margin-right: 0.5rem;
+        img {
+          height: 1.4rem;
+        }
+      }
+      .column-link-cont {
+        width: 320px;
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
+      &::after{
+        display: none;
+      }
+      .nav-sub {
+        display: inline-block;
+        width: auto;
+        position: absolute;
+        transform: translateX(-50%) translateY(-100%);
+      }
+    }
+
+    &.simple {
+      &::after{
+        display: none;
+      }
+
+      .nav-simple-link {
+        h4 {
+          color: $darker;
+        }
+
+        &:hover {
+          h4 {
+            color: $dark;
+          }
+        }
+      }
+
+      .nav-sub {
+        width: 270px;
+        position: absolute;
+        padding: 1.2rem 0;
+        transform: translateX(-50%) translateY(-100%);
+
+        // &::after {
+        //   content: "";
+        //   display: block;
+        //   position: absolute;
+        //   background: url(../../assets/img/shape-nav.svg);
+        //   opacity: 1;
+        //   height: 10px;
+        //   background-position: center center;
+        //   background-repeat: no-repeat;
+        //   top: 0;
+        //   left: 0;
+        //   width: 100%;
+        // }
+      }
     }
   }
 
@@ -128,6 +180,18 @@ header {
     transition: transform $transition * 3 $transition-timing, box-shadow $transition * 3 ease;
     transform: translateY(-100%);
     box-shadow: none;
+
+    // &::after {
+    //   content: "";
+    //   display: block;
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   width: 100%;
+    //   height: 10px;
+    //   background: url(../../assets/img/shape-nav.svg);
+    //   background-position: center center;
+    // }
 
     .column-link-cont {
       opacity: 1;
@@ -143,12 +207,6 @@ header {
       transform: translateY(-50px);
       transition: all $transition ease;
       transition-delay: $transition * 2;
-    }
-
-    &:hover {
-      .column-link-cont {
-        opacity: 0.7;
-      }
     }
   }
 
@@ -172,6 +230,76 @@ header {
     }
   }
 
+  .nav-sub-shape {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
+  .nav-simple-link {
+    padding: 1rem 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &.fixed-arrow {
+      h4 {
+        color: $darker;
+      }
+      &:hover {
+        justify-content: space-between;
+
+        h4 {
+          color: $primary;
+        }
+      }
+
+      .nav-sub-link-arrow {
+        margin-left: 2rem;
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    h4 {
+      font-size: 1rem;
+      color: $dark;
+      transition: color $transition ease;
+    }
+
+    .nav-sub-link-icon {
+      width: 2rem;
+      height: 2rem;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      margin-right: 1.2rem;
+
+      img{
+        height: 2rem;
+        width: auto;
+        max-width: 2rem;
+      }
+    }
+
+    .nav-sub-link-arrow {
+      color: $primary;
+      opacity: 0;
+      transform: translateX(-2rem);
+      transition: all $transition ease;
+    }
+
+    &:hover {
+      .nav-sub-link-arrow {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      h4 {
+        color: $dark;
+      }
+    }
+  }
+
   .nav-sub-mask {
     &.active {
       height: 100vh;
@@ -180,6 +308,26 @@ header {
       &::after {
         transition-delay: 0s;
         opacity: 1;
+      }
+
+      &.simple {
+        .nav-sub {
+          transform: translateY(0) translateX(-50%);
+
+          @media only screen and (max-height: 700px) {
+            height: auto;
+          }
+        }
+      }
+
+      &.auto-width {
+        .nav-sub {
+          transform: translateY(0) translateX(-50%);
+
+          @media only screen and (max-height: 700px) {
+            height: auto;
+          }
+        }
       }
 
       .nav-sub {
@@ -248,7 +396,7 @@ header {
     &::after {
       content: "";
       display: block;
-      width: 100vw;
+      width:100%;
       position: absolute;
       top: 0;
       left: 0;
@@ -340,6 +488,10 @@ header {
     top: 0;
     padding-top: 0;
 
+    .nav-sub-shape {
+      display: none;
+    }
+
     &.hide {
       transform: translateY(0);
     }
@@ -368,11 +520,50 @@ header {
       }
     }
 
+    .nav-simple-link {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
     .nav-sub-mask {
       position: relative;
       z-index: 1;
       top: 0;
       width: 100%;
+
+      &.auto-width {
+        .nav-sub {
+          width: 100%;
+          transform: translateX(0) translateY(-100%);
+          position: relative;
+          left: 0 !important;
+
+          .column-link-cont {
+            width: 100%;
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+            padding-top: 0.5rem !important;
+
+            &.nav-sub-cover {
+              padding-top: 0 !important;
+            }
+          }
+        }
+      }
+
+      &.simple {
+        .nav-sub {
+          width: 100%;
+          transform: translateX(0) translateY(-100%);
+          position: relative;
+          left: 0 !important;
+
+          .column-link-cont {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+          }
+        }
+      }
 
       .column-link-cont {
         opacity: 1 !important;
@@ -403,6 +594,18 @@ header {
       &.active {
         height: auto;
         max-height: 5000px;
+
+        &.simple {
+          .nav-sub {
+            transform: translateX(0) translateY(0);
+          }
+        }
+
+        &.auto-width {
+          .nav-sub {
+            transform: translateX(0) translateY(0);
+          }
+        }
 
         .nav-sub {
           box-shadow: none;

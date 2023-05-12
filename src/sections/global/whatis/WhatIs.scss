@@ -1,0 +1,13 @@
+@import "../../../styles/global/variables.scss";
+
+.what-is {
+  position: relative;
+
+  &-dots {
+    position: absolute;
+    z-index: 0;
+    left: -100px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

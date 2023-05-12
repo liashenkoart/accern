@@ -3,10 +3,11 @@ import Hero from "../sections/global/hero";
 import Footer from "../sections/global/footer";
 import { page } from "../data/pages/banking";
 import Seo from "../components/seo";
+import SEO from "../data/seo.json";
 
 import VisibilitySensor from '../utils/react-visibility-sensor';
 
-const Deployments = () => {
+const Banking = ({path}) => {
 
   const sections = [
     {component: Hero, page: page.hero},
@@ -15,7 +16,7 @@ const Deployments = () => {
 
   return (
     <div>
-      <Seo seo={page.seo} />
+      <Seo seo={SEO[path] ? SEO[path] : SEO["/"]} />
       {sections.map((section, i) => (
         <VisibilitySensor partialVisibility={true} once={true} key={`p-${i}`}>
           {({ isVisible }) =>
@@ -27,4 +28,4 @@ const Deployments = () => {
   );
 }
 
-export default Deployments;
+export default Banking;

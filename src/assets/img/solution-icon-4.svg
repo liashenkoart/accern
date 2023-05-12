@@ -1,0 +1,20 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="24" cy="24" r="24" fill="#FF94B8"/>
+<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48">
+<circle cx="24" cy="24" r="24" fill="white"/>
+</mask>
+<g mask="url(#mask0)">
+<g style="mix-blend-mode:hard-light">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M-7.3359 41.0107L-12.5135 32.0814L20.4134 13.1531L25.591 22.0824L-7.3359 41.0107Z" fill="#CA3F6E"/>
+</g>
+<g style="mix-blend-mode:hard-light">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M45.714 -8.59448L54.6626 -3.45027L35.6112 29.4055L26.6626 24.2613L45.714 -8.59448Z" fill="white"/>
+</g>
+<g style="mix-blend-mode:hard-light">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M27.714 22.4055L36.6626 27.5497L17.6112 60.4055L8.6626 55.2613L27.714 22.4055Z" fill="white"/>
+</g>
+<g style="mix-blend-mode:hard-light">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M-2.22018 -5.74728L6.70914 -10.9249L25.6374 22.002L16.7081 27.1796L-2.22018 -5.74728Z" fill="#B82A5A"/>
+</g>
+</g>
+</svg>

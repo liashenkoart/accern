@@ -4,10 +4,11 @@ import { page } from "../data/pages/contact";
 import Seo from "../components/seo";
 import SimpleBlocks from "../sections/global/simpleblocks";
 import Footer from "../sections/global/footer";
+import SEO from "../data/seo.json";
 
 import VisibilitySensor from '../utils/react-visibility-sensor';
 
-const Contact = () => {
+const Contact = ({path}) => {
 
   const sections = [
     { component: FormHero, page:page.hero },
@@ -17,7 +18,7 @@ const Contact = () => {
 
   return (
     <div>
-      <Seo seo={page.seo} />
+      <Seo seo={SEO[path] ? SEO[path] : SEO["/"]} />
       {sections.map((section, i) => (
         <VisibilitySensor partialVisibility={true} once={true} key={`p-${i}`}>
           {({ isVisible }) =>

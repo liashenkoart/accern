@@ -1,11 +1,4 @@
 export const page = {
-  seo: {
-    title: "Accern - Integrations",
-    meta: [
-      { name: "description", content: "Accern - Integrations" },
-      { property: "og:title", content: "Accern - Integrations" }
-    ],
-  },
   hero: {
     label: "Integrations",
     title: "Seamlessly <strong>Integrate Accern</strong> in your workflow",

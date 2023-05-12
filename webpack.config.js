@@ -64,7 +64,7 @@ module.exports = {
             }
           }
         ]
-      }
+      },
     ]
   },
   resolve: { extensions: ["*", ".js", ".jsx"] },
@@ -85,6 +85,8 @@ module.exports = {
       { from: path.resolve('src/assets'), to: path.resolve('dist/assets') },
       { from: path.resolve('src/index.html'), to: path.resolve('dist/index.html') },
       { from: path.resolve('src/form-process.php'), to: path.resolve('dist/form-process.php') },
+      { from: path.resolve('src/index.php'), to: path.resolve('dist/index.php') },
+      { from: path.resolve('src/data/seo.json'), to: path.resolve('dist/seo.json') },
     ])
   ]
 };

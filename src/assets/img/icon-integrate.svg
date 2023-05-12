@@ -1,0 +1,11 @@
+<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="17.9533" cy="16.2734" r="2.12667" stroke="#36A0FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<g opacity="0.4">
+<circle cx="10.3467" cy="16.2732" r="2.12667" transform="rotate(-180 10.3467 16.2732)" stroke="#36A0FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="10.3467" cy="3.12675" r="2.12667" transform="rotate(-180 10.3467 3.12675)" fill="#36A0FF" stroke="#36A0FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10.3467 14.1467L10.3467 5.64006" stroke="#36A0FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<path d="M14.4089 7.7666H16.5356C17.3186 7.7666 17.9533 8.40136 17.9533 9.18438V14.1466" stroke="#36A0FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle r="2.12667" transform="matrix(-1 0 0 1 3.12667 16.2734)" stroke="#36A0FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6.41333 7.7666H4.28667C3.50365 7.7666 2.86889 8.40136 2.86889 9.18438V14.1466" stroke="#36A0FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -8,11 +8,11 @@ import Quote from "../sections/global/quote";
 import Rows from "../sections/global/rows";
 import CTA from "../sections/global/cta";
 import Related from "../sections/global/related";
-import DownloadFile from "../components/downloadfile";
+import SEO from "../data/seo.json";
 
 import VisibilitySensor from '../utils/react-visibility-sensor';
 
-const UserStory = ({data}) => {
+const UserStory = ({data, path}) => {
 
   const sections = [
     { component: CaseStudies, page: page[data].caseStudies },
@@ -26,7 +26,7 @@ const UserStory = ({data}) => {
 
   return (
     <div>
-      <Seo seo={page[data].seo} />
+      <Seo seo={SEO[path] ? SEO[path] : SEO["/"]} />
       {sections.map((section, i) => (
         <VisibilitySensor partialVisibility={true} once={true} key={`p-${i}`}>
           {({ isVisible }) =>
@@ -34,7 +34,6 @@ const UserStory = ({data}) => {
           }
         </VisibilitySensor>
       ))}
-      <DownloadFile />
     </div>
   );
 }

@@ -213,14 +213,14 @@ const Blocks = ({ isVisible, page }) => {
                         {group.columns.map((column, i) => (
                           column.link ?
                             column.isExternal ?
-                              <a href={column.link} key={`ic-${i}`} target="_blank" className={`block as-link shadow-adv`}>
+                              <a href={column.link} key={`ic-${i}`} target="_blank" className={`block as-link ${page.version == "team" ? "team-block" : "shadow-adv"}`}>
                                 {renderContent(column, page)}
                               </a>
                               :
-                              <Link key={`ic-${i}`} className={`block as-link shadow-adv`} to={column.link}>
+                              <Link key={`ic-${i}`} className={`block as-link ${page.version == "team" ? "team-block" : "shadow-adv"}`} to={column.link}>
                                 {renderContent(column, page)}
                               </Link> :
-                            <div key={`ic-${i}`} className={`block shadow-adv`}>
+                            <div key={`ic-${i}`} className={`block ${page.version == "team" ? "team-block" : "shadow-adv"}`}>
                               {renderContent(column, page)}
                             </div>
                         ))}
@@ -229,18 +229,18 @@ const Blocks = ({ isVisible, page }) => {
                   ))}
                 </div>
               :
-              <div className={`blocks margin-negative-2 ${page.isReducedMargin ? "mt-4" : "mt-5"} ${page.columnsType ? page.columnsType : `columns-${page.columns.length < 5 ? page.columns.length : 5}`}`}>
+              <div className={`blocks ${page.version && page.version == "team" ? "margin-negative-3" : "margin-negative-2"} ${page.isReducedMargin ? "mt-4" : "mt-5"} ${page.version && page.version == "team" ? "team-blocks" : ""} ${page.columnsType ? page.columnsType : `columns-${page.columns.length < 5 ? page.columns.length : 5}`}`}>
                 {page.columns.map((column, i) => (
                   column.link ?
                     column.isExternal ?
-                      <a href={column.link} key={`ic-${i}`} target="_blank" className={`block as-link shadow-adv ${i < page.columns.length - 1 ? "" : "last"}`}>
+                      <a href={column.link} key={`ic-${i}`} target="_blank" className={`block as-link ${page.version == "team" ? "team-block" : "shadow-adv"} ${i < page.columns.length - 1 ? "" : "last"}`}>
                         {renderContent(column, page)}
                       </a>
                       :
-                      <Link key={`ic-${i}`} className={`block as-link shadow-adv ${i < page.columns.length - 1 ? "" : "last"}`} to={column.link}>
+                      <Link key={`ic-${i}`} className={`block as-link ${page.version == "team" ? "team-block" : "shadow-adv"} ${i < page.columns.length - 1 ? "" : "last"}`} to={column.link}>
                         {renderContent(column, page)}
                       </Link> :
-                    <div key={`ic-${i}`} className={`block shadow-adv ${i < page.columns.length - 1 ? "" : "last"}`}>
+                    <div key={`ic-${i}`} className={`block ${page.version == "team" ? "team-block" : "shadow-adv"} ${i < page.columns.length - 1 ? "" : "last"}`}>
                       {renderContent(column, page)}
                     </div>
                 ))}

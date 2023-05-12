@@ -1,11 +1,4 @@
 export const page = {
-  seo: {
-    title: "Accern - Product Documentation",
-    meta: [
-      { name: "description", content: "Accern - Product Documentation" },
-      { property: "og:title", content: "Accern - Product Documentation" }
-    ],
-  },
   hero: {
     label: "ACCERN",
     title: "Terms of Use",

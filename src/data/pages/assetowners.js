@@ -1,11 +1,4 @@
 export const page = {
-  seo: {
-    title: "Accern - Asset Owners",
-    meta: [
-      { name: "description", content: "Accern - Asset Owners" },
-      { property: "og:title", content: "Accern - Asset Owners" }
-    ],
-  },
   hero: {
     label: "Accern for Asset Owners",
     title: "<strong>AI-powered insights</strong> for Pensions, Family Offices, Insurance General Accounts, Endowments, and Sovereign Wealth Funds.",

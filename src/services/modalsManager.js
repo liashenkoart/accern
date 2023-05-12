@@ -1,6 +1,19 @@
 export const OpenModal = (modal, dispatch, data) => {
 
-  dispatch({ type: "SET_MODALS", data: { isRequestTrial: false, isRequestSuccess: false, isGetInTouch: false, isDownloadFile: false, isDownloadReport: false, isRequestCaseStudy: false, isRequestQuote: false } })
+  dispatch({
+    type: "SET_MODALS", data: {
+      isRequestTrial: false,
+      isRequestSuccess: false,
+      isGetInTouch: false,
+      isDownloadFile: false,
+      isDownloadReport: false,
+      isRequestCaseStudy: false,
+      isRequestQuote: false,
+      isRequestAccess: false,
+      isAwsSuccess: false,
+      data: null,
+    }
+  })
 
   switch (modal) {
     case "request":
@@ -23,6 +36,12 @@ export const OpenModal = (modal, dispatch, data) => {
       break;
     case "requestQuote":
       dispatch({ type: "SET_MODALS", data: { isRequestQuote: true, data: data } })
+      break;
+    case "requestAccess":
+      dispatch({ type: "SET_MODALS", data: { isRequestAccess: true, data: data } })
+      break;
+    case "awsSuccess":
+      dispatch({ type: "SET_MODALS", data: { isAwsSuccess: true, data: data } })
       break;
   }
 }

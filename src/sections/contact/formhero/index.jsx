@@ -43,7 +43,7 @@ const FormHero = ({ isVisible, page }) => {
     <div className={`form-hero ${isVisible ? "active" : ''}`}>
       <Container>
         <Row>
-          <Col lg={5} className="d-flex align-items-center justify-content-center justify-content-lg-start">
+          <Col lg={5} className="pt-5 d-flex align-items-center justify-content-center justify-content-lg-start">
             {page.isForm && <FormComp from="Contact page" data={page.form}/>}
           </Col>
           <Col lg={7}>

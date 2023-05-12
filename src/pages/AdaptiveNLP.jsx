@@ -7,10 +7,11 @@ import { page } from "../data/pages/adaptiveNLP";
 import Rows from "../sections/global/rows";
 import Parser from "../sections/adaptivenlp/parser";
 import Seo from "../components/seo";
+import SEO from "../data/seo.json";
 
 import VisibilitySensor from '../utils/react-visibility-sensor';
 
-const AdaptiveNLP = () => {
+const AdaptiveNLP = ({path}) => {
 
   const sections = [
     {component: Hero, page: page.hero},
@@ -24,7 +25,7 @@ const AdaptiveNLP = () => {
 
   return (
     <div>
-      <Seo seo={page.seo} />
+      <Seo seo={SEO[path] ? SEO[path] : SEO["/"]} />
       {sections.map((section, i) => (
         <VisibilitySensor partialVisibility={true} once={true} key={`p-${i}`}>
           {({ isVisible }) =>

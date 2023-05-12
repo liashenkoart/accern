@@ -1,11 +1,4 @@
 export const page = {
-  seo: {
-    title: "Accern - Contact",
-    meta: [
-      { name: "description", content: "Accern - Contact" },
-      { property: "og:title", content: "Accern - Contact" }
-    ],
-  },
   hero: {
     isForm: true,
     map: {
@@ -76,9 +69,10 @@ export const page = {
     },
     form: {
       label: "GET IN TOUCH",
-      title: "Request a Trial",
+      title: "Contact Us",
       message: "That's All, thank you!",
       button: "Submit",
+      formType: "contactUs",
       fields: [
         { name: "first_name", type: "text", placeholder: "First Name", className: "advanced", required: true, pattern:".{2,}" },
         { name: "last_name", type: "text", placeholder: "Last Name", className: "advanced", required: true, pattern:".{2,}" },
@@ -86,7 +80,9 @@ export const page = {
         { name: "phone", type: "tel", placeholder: "Phone Number", className: "advanced" },
         { name: "company", type: "text", placeholder: "Company", className: "advanced"},
         { name: "title", type: "text", placeholder: "Title", className: "advanced"},
-        { name: "country", type: "text", placeholder: "Country", className: "advanced", isFullWidth: true},
+        { name: "country", type: "text", placeholder: "Country", className: "advanced"},
+        { name: "subject", type: "text", placeholder: "Subject", className: "advanced"},
+        { name: "message", type: "textarea", placeholder: "Message", className: "advanced", isFullWidth: true},
       ]
     }
   },

@@ -48,7 +48,7 @@ const FormComp = ({ data, from, onCompleted }) => {
           }
         }).then(result => {
           setIsCompleted(true);
-          OpenModal("request-success", dispatchModals);
+          OpenModal(data.succesModal ? data.succesModal.name : "request-success", dispatchModals, data.succesModal)
           if (gtag) gtag('event', 'Form Submitted');
           if (onCompleted) onCompleted();
         }, error => {
@@ -76,6 +76,7 @@ const FormComp = ({ data, from, onCompleted }) => {
           </div>
           <Form className="mt-2 mt-lg-5" onSubmit={onSubmit}>
             <input type="hidden" name="form-type" value={data.formType ? data.formType : "getInTouch"}/>
+            <input type="hidden" name="additional" value={data.additional ? data.additional : ""}/>
             <Container fluid className="p-0">
               <Row>
                 {data.fields.map((field, i) => (

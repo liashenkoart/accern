@@ -1,11 +1,4 @@
 export const page = {
-  seo: {
-    title: "Accern - Careers",
-    meta: [
-      {name: "description", content: "Accern - Careers"},
-      {property: "og:title", content: "Accern - Careers"}
-    ],
-  },
   hero: {
     label: "Careers",
     title: "Explore a career<br> at <strong>Accern</strong>",
@@ -40,6 +33,7 @@ export const page = {
     description: "Interested in joining us? Please check out our open positions.",
     descrCL: "mw-500",
     placeholder: "Email address",
+    className: "mb-0",
     link: {
       name: "GET IN TOUCH",
       modal: "getInTouch"

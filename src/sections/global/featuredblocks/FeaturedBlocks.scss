@@ -1,0 +1,98 @@
+@import "../../../styles/global/variables.scss";
+
+$featured-blocks-spacer: 1.4rem;
+
+.featured-blocks {
+
+  &-inner {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    width: calc(100% + #{$featured-blocks-spacer});
+    margin-left: -$featured-blocks-spacer/2;
+
+    .featured-blocks-logo {
+      height: 70px;
+
+      img {
+        max-height: 40px;
+        max-width: 140px;
+        width: auto;
+      }
+    }
+
+    > * {
+      box-shadow: $shadow-border;
+      padding: $featured-blocks-spacer*2;
+      width: calc(20% - #{$featured-blocks-spacer});
+      margin: 0 $featured-blocks-spacer/2;
+      margin-bottom: $featured-blocks-spacer;
+      cursor: pointer;
+      position: relative;
+      color: inherit;
+      transition: box-shadow $transition ease;
+
+      &::after{
+        content: '';
+        display: block;
+        width: 9px;
+        height: calc(100% + 2px);
+        position: absolute;
+        left: -1px;
+        top: -1px;
+        opacity: 0;
+        background-image: url(../../../assets//img/shape-line-primary.svg);
+        background-size: cover;
+        transition: opacity $transition ease;
+      }
+
+      &:hover {
+        box-shadow: $shadow-5;
+        color: inherit;
+
+        &:after{
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    &-inner {
+      > * {
+        width: calc(25% - #{$featured-blocks-spacer});
+      }
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    &-inner {
+      > * {
+        width: calc(33.33% - #{$featured-blocks-spacer});
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    .featured-blocks-logo {
+      height: 50px;
+
+      img {
+        max-height: 30px;
+        max-width: 90px;
+      }
+    }
+
+    .featured-blocks-title {
+      font-size: 0.875rem;
+      font-weight: 500;
+      line-height: normal;
+    }
+    &-inner {
+      > * {
+        width: calc(50% - #{$featured-blocks-spacer});
+        padding: $featured-blocks-spacer/2;
+      }
+    }
+  }
+}

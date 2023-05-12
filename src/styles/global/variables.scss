@@ -33,6 +33,10 @@ $code-active:                 #0C2B7B;
 $lgray-adv:                   #E4E8EB;
 $gray-adv:                    #B2BBC6;
 
+$advanced:                    #5E4BEF;
+$pink:                        #F8AfAf;
+$blue:                        #1091fe;
+
 $theme-colors: ();
 
 $theme-colors: map-merge(
@@ -129,6 +133,7 @@ $shadow-2:                      0 28px 45px 0 rgba(109, 111, 113, 0.2);
 $shadow-3:                      0px 28px 45px rgba($primary, 0.2);
 $shadow-4:                      0 20px 30px 0 rgba(109, 111, 113, 0.15);
 $shadow-5:                      0 28px 45px 0 rgba(109, 111, 113, 0.1);
+$shadow-border:                 0px 0px 0px 1px $border-color;
 
 $modal-md:                      700px;
 

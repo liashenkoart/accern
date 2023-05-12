@@ -17,6 +17,8 @@ $phone = $_POST['phone'];
 $title = $_POST['title'];
 $country = $_POST['country'];
 $message = $_POST['message'];
+$subject = $_POST['subject'];
+$additional = $_POST['additional'];
 
 $type = $_POST['form-type'];
 
@@ -25,6 +27,7 @@ $EmailTo = 'info@accern.com';
 $Body = '';
 $Body .= '<b>First Name:</b> ';
 $Body .= $first_name;
+$Body .= '<br>';
 $Body .= '<b>Last Name:</b> ';
 $Body .= $last_name;
 $Body .= '<br>';
@@ -36,6 +39,25 @@ $Body .= $phone;
 $Body .= '<br>';
 
 switch ( $type ) {
+    case 'contactUs':
+    default:
+    $Subject = 'New message from the Accern Contact page';
+    $Body .= '<b>Title:</b> ';
+    $Body .= $title;
+    $Body .= '<br>';
+    $Body .= '<b>Country:</b> ';
+    $Body .= $country;
+    $Body .= '<br>';
+    $Body .= '<b>Company:</b> ';
+    $Body .= $company;
+    $Body .= '<br>';
+    $Body .= '<b>Subject:</b> ';
+    $Body .= $subject;
+    $Body .= '<br>';
+    $Body .= '<b>Message:</b> ';
+    $Body .= $message;
+    $Body .= '<br>';
+    break;
     case 'requestTrial':
     $Subject = 'New message from the Accern request trial form';
     $Body .= '<b>Title:</b> ';
@@ -46,6 +68,12 @@ switch ( $type ) {
     $Body .= '<br>';
     $Body .= '<b>Company:</b> ';
     $Body .= $company;
+    $Body .= '<br>';
+    $Body .= '<b>Subject:</b> ';
+    $Body .= $subject;
+    $Body .= '<br>';
+    $Body .= '<b>Message:</b> ';
+    $Body .= $message;
     $Body .= '<br>';
     break;
     case 'getInTouch':
@@ -59,7 +87,6 @@ switch ( $type ) {
     $Body .= '<b>Message:</b> ';
     $Body .= $message;
     $Body .= '<br>';
-    default:
     break;
     case 'file':
     $Subject = 'New message from the Accern download file';
@@ -69,9 +96,21 @@ switch ( $type ) {
     $Body .= '<b>Company:</b> ';
     $Body .= $company;
     $Body .= '<br>';
-    default:
+    $Body .= '<b>File:</b> ';
+    $Body .= $additional;
+    $Body .= '<br>';
     break;
-    
+    case 'requestAccess':
+    $Subject = 'New message from the Accern request access (use cases)';
+    $Body .= '<b>Company:</b> ';
+    $Body .= $company;
+    $Body .= '<br>';
+    $Body .= '<b>Message:</b> ';
+    $Body .= $message;
+    $Body .= '<br>';
+    $Body .= $additional;
+    $Body .= '<br>';
+    break;
 }
 
 // Instantiation and passing `true` enables exceptions

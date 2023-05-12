@@ -1,11 +1,4 @@
 export const page = {
-  seo: {
-    title: "Accern",
-    meta: [
-      { name: "description", content: "Accern" },
-      { property: "og:title", content: "Accern" }
-    ],
-  },
   hero: {
     label: "Powered by Artificial Intelligence",
     title: "Accelerate AI for",
@@ -49,6 +42,7 @@ export const page = {
 
   features: {
     isReducedMargin: true,
+    className: "fluid-images",
     rows: [
       {
         label: "Data Store",

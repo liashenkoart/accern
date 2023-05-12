@@ -1,0 +1,44 @@
+@import "../../styles/global/variables.scss";
+
+.shape-10p {
+  height: 10px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+
+  >svg {
+    margin-top: -1px;
+    display: block;
+    flex-shrink: 0;
+
+    path:nth-child(3n+1) {
+      opacity: 0;
+      animation: flash infinite 2.5s ease-in-out;
+      animation-fill-mode: forwards;
+    }
+    path:nth-child(2n+2) {
+      opacity: 0;
+      animation: flash infinite 4s ease-in-out;
+      animation-fill-mode: forwards;
+    }
+    path:nth-child(3n+3) {
+      opacity: 0;
+      animation: flash infinite 5s ease-in-out;
+      animation-fill-mode: forwards;
+    }
+  }
+}
+
+@-webkit-keyframes flash {0% {opacity: 1;}50% {opacity: 0;}100% {opacity: 1;}}
+@keyframes flash {0% {opacity: 1;}50% {opacity: 0;}100% {opacity: 1;}}
+
+@-webkit-keyframes move {0% {transform: translate(0);}50% {transform: translate(100px)}100% {transform: translate(0)}}
+@keyframes move {0% {transform: translate(0);}50% {transform: translate(100px)}100% {transform: translate(0)}}
+
+@-webkit-keyframes rotate {0% {transform: rotate(0 1440.01 11.9613);}50% {transform: rotate(-180 1440.01 11.9613)}100% {transform: rotate(0 1440.01 11.9613)}}
+@keyframes rotate {0% {transform: rotate(0 1440.01 11.9613);}50% {transform: rotate(-180 1440.01 11.9613)}100% {transform: rotate(0 1440.01 11.9613)}}

@@ -1,13 +1,19 @@
 @import "../../styles/global/variables.scss";
 
 .mudule-block {
-
   &.reverse {
     .row {
       flex-direction: row-reverse !important;
     }
   }
-  
+
+  @include media-breakpoint-down(lg) {
+    &.sect-spacer {
+      padding-top: $section-spacer/2;
+      padding-bottom: $section-spacer/2;
+    }
+  }
+
   @include media-breakpoint-down(md) {
     &.reverse {
       .row {
@@ -22,7 +28,6 @@
         flex-direction: column-reverse !important;
       }
     }
-    
 
     &.sect-spacer {
       padding-bottom: $section-spacer/4;

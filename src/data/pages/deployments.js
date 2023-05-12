@@ -1,16 +1,10 @@
 export const page = {
-  seo: {
-    title: "Accern - Deployments",
-    meta: [
-      { name: "description", content: "Accern - Deployments" },
-      { property: "og:title", content: "Accern - Deployments" }
-    ],
-  },
   hero: {
     label: "Deployments",
     title: "Secured Flexible <strong>Deployment</strong> Options",
     description: "Accern provides enterprise-grade secured deployment options based on your needs.",
-    img: "deployments-illustration.svg",
+    img: "deployment-illustration.svg",
+    variant: "fluid",
     button: {
       name: "GET A DEMO",
       modal: "request"

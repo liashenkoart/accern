@@ -1,11 +1,4 @@
 export const page = {
-  seo: {
-    title: "Accern - Quantitative Managers",
-    meta: [
-      { name: "description", content: "Accern - Quantitative Managers" },
-      { property: "og:title", content: "Accern - Quantitative Managers" }
-    ],
-  },
   hero: {
     label: "Accern for Quantitative Investment",
     title: "<strong>AI-powered insights</strong> for Quantitative Portfolio Managers, Analyst, Researchers and Data Sourcing Teams.",

@@ -4,10 +4,11 @@ import SupportPolicy from "../sections/policy";
 import Footer from "../sections/global/footer";
 import { page } from "../data/pages/policy";
 import Seo from "../components/seo";
+import SEO from "../data/seo.json";
 
 import VisibilitySensor from '../utils/react-visibility-sensor';
 
-const Policy = () => {
+const Policy = ({path}) => {
 
   const sections = [
     {component: Title, page: page.hero},
@@ -17,7 +18,7 @@ const Policy = () => {
 
   return (
     <div>
-      <Seo seo={page.seo} />
+      <Seo seo={SEO[path] ? SEO[path] : SEO["/"]} />
       {sections.map((section, i) => (
         <VisibilitySensor partialVisibility={true} once={true} key={`p-${i}`}>
           {({ isVisible }) =>

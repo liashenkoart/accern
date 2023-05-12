@@ -1,0 +1,62 @@
+@import "../../../styles/global/variables.scss";
+
+$request-access-spacer: 6rem;
+
+.request-access-details {
+  width: 100%;
+  height: 100%;
+  padding: $request-access-spacer $request-access-spacer/2;
+
+  h3 {
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    color: $white;
+  }
+
+  &-description {
+    margin-bottom: 0;
+    font-size: 0.875rem;
+    opacity: 0.8;
+    color: $white;
+  }
+
+  &-label {
+    font-size: 0.8125rem;
+    color: $white;
+    opacity: 0.8;
+  }
+
+  &-detail {
+    font-size: 0.9375rem;
+    color: $white;
+  }
+
+  @include media-breakpoint-down(lg) {
+    h3 {
+      font-size: 1.125rem;
+    }
+  }
+}
+
+.modal-bg {
+  background-size: cover;
+  &.primary {
+    background-image: url(../../../assets/img/shape-rect-primary.png);
+  }
+  &.secondary {
+    background-image: url(../../../assets/img/shape-rect-secondary.png);
+  }
+  &.pink {
+    background-image: url(../../../assets/img/shape-rect-pink.png);
+  }
+  &.advanced {
+    background-image: url(../../../assets/img/shape-rect-advanced.png);
+  }
+  &.danger {
+    background-image: url(../../../assets/img/shape-rect-danger.png);
+  }
+  &.light {
+    background-image: url(../../../assets/img/shape-rect-light.png);
+  }
+}

@@ -5,6 +5,7 @@ import { Context } from "../../context/context";
 import { OpenModal } from "../../services/modalsManager";
 import * as bootstrapValidate from 'bootstrap-validate';
 import Icon from "../../components/icon";
+import {navigate} from "@reach/router";
 
 import "./GetStarted.scss"
 
@@ -20,7 +21,7 @@ const GetStarted = ({page}) => {
   }, []);
 
   const validate = () => {
-    bootstrapValidate(inputR.current, 'email:', setValidaion);
+    if(inputR.current) bootstrapValidate(inputR.current, 'email:', setValidaion);
   }
 
   const setValidaion = (isValid) => {
@@ -30,7 +31,7 @@ const GetStarted = ({page}) => {
   }
 
   return (
-    <div className="get-started">
+    <div className={`get-started ${page && page.getstarted.className ? page.getstarted.className : "" }`}>
       <Container fluid className="position-relative z-1">
         <div className="awards-bg effect-bg"></div>
         <Row>
@@ -40,13 +41,13 @@ const GetStarted = ({page}) => {
               <Row>
                 <Col lg={6} className="text-center text-lg-left">
                   <h2 className="text-light lh-1 mb-3">{page ? page.getstarted.title : settings.getstarted.title}</h2>
-                  <p className="text-light op-07 mw-340 mb-4 mb-lg-0 mx-auto mx-lg-0">{page ? page.getstarted.description : settings.getstarted.description}</p>
+                  <p className="text-light op-07 mw-340 mb-4 mb-lg-0 mx-auto mx-lg-0" dangerouslySetInnerHTML={{__html: page ? page.getstarted.description : settings.getstarted.description}}></p>
                 </Col>
                 <Col lg={6} className="d-flex align-items-center justify-content-left justify-content-md-end">
                   <Form className="d-inline-flex w-480">
-                    <div className="w-100 d-flex flex-column flex-md-row">
-                      <div className={`position-relative ${valid}`}>{valid == "is-invalid" && <div className="icon-error"><Icon variant="icon-close-small"/></div>}<Form.Control ref={inputR} className="theme-light mb-4 mb-md-0" type="email" value={userMail} onChange={e => dispatchUserMail({type: "SET_USER_MAIL", data:e.target.value})} placeholder={page ? page.getstarted.placeholder : settings.getstarted.placeholder} required /></div>
-                      <Button variant="light" onClick={()=>OpenModal(page ? page.getstarted.link.modal ? page.getstarted.link.modal : "request" : "request", dispatchModals)}>{page ? page.getstarted.link.name : settings.getstarted.link.name}</Button>
+                    <div className="w-100 d-flex flex-column flex-md-row justify-content-end">
+                      {page && page.getstarted.isDisableForm ? <></> : <div className={`position-relative ${valid}`}>{valid == "is-invalid" && <div className="icon-error"><Icon variant="icon-close-small"/></div>}<Form.Control ref={inputR} className="theme-light mb-4 mb-md-0" type="email" value={userMail} onChange={e => dispatchUserMail({type: "SET_USER_MAIL", data:e.target.value})} placeholder={page ? page.getstarted.placeholder : settings.getstarted.placeholder} required /></div>}
+                      <Button variant="light" onClick={()=>page && page.getstarted && page.getstarted.link.link ? navigate(page.getstarted.link.link) : OpenModal(page && page.getstarted.link.modal ? page.getstarted.link.modal : "request", dispatchModals)}>{page ? page.getstarted.link.name : settings.getstarted.link.name}</Button>
                     </div>
                   </Form>
                 </Col>

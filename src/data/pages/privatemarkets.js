@@ -1,11 +1,4 @@
 export const page = {
-  seo: {
-    title: "Accern - Private Markets",
-    meta: [
-      { name: "description", content: "Accern - Private Markets" },
-      { property: "og:title", content: "Accern - Private Markets" }
-    ],
-  },
   hero: {
     label: "Accern for Private Markets",
     title: "<strong>AI-powered insights</strong> for Private Equity and Venture Capital.",

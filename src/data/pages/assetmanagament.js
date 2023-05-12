@@ -1,11 +1,4 @@
 export const page = {
-  seo: {
-    title: "Accern - Asset Management",
-    meta: [
-      { name: "description", content: "Accern - Asset Management" },
-      { property: "og:title", content: "Accern - Asset Management" }
-    ],
-  },
   hero: {
     label: "Accern for Asset Managers",
     title: "Make better investment decisions with <strong>AI-powered insights</strong> for Active Managers, Passive Managers and Hedge Funds.",

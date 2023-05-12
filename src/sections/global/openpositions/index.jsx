@@ -1,4 +1,3 @@
-import { navigate } from "@reach/router";
 import React, { useState } from "react";
 import { Container, Row, Col, Collapse, Button } from "react-bootstrap";
 import Select from "react-select";

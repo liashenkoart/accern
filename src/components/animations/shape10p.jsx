@@ -1,0 +1,51 @@
+import React from "react";
+import { settings } from "../../data/settings";
+
+import "./Animations.scss";
+
+const Shape10p = ({ data }) => {
+
+  const getShape = () => {
+    return <svg width="1440" height="12" viewBox="0 0 1440 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="1440.01" y="11.9613" width="1440" height="10.857" transform="rotate(-180 1440.01 11.9613)" fill="#1063FE" />
+      <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="1" width="1441" height="11">
+        <rect x="1440.01" y="11.9613" width="1440" height="10.857" transform="rotate(-180 1440.01 11.9613)" fill="white" />
+      </mask>
+      <g mask="url(#mask0)">
+        <path fillRule="evenodd" clipRule="evenodd" d="M362.304 77.1739L331.306 110.81L88.0411 -103.196L119.039 -136.832L362.304 77.1739Z" fill="#5410FE" />
+        <path fillRule="evenodd" clipRule="evenodd" d="M180.714 1.37041L172.258 10.5406L-70.992 -203.482L-62.5368 -212.652L180.714 1.37041Z" fill="#1091FE" />
+        <path opacity="0.122675" fillRule="evenodd" clipRule="evenodd" d="M464.598 202.811L415.682 255.905L98.0502 -15.5729L146.967 -68.6671L464.598 202.811Z" fill="#011D6C" />
+        <path opacity="0.319592" fillRule="evenodd" clipRule="evenodd" d="M259.7 153.164L228.702 186.8L-14.5632 -27.2066L16.4347 -60.8426L259.7 153.164Z" fill="#011D6C" />
+        <path opacity="0.582241" fillRule="evenodd" clipRule="evenodd" d="M334.343 148.944L285.426 202.039L-32.2052 -69.4396L16.7114 -122.534L334.343 148.944Z" fill="#011D6C" />
+        <path fillRule="evenodd" clipRule="evenodd" d="M299.428 209.387L264.73 179.581L470.116 -71.0044L504.814 -41.1992L299.428 209.387Z" fill="#5410FE" />
+        <path fillRule="evenodd" clipRule="evenodd" d="M196.534 262.103L187.074 253.973L392.476 3.40175L401.936 11.5317L196.534 262.103Z" fill="#1091FE" />
+        <path opacity="0.122675" fillRule="evenodd" clipRule="evenodd" d="M375.646 89.4452L320.877 42.4113L581.105 -284.501L635.874 -237.467L375.646 89.4452Z" fill="#011D6C" />
+        <path fillRule="evenodd" clipRule="evenodd" d="M358.952 239.276L324.255 209.471L529.641 -41.1146L564.338 -11.3094L358.952 239.276Z" fill="#011D6C" />
+        <path opacity="0.582241" fillRule="evenodd" clipRule="evenodd" d="M326.359 21.5012L271.589 -25.5327L531.817 -352.445L586.586 -305.411L326.359 21.5012Z" fill="#011D6C" />
+        <path fillRule="evenodd" clipRule="evenodd" d="M1345 59.6196L1314 93.2556L1070.73 -120.751L1101.73 -154.387L1345 59.6196Z" fill="#5410FE" />
+        <path fillRule="evenodd" clipRule="evenodd" d="M1411.32 79.2869L1402.86 88.4571L1159.61 -125.565L1168.07 -134.735L1411.32 79.2869Z" fill="#32C5FF" />
+        <path opacity="0.376186" fillRule="evenodd" clipRule="evenodd" d="M1424.32 79.2869L1415.86 88.4571L1172.61 -125.565L1181.07 -134.735L1424.32 79.2869Z" fill="#32C5FF" />
+        <path opacity="0.376186" fillRule="evenodd" clipRule="evenodd" d="M1630.41 95.7739L1577.2 154.646L1320.61 -44.5652L1373.82 -103.437L1630.41 95.7739Z" fill="#32C5FF" />
+        <path opacity="0.122675" fillRule="evenodd" clipRule="evenodd" d="M1017.92 -28.0677L969.001 25.0266L651.369 -246.452L700.286 -299.546L1017.92 -28.0677Z" fill="#011D6C" />
+        <path fillRule="evenodd" clipRule="evenodd" d="M1447.6 -16.3701L1416.6 17.2659L1173.34 -196.74L1204.34 -230.376L1447.6 -16.3701Z" fill="#011D6C" />
+        <path opacity="0.582241" fillRule="evenodd" clipRule="evenodd" d="M1148.17 25.799L1099.26 78.8932L781.624 -192.585L830.541 -245.679L1148.17 25.799Z" fill="#011D6C" />
+        <path fillRule="evenodd" clipRule="evenodd" d="M962.922 27.4277L928.225 -2.37753L1133.61 -252.963L1168.31 -223.158L962.922 27.4277Z" fill="#32C5FF" />
+        <path fillRule="evenodd" clipRule="evenodd" d="M1112.85 9.40348L1103.39 1.27348L1308.79 -249.298L1318.25 -241.168L1112.85 9.40348Z" fill="#1091FE" />
+        <path opacity="0.122675" fillRule="evenodd" clipRule="evenodd" d="M534.862 240.86L480.093 193.827L740.321 -133.086L795.09 -86.052L534.862 240.86Z" fill="#011D6C" />
+        <path fillRule="evenodd" clipRule="evenodd" d="M883.398 10.5378L848.701 -19.2674L1054.09 -269.853L1088.78 -240.048L883.398 10.5378Z" fill="#011D6C" />
+        <path opacity="0.582241" fillRule="evenodd" clipRule="evenodd" d="M584.15 308.805L529.381 261.771L789.609 -65.1418L844.378 -18.1079L584.15 308.805Z" fill="#011D6C" />
+      </g>
+    </svg>
+  }
+
+  return (
+    <div className="shape-10p">
+      {getShape()}
+      {getShape()}
+      {getShape()}
+      {getShape()}
+    </div>
+  );
+}
+
+export default Shape10p;

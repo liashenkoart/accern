@@ -1,5 +1,45 @@
+
+@import "../../styles/global/variables.scss";
+
 .app-icon {
   fill: currentcolor;
   width: 1em;
   height: 1em;
+}
+
+.circular {
+  animation: rotate-icn 2s linear infinite;
+  height: 1rem;
+  transform-origin: center center;
+  width: 1rem;
+  margin-right: 0.5rem;
+
+  .path {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+    animation: dash-icn 1.5s ease-in-out infinite;
+    stroke-linecap: round;
+    stroke: $black;
+  }
+}
+
+@keyframes rotate-icn {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash-icn {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35px;
+  }
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124px;
+  }
 }

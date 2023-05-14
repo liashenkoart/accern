@@ -19,6 +19,9 @@
 .mw-200 {
   max-width: 200px;
 }
+.mw-260 {
+  max-width: 260px;
+}
 .mw-250 {
   max-width: 250px;
 }
@@ -37,11 +40,17 @@
 .mw-440 {
   max-width: 440px;
 }
+.mw-450 {
+  max-width: 450px;
+}
 .mw-480 {
   max-width: 480px;
 }
 .mw-500 {
   max-width: 500px;
+}
+.mw-520 {
+  max-width: 520px;
 }
 .mw-550 {
   max-width: 550px;
@@ -55,8 +64,20 @@
 .mw-600 {
   max-width: 600px;
 }
+.mw-620 {
+  max-width: 620px;
+}
+.mw-650 {
+  max-width: 650px;
+}
+.mw-680 {
+  max-width: 680px;
+}
 .mw-700 {
   max-width: 700px;
+}
+.mw-720 {
+  max-width: 720px;
 }
 .mw-800 {
   max-width: 800px;
@@ -84,6 +105,13 @@
 
   @include media-breakpoint-down(md) {
     margin-top: 1rem;
+  }
+}
+.mb-d-2 {
+  margin-bottom: 4rem;
+
+  @include media-breakpoint-down(md) {
+    margin-bottom: 2rem;
   }
 }
 .mb-d {
@@ -195,11 +223,13 @@ h4 {
 }
 
 .sect-spacer {
-  padding: $section-spacer 0;
+  padding-top: $section-spacer;
+  padding-bottom: $section-spacer;
   position: relative;
 
   @include media-breakpoint-down(md) {
-    padding: $section-spacer/2 0;
+    padding-top: $section-spacer/2;
+    padding-bottom: $section-spacer/2;
   }
 }
 
@@ -286,6 +316,37 @@ h4 {
   }
 }
 
+.list-dark {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-size: 1.125rem;
+
+  li::before {content: "•"; color: $darker;margin-right: 0.5rem;}
+}
+
+.list-primary {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-size: 1.125rem;
+  position: relative;
+
+  li {
+    padding-left: 1rem;
+    position: relative;
+  }
+
+  li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: $primary;
+    margin-right: 0.5rem;
+  }
+}
+
 .list-simple {
   padding: 0;
   margin: 0;
@@ -346,6 +407,13 @@ h4 {
 }
 
 .modal-custom {
+
+  &.video {
+    .modal-content {
+      overflow: visible;
+    }
+  }
+
   .modal-close {
     position: absolute;
     right: 2rem;
@@ -357,6 +425,20 @@ h4 {
     cursor: pointer;
     pointer-events: all;
     transition: all $transition ease;
+
+    &.circle-over {
+      top: -2rem;
+      right: -2rem;
+
+      @include media-breakpoint-down(md) {
+        top: -2rem;
+        right: 1rem;
+
+        .app-icon{
+          color: $white;
+        }        
+      }
+    }
 
     &:hover {
       opacity: 0.5;
@@ -393,6 +475,10 @@ h4 {
 
 .op-05 {
   opacity: 0.5;
+}
+
+.op-06 {
+  opacity: 0.6;
 }
 
 .custom-collapse {
@@ -615,7 +701,14 @@ h4 {
   top:0;
 }
 
+.bg-primary-05 {
+  background-color: rgba($primary, 0.05);
+}
+
 @include media-breakpoint-down(lg) {
+  .list-dark {
+    font-size: 1rem;
+  }
   .tabs-simple {
     .nav-item {
       font-size: 1rem;

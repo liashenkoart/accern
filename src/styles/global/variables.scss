@@ -8,14 +8,21 @@ $primary-dark:                #0044CE;
 $primary-darker:              #011D6C;
 $primary-active:              rgba(#0531AD, 0.2);
 $primary-cover:               rgba(#1063FE, 0.08);
+$primary-cover-5:             rgba(#1063FE, 0.05);
 $primary-adv:                 #042a89;
+$primary-spc:                 #0756E9;
 $secondary:                   #88c217;
 $success:                     $secondary;
+$success-spc:                 #69BC0E;
 $light:                       #F6F7F9;
 $warning:                     #ffc107;
 $info:                        #17a2b8;
 $danger:                      #FB7F54;
+$danger-spc:                  #EA7635;
+$orange:                      #F5A623;
+$orange-spc:                  #EA970C;
 $error:                       #EC0924;
+$error-spc:                   #AE071B;
 $white:                       #fff;
 $dark:                        #000000;
 $cover:                       #fafafa;
@@ -25,6 +32,8 @@ $dgray:                       #272727;
 $lighter:                     #D8DDE2;
 $darker:                      #585C66;
 $cover-adv:                   #D8D8D8;
+$cover-adv-2:                 #E9F0FE;
+$cover-spc:                   #EBECEE;
 
 $code-dark:                   #001241;
 $code-darker:                 #000f37;
@@ -34,8 +43,17 @@ $lgray-adv:                   #E4E8EB;
 $gray-adv:                    #B2BBC6;
 
 $advanced:                    #5E4BEF;
+$advanced-spc:                #3920F5;
 $pink:                        #F8AfAf;
+$pink-spc:                    #FA9296;
 $blue:                        #1091fe;
+$blue-spc:                    #0b64b0;
+$yellow:                      #FBC059;
+$yellow-spc:                  #F0B44C;
+$rose:                        #FE689B;
+$rose-spc:                    #EF457E;
+
+$orange:                        #FF961F;
 
 $theme-colors: ();
 
@@ -53,6 +71,7 @@ $theme-colors: map-merge(
     "gray":       $gray,
     "gray-adv":   $gray-adv,
     "primary-cover":$primary-cover,
+    "primary-cover-5":$primary-cover-5,
     "error":       $error,
   ),
   $theme-colors
@@ -106,8 +125,8 @@ $yiq-contrasted-threshold:      200;
 $app-top-padding:               6.125rem;
 
 $app-padding:                   $app-top-padding 0 0 0;
-$header-height:                 100px;
-$header-height-md:              70px;
+$header-height:                 70px;
+$header-height-md:              60px;
 
 $gutter:                        30px;
 
@@ -126,7 +145,7 @@ $line-height-base:              1.5;
 
 $input-btn-line-height:         1.3rem;
 
-$section-spacer:                6.25rem;
+$section-spacer:                7.5rem;
 
 $shadow-1:                      0px 28px 45px rgba(0, 0, 0, 0.2);
 $shadow-2:                      0 28px 45px 0 rgba(109, 111, 113, 0.2);
@@ -134,6 +153,7 @@ $shadow-3:                      0px 28px 45px rgba($primary, 0.2);
 $shadow-4:                      0 20px 30px 0 rgba(109, 111, 113, 0.15);
 $shadow-5:                      0 28px 45px 0 rgba(109, 111, 113, 0.1);
 $shadow-border:                 0px 0px 0px 1px $border-color;
+$shadow-border-2:               0px 0px 0px 1px rgba($border-color, 0.5);
 
 $modal-md:                      700px;
 
@@ -150,3 +170,12 @@ $modal-backdrop-opacity:        .8;
 
 $item-spacer-x:                    1.6rem;
 $item-spacer-y:                    1.2rem;
+
+$tooltip-font-size:             1rem;
+$tooltip-bg:                    $code-dark;
+$tooltip-border-radius:         0;
+$tooltip-arrow-color:           $tooltip-bg;
+$tooltip-padding-y:             1.6rem;
+$tooltip-padding-x:             1.6rem;
+$tooltip-margin:                0 0.5rem;
+$tooltip-opacity:               1;

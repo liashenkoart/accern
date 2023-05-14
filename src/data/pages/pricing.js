@@ -15,6 +15,7 @@ export const page = {
   getInTouch: {
     title: "Still have questions?",
     description: "Let us know and we’ll put you on the right path.",
+    className: "mb-s",
     button: {
       name: "GET IN TOUCH",
       modal: "requestQuote"
@@ -335,7 +336,7 @@ export const page = {
               { icon: "allow", className: "text-primary text-center" },
             ],
             [
-              { content: "Access to all white papers", className: "text-dark" },
+              { content: "Access to all whitepapers", className: "text-dark" },
               { icon: "allow", className: "text-primary text-center" },
               { icon: "allow", className: "text-primary text-center" },
               { icon: "allow", className: "text-primary text-center" },

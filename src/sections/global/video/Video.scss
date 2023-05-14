@@ -1,0 +1,47 @@
+@import "../../../styles/global/variables.scss";
+
+.video {
+
+  &-bg {
+    background: url('../../../assets/img/bg-primary.png');
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: $gutter/2;
+    width: calc(100% - #{$gutter});
+    z-index: 1;
+  }
+
+  &-container {
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  &-play {
+    font-size: 4rem;
+    color: $white;
+    cursor: pointer;
+    transition: opacity $transition ease;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  &-lines-shape {
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 13.875rem;
+    line-height: 13.875rem;
+    color: $primary;
+    z-index: 0;
+  }
+}

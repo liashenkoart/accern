@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState, useRef } from "react";
 import { Link } from "@reach/router";
 import { Nav, Container, Row, Col, Button } from "react-bootstrap";
 import { settings } from "../../data/settings";
@@ -18,12 +18,21 @@ const Header = ({ isFluid }) => {
   const [subActive, setSubActive] = useState(false);
   const [subs, setSubs] = useState(settings.navigation.map(() => false));
   const [isActiveMobile, setIsActiveMobile] = useState(false);
-  const { dispatchModals, page, scrollB } = useContext(Context);
+  const { dispatchModals, page, scrollB, dispatchApp } = useContext(Context);
   const [navPosition, setNavPosition] = useState([]);
+  const isCanDetect = useRef(true);
 
   useEffect(() => {
     if (scrollB) scrollB.scrollbar.addListener((status) => {
-      setScrollTop(status.offset.y)
+      if (isCanDetect.current) {
+        isCanDetect.current = false;
+        setScrollTop(status.offset.y);
+
+        const timer = setTimeout(() => {
+          isCanDetect.current = true;
+          clearTimeout(timer);
+        }, 300)
+      }
     });
   }, [scrollB])
 
@@ -43,12 +52,12 @@ const Header = ({ isFluid }) => {
   }, [scrollTop]);
 
   const renderSubLink = (link) => {
-    return (link.link ? <Link onClick={hideAll} className={`nav-sub-link ${!link.description ? "align-items-center" : ""} ${link.icon ? "with-icon" : ""}`} to={link.link}>
+    return (link.link ? <Link onClick={()=>hideAll(false, link)} className={`nav-sub-link ${link.isHide ? "hide-link" : ""} ${!link.description ? "align-items-center" : ""} ${link.icon ? "with-icon" : ""}`} to={link.link}>
       {link.icon && <div className="nav-sub-link-icon"><img src={`../../assets/img/${link.icon}`} alt="" /></div>}
       <div><h4 className={`text-medium-link ${!link.description ? "mb-0" : ""}`}>{link.name}</h4><p className="mb-0 mw-200">{link.description}</p></div>
       {link.isSimple ? <Icon variant="arrow-right" /> : null}
     </Link>
-      : <div className={`nav-sub-link ${!link.description ? "align-items-center" : ""} cursor-pointer ${link.icon ? "with-icon" : ""}`}>
+      : <div className={`nav-sub-link ${!link.description ? "align-items-center" : ""} ${link.isHide ? "hide-link" : ""} cursor-pointer ${link.icon ? "with-icon" : ""}`}>
         {link.icon && <div className="nav-sub-link-icon"><img src={`../../assets/img/${link.icon}`} alt="" /></div>}
         <div><h4 className={`text-medium-link ${!link.description ? "mb-0" : ""}`}>{link.name}</h4><p className="mb-0 mw-200">{link.description}</p></div>
         {link.isSimple ? <Icon variant="arrow-right" /> : null}
@@ -85,11 +94,11 @@ const Header = ({ isFluid }) => {
               {sub.columns.map((column, i) => (
                 <Col key={`nlk-${i}`} lg={column.size} className={`column-link-cont pt-4 pb-4 ${column.className ? column.className : ""}`}>
                   <div className="column-link">
-                    {column.label && <div className={`nav-label-padding mb-2 ${column.label ? "border-bottom" : ""}`}><span className="text-label fw-300 text-dark">{column.label}</span></div>}
+                    {column.label && <div className={`nav-label-padding mb-2 ${column.label ? "border-bottom" : ""}`}><span className="text-label fw-300 text-primary">{column.label}</span></div>}
                     <div className={`${column.size > 4 ? column.size < 12 ? column.size == 9 ? "columns-3" : "columns-2" : "columns-4" : "columns-1"}`}>
                       {column.links.map((link, i) => (
                         link.label ?
-                          <div  key={`s-${i}`} className={`nav-label-padding-inner mb-2 ${link.label ? "border-bottom" : ""}`}><span className="text-label fw-300 text-dark">{link.label}</span></div>
+                          <div key={`s-${i}`} className={`nav-label-padding-inner mb-2 ${link.label ? "border-bottom" : ""}`}><span className="text-label fw-300 text-primary">{link.label}</span></div>
                           :
                           <div key={`s-${i}`} className={`nav-simple-link pl-0 pr-0 ${link.variant ? link.variant : ""} ${link.orderMobile ? `${`order-${link.orderMobile}`} ${`order-lg-${i + 1}`}` : ""} ${link.isSimple ? "simple-link" : ""} ${link.isComing ? "coming-link" : ""}`}>
                             {renderSubLink(link)}
@@ -112,11 +121,11 @@ const Header = ({ isFluid }) => {
               {sub.columns.map((column, i) => (
                 <Col key={`nlk-${i}`} lg={column.size} className={`column-link-cont ${i != 0 ? "pl-3 pr-3" : "pr-3"} pb-4 ${column.className ? column.className : ""}`}>
                   <div className="column-link">
-                    {column.label && <div className={`nav-label-padding mb-2 ${column.label ? "border-bottom" : ""}`}><span className="text-label fw-300 text-dark">{column.label}</span></div>}
+                    {column.label && <div className={`nav-label-padding mb-2 ${column.label ? "border-bottom" : ""}`}><span className="text-label fw-300 text-primary">{column.label}</span></div>}
                     <div className={`${column.size > 4 ? column.size < 12 ? column.size == 9 ? "columns-3" : "columns-2" : "columns-4" : "columns-1"}`}>
                       {column.links.map((link, i) => (
                         link.label ?
-                          <div className={`nav-label-padding-inner mb-2 ${link.label ? "border-bottom" : ""}`}><span className="text-label fw-300 text-dark">{link.label}</span></div>
+                          <div className={`nav-label-padding-inner mb-2 ${link.label ? "border-bottom" : ""}`}><span className="text-label fw-300 text-primary">{link.label}</span></div>
                           :
                           <div key={`s-${i}`} className={`nav-simple-link pl-0 pr-0 ${link.variant ? link.variant : ""} ${link.orderMobile ? `${`order-${link.orderMobile}`} ${`order-lg-${i + 1}`}` : ""} ${link.isSimple ? "simple-link" : ""} ${link.isComing ? "coming-link" : ""}`}>
                             {renderSubLink(link)}
@@ -163,10 +172,11 @@ const Header = ({ isFluid }) => {
 
   }
 
-  const hideAll = (onMobile) => {
+  const hideAll = (onMobile, link) => {
     let temp = [];
     subs.map(() => temp.push(false))
     setSubs(temp);
+    if(link) setAction(link);
     if (onMobile) setIsActiveMobile(false);
   }
 
@@ -174,12 +184,20 @@ const Header = ({ isFluid }) => {
     return filterIt(settings.navigation, page.currentPage, "link").length > 0 ? filterIt(settings.navigation, page.currentPage, "link")[0].isFluid ? true : false : false;
   }
 
+  const setAction = (link) => {
+    if(link.action) dispatchApp({ type: "SET_APP_VALUES", data: { linkAction: {name: link.action, data: link.data} } });
+
+    setTimeout(()=>{
+      dispatchApp({ type: "SET_APP_VALUES", data: { linkAction: {} } });
+    }, 2000)
+  }
+
   return (
-    <header className={`${lastPos > 500 ? "hide" : ""} ${lastPos > 50 ? "bg-white" : ""} ${direction} ${subActive ? "sub-active" : ""}`}>
+    <header className={`bg-dark ${lastPos > 500 ? "hide" : ""} ${direction} ${subActive ? "sub-active" : ""}`}>
       <Container fluid={checkFluid()}>
         <Row>
           <Col className={`d-flex align-items-center z-1 ${checkFluid() ? "pl-3 pl-md-4" : ""}`} md={2} xs={2}>
-            <Link className="nav-link p-0" onClick={() => hideAll(true)} to="/"><img className="nav-logo" src="../../assets/img/logo.svg" alt="" /></Link>
+            <Link className="nav-link p-0" onClick={() => hideAll(true)} to="/"><img className="nav-logo" src="../../assets/img/logo-white.svg" alt="" /></Link>
           </Col>
           <Col md={10} xs={10}>
             <div className={`menu-toggle x ${!isActiveMobile ? "collapsed" : ""}`} onClick={() => setIsActiveMobile(!isActiveMobile)}>
@@ -204,7 +222,7 @@ const Header = ({ isFluid }) => {
                           </Nav.Item>
                         ))}
                       </Nav>
-                      {settings.headerButton && settings.headerButton.isActive ? settings.headerButton.modal ? <Button className="ml-0 ml-lg-4 w-auto w-md-100" variant="neutral" onClick={() => OpenModal(settings.headerButton.modal, dispatchModals)}>{settings.headerButton.name} <Icon variant="arrow-right"/></Button> : <Link className="ml-0 ml-lg-4 w-auto w-md-100 btn btn-neutral" to={settings.headerButton.link}>{settings.headerButton.name}</Link> : null}
+                      {settings.headerButton && settings.headerButton.isActive ? settings.headerButton.modal ? <Button className="ml-0 ml-xl-4 w-auto w-md-100" variant="neutral" onClick={() => OpenModal(settings.headerButton.modal, dispatchModals)}>{settings.headerButton.name} <Icon variant="arrow-right" /></Button> : <Link className="ml-0 ml-lg-4 w-auto w-md-100 btn btn-neutral" to={settings.headerButton.link}>{settings.headerButton.name}</Link> : null}
                     </Col>
                   </Row>
                 </Container>

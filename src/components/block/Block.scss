@@ -1,6 +1,17 @@
 @import "../../styles/global/variables.scss";
 
 .mudule-block {
+
+  &-number {
+    font-size: 8.75rem;
+    line-height: 8.75rem;
+    color: rgba($primary, 0.07);
+    font-weight: 600;
+    position: absolute;
+    left: -3rem;
+    top: -3rem;
+  }
+
   &.reverse {
     .row {
       flex-direction: row-reverse !important;
@@ -8,6 +19,9 @@
   }
 
   @include media-breakpoint-down(lg) {
+    &-number {
+      font-size: 6.75rem;
+    }
     &.sect-spacer {
       padding-top: $section-spacer/2;
       padding-bottom: $section-spacer/2;
@@ -23,6 +37,9 @@
   }
 
   @include media-breakpoint-down(sm) {
+    &-number {
+      left: 0;
+    }
     &.reverse {
       .row.flex-column-reverse {
         flex-direction: column-reverse !important;

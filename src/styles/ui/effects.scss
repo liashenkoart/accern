@@ -93,3 +93,77 @@
     background-position: left bottom;
   }
 }
+
+.effect-bg-primary {
+  background: url(../assets/img/dollar-bg.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  max-width: 100%;
+  width: calc(#{map-get($container-max-widths, "xl")} - #{$gutter});
+  height: 100%;
+
+  @include media-breakpoint-down(lg) {
+    width: calc(#{map-get($container-max-widths, "lg")} - #{$gutter});
+  }
+
+  @include media-breakpoint-down(md) {
+    width: 100%;
+    background-position: left bottom;
+  }
+}
+
+.effect-bg {
+  background: url(../assets/img/effect-primary.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  max-width: 100%;
+  width: calc(#{map-get($container-max-widths, "xl")} - #{$gutter});
+  height: 100%;
+
+  &.primary {
+    background: url(../assets/img/effect-primary.png);
+  }
+
+  &.danger {
+    background: url(../assets/img/effect-danger.png);
+  }
+
+  &.error {
+    background: url(../assets/img/effect-error.png);
+  }
+
+  &.pink {
+    background: url(../assets/img/effect-pink.png);
+  }
+
+  &.light {
+    background: url(../assets/img/effect-light.png);
+  }
+
+  &.success {
+    background: url(../assets/img/effect-success.png);
+  }
+
+  &.advanced {
+    background: url(../assets/img/effect-advanced.png);
+  }
+
+  @include media-breakpoint-down(lg) {
+    width: calc(#{map-get($container-max-widths, "lg")} - #{$gutter});
+  }
+
+  @include media-breakpoint-down(md) {
+    width: 100%;
+    background-position: left bottom;
+  }
+}

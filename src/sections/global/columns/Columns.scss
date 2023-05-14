@@ -1,0 +1,121 @@
+@import "../../../styles/global/variables.scss";
+
+.columns {
+  
+  overflow: hidden;
+
+  &-lines {
+    position: relative;
+    z-index: -1;
+  }
+
+  &-items {
+
+    >* {
+      h3 {
+        position: relative;
+
+        &::after{
+          content: '';
+          display: block;
+          width: 1px;
+          height: 100%;
+          background-color: $primary;
+          position: absolute;
+          left: -1.5rem;
+          bottom: 0;
+          transition: transform $transition ease;
+        }
+      }
+      &:nth-child(1){
+        h3 {
+          &::after{
+            background-color: $primary;
+          }
+        }
+      }
+      &:nth-child(2){
+        h3 {
+          &::after{
+            background-color: $danger;
+          }
+        }
+      }
+      &:nth-child(3){
+        h3 {
+          &::after{
+            background-color: $advanced;
+          }
+        }
+      }
+
+      &:hover {
+        h3 {
+          &::after{
+            transform: scaleY(10);
+          }
+        }
+      }
+    }
+  }
+
+  .columns-lines {
+    >div {
+      position: relative;
+      &::after{
+        content: '';
+        display: block;
+        position: absolute;
+        top: -1000px;
+        width: 1px;
+        height: 2000px;
+        background-image: url("../../../assets/img/line-dashed.svg");
+        background-repeat: repeat;
+      }
+
+      &:last-child{
+        &::before{
+          content: '';
+          display: block;
+          position: absolute;
+          top: -1000px;
+          right: $gutter/2;
+          width: 1px;
+          height: 2000px;
+          background-image: url("../../../assets/img/line-dashed.svg");
+          background-repeat: repeat;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    &-items{
+      >* {
+        margin-bottom: 2rem;
+
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
+    }
+    &-lines{
+      display: none;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    .shape-lines {
+      display: none;
+    }
+
+    .block {
+      text-align: center;
+
+      h3 {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+}

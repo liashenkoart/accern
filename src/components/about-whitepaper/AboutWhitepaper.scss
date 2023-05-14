@@ -1,0 +1,10 @@
+@import "../../styles/global/variables.scss";
+
+.about-whitepaper {
+  padding-right: 4rem;
+
+  @include media-breakpoint-down(lg) {
+    padding-right: 0;
+
+  }
+}

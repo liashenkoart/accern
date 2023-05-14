@@ -10,7 +10,15 @@ $block-case-spacer: 2.4rem;
   height: calc(100% - #{$gutter});
   transition: all $transition ease;
 
+  .block-case-description {
+    color: $darker;
+  }
+
   &.case {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
     .block-case-img {
       width: auto;
       height: 72px;
@@ -281,6 +289,64 @@ $block-case-spacer: 2.4rem;
       margin-bottom: 0;
       max-height: 52px;
       margin-right: 1.5rem;
+    }
+  }
+
+  &.filter-bn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: $block-case-spacer * 0.7;
+    box-shadow: $shadow-border-2;
+
+    .app-icon {
+      transition: color $transition ease;
+    }
+
+    &:hover {
+      box-shadow: $shadow-5;
+
+      .app-icon {
+        color: $primary;
+      }
+    }
+
+    h3 {
+      margin-bottom: 0;
+    }
+
+    .block-case-img {
+      margin-bottom: 0;
+      height: 46px;
+      margin-right: 1.5rem;
+    }
+  }
+
+  &.neutral {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 170px;
+    box-shadow: $shadow-border;
+    opacity: 0.8;
+    filter: saturate(0);
+
+    &:hover {
+      opacity: 1;
+      filter: saturate(1);
+      box-shadow: $shadow-5;
+    }
+
+    h3 {
+      margin-bottom: 0;
+    }
+
+    .block-case-img {
+      margin-bottom: 0;
+      max-height: 50px;
+      max-width: 200px;
+      width: auto;
     }
   }
 

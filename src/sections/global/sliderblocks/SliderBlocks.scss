@@ -1,0 +1,180 @@
+@import "../../../styles/global/variables.scss";
+
+.slider-blocks-container {
+  padding: 40px 30px;
+  width: calc(100% + 400px);
+  margin-left: -200px;
+  overflow: hidden;
+
+  &.fit-width {
+    width: calc(100% + 400px);
+    margin-left: -100px;
+    padding-top: 0;
+    margin-bottom: -40px;
+  }
+
+  .swiper-container {
+    overflow: visible;
+
+    >* {
+      user-select: none;
+    }
+  }
+  .swiper-wrapper {
+    align-items: stretch;
+  }
+
+  .swiper-wrapper{-webkit-transition-timing-function:linear!important; -o-transition-timing-function:linear!important; transition-timing-function:linear!important; }
+
+  &.draged {
+    .swiper-wrapper{-webkit-transition-timing-function:ease-out!important; -o-transition-timing-function:ease-out!important; transition-timing-function:ease-out!important; }
+  }
+
+  @include media-breakpoint-down(sm) {
+    width: 200%;
+    margin-left: -50%;
+    padding-left: 0;
+    padding-right: 0;
+
+    &.fit-width {
+      width: 200%;
+      margin-left: -50%;
+    }
+
+    .simple-block {
+
+      &:hover {
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+.slider-blocks {
+  margin-bottom: 0;
+
+  .case-block {
+    padding: 2rem;
+    padding-bottom: 0rem;
+    overflow: hidden;
+    transition: all $transition ease;
+
+    .case-block-label {
+      position: relative;
+      display: block;
+      padding: 1rem 0;
+      margin-top: 2rem;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+      font-weight: 500;
+      color: $primary;
+
+      &::after{
+        content: '';
+        display: block;
+        position: absolute;
+        width: 140%;
+        left: 0;
+        top: 0;
+        height: 1px;
+        background-color: $border-color;
+      }
+    }
+
+    img {
+      margin-bottom: 2rem;
+      height: 62px;
+      width: auto;
+    }
+
+    &.primary {background-color: rgba($primary, 0.1);.case-block-label {color:$primary}}
+    &.secondary {background-color: rgba($secondary, 0.1);.case-block-label {color:$secondary}}
+    &.pink {background-color: rgba($pink, 0.1);.case-block-label {color:$pink}}
+    &.danger {background-color: rgba($danger, 0.1);.case-block-label {color:$danger}}
+    &.red {background-color: rgba($error, 0.1);.case-block-label {color:$error}}
+    &.advanced {background-color: rgba($advanced, 0.1);.case-block-label {color:$advanced}}
+    &.light {background-color: rgba($blue, 0.1);.case-block-label {color:$blue}}
+
+
+    &:hover {
+      background-color: $white;
+      box-shadow: $shadow-4;
+    }
+  }
+
+  .simple-block {
+    user-select: none;
+    padding: 0 2rem;
+    height: 120px !important;
+    color: inherit;
+    background-color: $cover-adv-2;
+    transition: all $transition ease;
+
+    .simple-block-img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      filter: saturate(0);
+      opacity: 0.7;
+      position: relative;
+      transition: all $transition ease;
+
+      >* {
+        position: relative;
+      }
+    }
+
+    .text-label {
+      opacity: 0.7;
+      margin-bottom: 0.2rem;
+      transition: color $transition ease;
+    }
+
+    .text-medium {
+      color: $dark;
+      transition: color $transition ease;
+    }
+
+    .text-subtitle-strong {
+      transition: color $transition ease;
+    }
+
+    .text-small {
+      transition: all $transition ease;
+    }
+
+    &:hover {
+      background-color: $white;
+      box-shadow: $shadow-4;
+
+      .simple-block-img {
+        filter: saturate(1);
+        opacity: 1;
+      }
+
+      .text-label,
+      .text-medium,
+      .text-subtitle-strong {
+        color: $white;
+      }
+
+      .text-small {
+        color: $white;
+        opacity: 0.7;
+      }
+
+
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    .simple-block {
+
+      &:hover {
+        box-shadow: none;
+      }
+    }
+  }
+}

@@ -68,6 +68,10 @@
   &.rows-middle {
     p {
       margin-bottom: 0 !important;
+
+      p {
+        margin-bottom: 1.6rem !important;
+      }
     }
   }
 
@@ -94,6 +98,12 @@
           }
         }
       }
+    }
+  }
+
+  .list-primary {
+    li {
+      margin-bottom: 1.6rem;
     }
   }
 

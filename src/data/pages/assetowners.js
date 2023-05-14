@@ -1,22 +1,32 @@
 export const page = {
   hero: {
     label: "Accern for Asset Owners",
-    title: "<strong>AI-powered insights</strong> for Pensions, Family Offices, Insurance General Accounts, Endowments, and Sovereign Wealth Funds.",
-    icon: "icon-users.svg",
+    title: "<strong>AI-Powered insights</strong> for Pensions, Family Offices, Insurance General Accounts, Endowments, and Sovereign Wealth Funds",
+    titleCL: "mw-800",
+    variant: "lines",
+    theme: "primary v2",
+    icon: "icon-wealth-management.svg",
+    className: "mt-5",
+    button: {
+      name: "Get Started",
+      link: "/contact",
+      variant: "primary-arrow"
+    }
   }, 
   
   related: {
-    title: "Industry leaders using <span class='text-primary'>Accern</span>",
-    className: "mb-s",
+    title: "Industry leaders using <span class='text-primary fw-400'>Accern</span>",
+    titleCL: "mw-800",
+    className: "mb-s bg-primary-cover-5",
     columns: [
       {
         label: "NEXT Alpha",
-        description: "Accern assists Next Alpha in becoming one of the best-performing hedge funds.",
+        description: "Accern Assists Next Alpha in Becoming one of the Best-Performing Hedge Funds.",
         link: "/user-story-next-alpha",
       },
       {
         label: "Fundomate",
-        description: "Accern helps Fundomate automate business funding and improve risk assessment.",
+        description: "Accern Helps Fundomate Automate Business Funding and Improve Risk Assessment.",
         link: "/user-story-fundomate",
       }
     ]
@@ -31,18 +41,18 @@ export const page = {
     rows: [
       {
         title: "Enhance your external investment manager’s due diligence and selection process",
-        description: "Perform deeper due diligence by using thematic screening approaches. Select investments and managers which follow appointed mandates.",
-        img: "asset-owners-img-1.svg",
+        description: "Perform deeper due diligence by using thematic screening approaches. Select investments and managers that follow appointed mandates.",
+        img: "wealth-management-img-1.svg",
       },
       {
         title: "Monitor and engage with investment managers effectively and efficiently",
-        description: "Engage in more informed discussions with your managers by gaining deeper insights. Continuously monitor their holdings around appointed mandates such as ESG, credit, and MedTech, EDtech, Cleantech, and more.",
-        img: "asset-owners-img-2.svg",
+        description: "Engage in more informed discussions with your managers by obtaining insights. Continuously monitor their holdings around appointed mandates such as ESG, credit, and MedTech, EDtech, Cleantech, and more.",
+        img: "wealth-management-img-2.svg",
       },
       {
         title: "Better mitigate your investment risks",
-        description: "Choose from Accern’s large collection of ready-made use cases or customize your own use case to uncover early warning signals and emerging risk controversies. Accern utilizes the latest in text analytics and machine algorithms to discover potential impacts on the reputation, credit, operation, or market risks of your external investments.",
-        img: "asset-owners-img-3.svg",
+        description: "Search across client documents and interactions with Accern's advanced AI search capabilities. Personalize financial advice with real-time portfolio surveillance and with smart search capabilities and intelligent tagging on integrated internal documents, client meeting notes, and CRM functions.",
+        img: "wealth-management-img-3.svg",
       },
     ]
   },
@@ -50,24 +60,35 @@ export const page = {
   whitepaper: {
     label: "OUR WHITEPAPER",
     isDisableShape: true,
-    title: "AI For Asset Owners White Paper",
+    title: "Deployed AI Solutions 75x Faster for Large Asset Owners.",
     className: "mb-s",
     titleCL: "mw-700",
     labelCL: "op-05",
     bgClassName: "effect-bg-3",
     button: {
       name: "Report coming soon",
-      link: ""
+      link: "",
     }
   }, 
 
-  cta: {
-    title: "Stay ahead of the market. Enhance your <strong>fund's capabilities</strong> with <strong class='text-primary'>Accern.</strong>",
-    titleCL: "mw-850",
-    variant: "simple",
-    link: {
-      name: "Schedule a Demo",
+  footerGetStarted: {
+    title: "Stay ahead of the market. Enhance your <strong>fund's capabilities</strong> with Accern.",
+    label: "GET STARTED",
+    button: {
+      name: "Talk to sales",
       link: "/contact"
     }
+  },
+
+  marketPlace: {
+    label: "AI Marketplace",
+    title: "Use Cases for <span class='text-special-primary-dark'>Wealth Managers</span>",
+    description: "Explore various ready-made use cases for wealth managers.",
+    variant: "case",
+    button: {
+      name: "View use cases",
+      variant: "link",
+      link: "/marketplace",
+    },
   },
 }

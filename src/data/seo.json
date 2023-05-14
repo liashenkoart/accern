@@ -240,5 +240,24 @@
       { "property": "og:description", "content": "AI-powered insights for Wealth Advisors and Retail Brokers."},
       { "property": "og:image", "content": "wealth-management-img-1-thumb.png" }
     ]
+  },
+  "/request-morningstar":{
+    "title": "Accern - Morningstar",
+    "meta": [
+      { "name": "description", "content": "We are accelerating AI adoption for enterprises with a no-code development platform." },
+      { "property": "og:title", "content": "Accern - Morningstar" },
+      { "property": "og:description", "content": "We are accelerating AI adoption for enterprises with a no-code development platform."},
+      { "property": "og:image", "content": "logo-thumb.png" }
+    ]
+  },
+  "/data-engineers":{
+    "title": "Accern - Data Engineers",
+    "meta": [
+      { "name": "description", "content": "We are accelerating AI adoption for enterprises with a no-code development platform." },
+      { "property": "og:title", "content": "Accern - Data Engineers" },
+      { "property": "og:description", "content": "We are accelerating AI adoption for enterprises with a no-code development platform."},
+      { "property": "og:image", "content": "logo-thumb.png" }
+    ]
   }
+  
 }

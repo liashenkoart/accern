@@ -9,8 +9,20 @@ require 'PHPMailer/src/Exception.php';
 require 'PHPMailer/src/PHPMailer.php';
 require 'PHPMailer/src/SMTP.php';
 
-$first_name = $_POST['firstname'];
-$last_name = $_POST['lastname'];
+if($_POST['firstname']) {
+    $first_name = $_POST['firstname'];
+}
+if($_POST['first_name']) {
+    $first_name = $_POST['first_name'];
+}
+
+if($_POST['lastname']) {
+    $last_name = $_POST['lastname'];
+}
+if($_POST['last_name']) {
+    $last_name = $_POST['last_name'];
+}
+
 $company = $_POST['company'];
 $email = $_POST['email'];
 $phone = $_POST['phone'];
@@ -108,6 +120,19 @@ switch ( $type ) {
     $Body .= '<b>Message:</b> ';
     $Body .= $message;
     $Body .= '<br>';
+    $Body .= '<b>Interested in:</b> ';
+    $Body .= $additional;
+    $Body .= '<br>';
+    break;
+    case 'requestAccessCompany':
+    $Subject = 'New message from the Accern request access';
+    $Body .= '<b>Company:</b> ';
+    $Body .= $company;
+    $Body .= '<br>';
+    $Body .= '<b>Title:</b> ';
+    $Body .= $title;
+    $Body .= '<br>';
+    $Body .= '<b>Interested in:</b> ';
     $Body .= $additional;
     $Body .= '<br>';
     break;

@@ -8,6 +8,8 @@ export const settings = {
   ghostURL: "https://kumesharoomoogan.ghost.io",
   ghostKey: "6fafb19e84b7fb61946f1beb57",
   ghostVersion: "v3",
+  subscribe: "https://accern.us2.list-manage.com/subscribe/post?u=062b50add44565946faa2e749&id=9412e07dd3",
+  isGetStarted: false,
   headerButton: {
     isActive: true,
     name: "GET STARTED",
@@ -31,13 +33,13 @@ export const settings = {
           {
             size: 6,
             links: [
-              { label: "Connect"},
+              { label: "Connect" },
               { name: "Data", component: "Data", link: "/data", icon: "icon-data-n.svg" },
-              { label: "BUILD"},
-              { name: "AutoML Taxonomy", component: "AutoTaxonomy",link: "/auto-taxonomy", icon: "icon-automl.svg" },
+              { label: "BUILD" },
+              { name: "AutoML Taxonomy", component: "AutoTaxonomy", link: "/auto-taxonomy", icon: "icon-automl.svg" },
               { name: "Adaptive NLP", component: "AdaptiveNLP", link: "/adaptive-nlp", icon: "icon-adaptive-nlp-n.svg" },
               { name: "Adaptive Forecasting", component: "AdaptiveForecasting", link: "/adaptive-forecasting", icon: "icon-adaptive-forecasting.svg" },
-              { label: "Operationalize"},
+              { label: "Operationalize" },
               { name: "Deploy", component: "Deployments", link: "/deployments", icon: "icon-deploy.svg" },
               { name: "Integrate", component: "Integrations", link: "/integrations", icon: "icon-integrate.svg" },
             ]
@@ -46,11 +48,11 @@ export const settings = {
             size: 6,
             className: "nav-sub-cover",
             links: [
-              {label: "DETAILS"},
+              { label: "DETAILS" },
               { name: "Pricing", component: "Pricing", link: "/pricing", icon: "icon-pricing.svg" },
-              { name: "Compare", component: "Compare",link: "/compare", icon: "icon-compare.svg" },
-              { name: "Product Updates", component: "ProductUpdates", link: "/product-updates", icon: "icon-product-updates.svg" },
-              { name: "Trial Process", component: "TrialProcess", link: "/trial-process", icon: "icon-trial-process.svg" },
+              { name: "Compare", component: "Compare", link: "/compare", icon: "icon-compare.svg" },
+              // { name: "Product Updates", component: "ProductUpdates", link: "/product-updates", icon: "icon-product-updates.svg" },
+              // { name: "Trial Process", component: "TrialProcess", link: "/trial-process", icon: "icon-trial-process.svg" },
             ]
           },
         ]
@@ -63,11 +65,12 @@ export const settings = {
         columns: [
           {
             links: [
-              { name: "About Accern", component: "Company", link: "/company", icon: "icon-about.svg"},
-              { name: "Customers", component: "Customers", link: "/customers", icon: "icon-customers.svg"},
-              { name: "Careers", component: "Careers", link: "/careers", icon: "icon-careers.svg"},
-              { name: "Newsroom", component: "NewsRoom", link: "/newsroom", icon: "icon-newsroom.svg"},
-              { name: "Contact us", component: "Contact", link: "/contact", icon: "icon-contactus.svg"},
+              { name: "About Accern", component: "Company", link: "/company", icon: "icon-about.svg" },
+              { name: "Customers", component: "CustomerStories", link: "/customers", icon: "icon-customers.svg" },
+              { name: "Careers", component: "Careers", link: "/careers", icon: "icon-careers.svg" },
+              { name: "Newsroom", component: "NewsRoom", link: "/newsroom", icon: "icon-newsroom.svg" },
+              { name: "Partners", component: "Partners", link: "/partners", icon: "icon-about.svg" },
+              { name: "Contact us", component: "Contact", link: "/contact", icon: "icon-contactus.svg" },
             ]
           },
         ]
@@ -81,36 +84,36 @@ export const settings = {
             label: "By Industry",
             size: 3,
             links: [
-              { name: "Asset Management", component: "AssetManagament", link: "/asset-management", icon: "icon-asset-management.svg" },
-              { name: "Private Markets", component: "PrivateMarkets",link: "/private-markets", icon: "icon-private-markets.svg" },
-              { name: "Wealth Management", component: "WealthManagement", link: "/wealth-management", icon: "icon-wealth-management.svg" },
-              { name: "Insurance", component: "Insurance", link: "/insurance", icon: "icon-insurance-shield.svg" },
-              { name: "Banking", component: "BankingSolution", link: "/banking-solution", icon: "icon-banking.svg" },
-              { name: "View All Industries", component: "Industries", link: "/view-all-industries", variant: "fixed-arrow" },
+              { name: "Asset Management", link: "/asset-management", icon: "icon-asset-management.svg" },
+              { name: "Private Markets", link: "/private-markets", icon: "icon-private-markets.svg" },
+              { name: "Asset Owners", link: "/asset-owners", icon: "icon-wealth-management.svg" },
+              { name: "Insurance", link: "/insurance", icon: "icon-insurance-shield.svg" },
+              { name: "Banking", link: "/bankers", icon: "icon-banking.svg" },
+              { name: "View All Industries", link: "/solutions", variant: "fixed-arrow", action: "solution-filter", data: "industry" },
             ]
           },
           {
             label: "BY SOLUTION",
             size: 3,
             links: [
-              { name: "Credit Risk", component: "CreditRisk", link: "/credit-risk", icon: "icon-credit-risk.svg" },
-              { name: "ESG Investing", component: "ESGInvesting",link: "/esg-investing", icon: "icon-esg-investing.svg" },
-              { name: "Quantitative Research", component: "QuantitativeResearch", link: "/quantitative-research", icon: "icon-quantititive-research.svg" },
-              { name: "Fundamental Research", component: "FundamentalResearch", link: "/fundamental-research", icon: "icon-fundamental-research.svg" },
-              { name: "Financial Crimes", component: "FinancialCrimes", link: "/financial-crimes", icon: "icon-financial-crimes.svg" },
-              { name: "View All Solutions", component: "Solutions", link: "/view-all-solutions", variant: "fixed-arrow" },
+              { name: "Credit Risk", link: "/credit-risk", icon: "icon-credit-risk.svg" },
+              { name: "ESG Investing", link: "/esg-investing", icon: "icon-esg-investing.svg" },
+              { name: "Quantitative Research", link: "/quantitative-research", icon: "icon-quantititive-research.svg" },
+              { name: "Fundamental Research", link: "/fundamental-research", icon: "icon-fundamental-research.svg" },
+              { name: "Financial Crimes", link: "/financial-crimes", icon: "icon-financial-crimes.svg" },
+              { name: "View All Solutions", link: "/solutions", variant: "fixed-arrow", action: "solution-filter", data: "function" },
             ]
           },
           {
             label: "BY WORKFLOW",
             size: 3,
             links: [
-              { name: "Smart Insights", component: "SmartInsights", link: "/smart-insights", icon: "icon-smart-insights.svg" },
-              { name: "Smart Extraction", component: "SmartExtraction", link: "/smart-extraction", icon: "icon-smart-extraction.svg" },
-              { name: "Smart Search", component: "SmartSearch", link: "/smart-search", icon: "icon-smart-search.svg" },
-              { name: "Smart Alerts", component: "SmartAlerts", link: "/smart-alerts", icon: "icon-smart-alerts.svg" },
-              { name: "Smart Recommendations", component: "SmartRecommendations", link: "/smart-recommendations", icon: "icon-smart-recommendations.svg" },
-              { name: "View All Workflows", component: "Workflows", link: "/view-all-workflows", variant: "fixed-arrow" },
+              { name: "Smart Insights", link: "/smart-insights", icon: "icon-smart-insights.svg" },
+              { name: "Smart Extraction", link: "/smart-extraction", icon: "icon-smart-extraction.svg" },
+              { name: "Smart Search", link: "/smart-search", icon: "icon-smart-search.svg" },
+              { name: "Smart Alerts", link: "/smart-alerts", icon: "icon-smart-alerts.svg" },
+              { name: "Smart Recommendations", link: "/smart-recommendations", icon: "icon-smart-recommendations.svg" },
+              { name: "View All Workflows", link: "/solutions", variant: "fixed-arrow", action: "solution-filter", data: "workflow" },
             ]
           },
           {
@@ -122,7 +125,7 @@ export const settings = {
               { name: "Data Scientist", component: "DataScientist", link: "/data-scientist", icon: "icon-data-scientist-n.svg" },
               { name: "Data Engineers", component: "DataEngineers", link: "/data-engineers", icon: "icon-data-engineers.svg" },
               { name: "Software Developers", component: "SoftwareDevelopers", link: "/software-developers", icon: "icon-software-developers.svg" },
-              { name: "View All Users", component: "Users", link: "/view-all-users", variant: "fixed-arrow" },
+              { name: "View All Users", link: "/solutions", variant: "fixed-arrow", action: "solution-filter", data: "users" },
             ]
           },
         ]
@@ -135,7 +138,6 @@ export const settings = {
     { name: "Support policy", link: "/support_policy", component: "Policy", excludeNav: true },
     { name: "Privacy", link: "/privacy", component: "Privacy", excludeNav: true },
     { name: "Aws Registration", link: "/aws-registration", component: "AwsRegistration", excludeNav: true },
-    { name: "Marketplace", link: "/marketplace", component: "Marketplace", excludeNav: true },
     { name: "NewsRoom", link: "/news-room", component: "NewsRoom", excludeNav: true },
     { name: "Blog", link: "/blog", component: "Blog", excludeNav: true },
     { name: "Post", link: "/post/:postName", component: "Post", excludeNav: true },
@@ -144,41 +146,71 @@ export const settings = {
     { name: "Blog Bio", link: "/bio/:userId", component: "BlogBio", excludeNav: true },
     { name: "Trading Validation", component: "UserStory", link: "/user-story-next-alpha", data: "next-alpha", icon: "icon-link-data.svg", excludeNav: true },
     { name: "Credit Risk", component: "UserStory", link: "/user-story-fundomate", data: "fundomate", icon: "icon-link-data.svg", excludeNav: true },
+    { name: "Request Morningstar", component: "RequestMorningstar", link: "/request-morningstar", excludeNav: true },
+    { name: "Request Naviga", component: "RequestNaviga", link: "/request-naviga", excludeNav: true },
+    { name: "WhitePapers", link: "/whitepapers", component: "WhitePapers", excludeNav: true },
+    { name: "Request Whitepaper", link: "/request-whitepaper", component: "RequestWhitepaper", excludeNav: true },
+    { name: "Become Partner", link: "/become-partner", component: "BecomePartner", excludeNav: true },
+    { name: "Credit Risk Workflow", component: "CreditRiskWorkflow", link: "/credit-risk-workflow", icon: "icon-credit-risk.svg", excludeNav: true },
+    { name: "Course", link: "/course/:courseName", component: "Course", excludeNav: true },
+    { name: "University", link: "/university", component: "University", excludeNav: true },
+    { name: "Partners", component: "Partners", link: "/partners", excludeNav: true },
+    { name: "Courses", component: "Courses", link: "/courses", excludeNav: true },
+    { name: "Solutions", component: "Solutions", link: "/solutions", excludeNav: true },
+    { name: "Product Managers", component: "ProductManagers", link: "/product-managers", icon: "icon-product-managers.svg", excludeNav: true },
+    { name: "Credit Risk", component: "CreditRiskSolution", link: "/credit-risk", excludeNav: true },
+    { name: "Claims Management", component: "ClaimsManagement", link: "/claims-management", excludeNav: true },
+    { name: "Customer Experience", component: "CustomerExperience", link: "/customer-experience", excludeNav: true },
+    { name: "Customer Retention", component: "CustomerRetention", link: "/customer-retention", excludeNav: true },
+    { name: "Equity Research", component: "EquityResearch", link: "/equity-research", excludeNav: true },
+    { name: "ESG Investing", component: "ESGInvesting", link: "/esg-investing", excludeNav: true },
+    { name: "Event-Driven Investing", component: "EventDrivenInvesting", link: "/event-driven-investing", excludeNav: true },
+    { name: "Financial Crimes", component: "FinancialCrimes", link: "/financial-crimes", excludeNav: true },
+    { name: "Fundamental Research", component: "FundamentalResearch", link: "/fundamental-research", excludeNav: true },
+    { name: "Long/Short Equity", component: "LongShortEquity", link: "/long-short-equity", excludeNav: true },
+    { name: "Merger Arbitrage", component: "MergerArbitrage", link: "/merger-arbitrage", excludeNav: true },
+    { name: "Mergers & Acquisitions", component: "MergersAcquisitions", link: "/mergers-acquisitions", excludeNav: true },
+    { name: "Product Recommendations", component: "ProductRecommendations", link: "/product-recommendations", excludeNav: true },
+    { name: "Quantitative Research", component: "QuantitativeResearch", link: "/quantitative-research", excludeNav: true },
+    { name: "Underwriting", component: "Underwriting", link: "/underwriting", excludeNav: true },
+    { name: "Smart Insights", component: "SmartInsights", link: "/smart-insights", excludeNav: true},
+    { name: "Smart Search", component: "SmartSearch", link: "/smart-search", excludeNav: true},
+    { name: "Smart Alerts", component: "SmartAlerts", link: "/smart-alerts", excludeNav: true },
+    { name: "Smart Extraction", component: "SmartExtraction", link: "/smart-extraction", excludeNav: true},
+    { name: "Smart Summaries", component: "SmartSummaries", link: "/smart-summaries", excludeNav: true},
+    { name: "Smart Recommendations", component: "SmartRecommendations", link: "/smart-recommendations", excludeNav: true},
+    { name: "Smart Verification", component: "SmartVerification", link: "/smart-verification", excludeNav: true},
 
+    { name: "Asset Management", component: "AssetManagament", link: "/asset-management", excludeNav: true },
+    { name: "Private Markets", component: "PrivateMarkets", link: "/private-markets", excludeNav: true },
+    { name: "Asset Owners", component: "AssetOwners", link: "/asset-owners", excludeNav: true },
+    { name: "Insurance", component: "Insurance", link: "/insurance", excludeNav: true },
+    { name: "Banking", component: "Bankers", link: "/bankers", excludeNav: true },
+    { name: "Quantitative Managers", component: "QuantitativeManagers", link: "/quantitative-managers", excludeNav: true },
+    
   ],
 
   footer: {
     columns: [
       {
         title: "Accern",
-        rows: [
-          { name: "55 Broadway", link: "" },
-          { name: "New York, NY 10006", link: "" },
-          { name: "+1 (347) 745 6649", link: "" },
-          { name: "info@accern.com", link: "" },
-          { socials: [
-            {link: "#", icon: "icon-facebook-shape"},
-            {link: "#", icon: "icon-twitter-shape"},
-            {link: "#", icon: "icon-linkedin-shape"},
-            {link: "#", icon: "icon-instagram-shape"},
-          ] }
-        ]
+        description: "We are accelerating AI adoption for enterprises with a no-code development platform.",
       },
       {
         title: "Product",
         rows: [
-          { label:"Features" },
+          { label: "Features" },
           { name: "Data", link: "/data" },
           { name: "AutoML Taxonomy", link: "/auto-taxonomy" },
           { name: "Adaptive NLP", link: "/adaptive-nlp" },
           { name: "Adaptive Forecasting", link: "/adaptive-forecasting" },
           { name: "Deploy", link: "/deployments" },
           { name: "Integrate", link: "/integrations" },
-          { label:"Details" },
+          { label: "Details" },
           { name: "Pricing", link: "/pricing" },
           { name: "Compare", link: "/compare" },
-          { name: "Product Updates", link: "/product-updates" },
-          { name: "Request Trial", link: "/request-trial" },
+          // { name: "Product Updates", link: "/product-updates" },
+          { name: "Request Trial", modal: "request" },
         ]
       },
       {
@@ -196,42 +228,67 @@ export const settings = {
       {
         title: "Solutions",
         rows: [
-          { name: "By Industry", link: "/view-all-industries" },
-          { name: "By Solutions", link: "/view-all-solutions" },
-          { name: "By Workflow", link: "/view-all-workflows" },
-          { name: "By Users", link: "/view-all-users" },
+          { name: "By Industry", link: "/solutions", action: "solution-filter", data: "industry" },
+          { name: "By Function", link: "/solutions", action: "solution-filter", data: "function" },
+          { name: "By Workflow", link: "/solutions", action: "solution-filter", data: "workflow" },
+          { name: "By Users", link: "/solutions", action: "solution-filter", data: "users" },
         ]
       },
       {
         title: "AI Marketplace",
         rows: [
           { name: "By AI Use Cases", link: "/marketplace" },
-          { name: "By AI Components", link: "/marketplace" },
-          { name: "By AI Apps", link: "/marketplace" },
+          // { name: "By AI Components", link: "/marketplace" },
+          // { name: "By AI Apps", link: "/marketplace" },
         ]
       },
       {
         title: "AI University",
         rows: [
-          {label: "Documentation"},
-          { name: "Product", link: "/documentation" },
-          { name: "Integration", link: "/documentation" },
+          { label: "Documentation" },
+          // { name: "Product", link: "/documentation" },
+          // { name: "Integration", link: "/documentation" },
           { name: "API", link: "/documentation" },
-          {label: "Learn"},
-          { name: "Courses", link: "/courses" },
-          { name: "Webinars", link: "/webinars" },
-          { name: "Blog", link: "/blog" },
-          { name: "Whitepapers", link: "/whitepapers" },
-          { name: "Glossary", link: "/glossary" },
-          {label: "Community"},
-          { name: "Events", link: "/events" },
-          { name: "AI Tutorials", link: "/ai-tutorials" },
-          { name: "Become a Contributor", link: "/contact" },
+          // { label: "Learn" },
+          // { name: "Courses", link: "/courses" },
+          // { name: "Webinars", link: "/webinars" },
+          // { name: "Blog", link: "/blog" },
+          // { name: "Whitepapers", link: "/whitepapers" },
+          // { name: "Glossary", link: "/glossary" },
+          { label: "Community" },
+          // { name: "Events", link: "/events" },
+          // { name: "AI Tutorials", link: "/ai-tutorials" },
+          { name: "Become a Contributor", link: "/become-partner" },
         ]
       },
     ],
-    copyright: "Copyright © 2014 – 2020 Accern Corporation. All Rights Reserved.",
+    socials: [
+      { link: "#", icon: "icon-facebook-shape" },
+      { link: "#", icon: "icon-twitter-shape" },
+      { link: "#", icon: "icon-linkedin-shape" },
+      { link: "#", icon: "icon-instagram-shape" },
+    ],
+
+    contacts: {
+      rows: [
+        { name: "+1 (347) 745 6649", link: "tel:+13477456649" },
+        { name: "info@accern.com", link: "mailto:info@accern.com" },
+      ]
+    },
+
+    subscribe: {
+      title: "Stay in Touch",
+      description: "Get the latest from Accern",
+      placeholder: "Email address",
+      button: "subscribe",
+      message: "Thank You. You are subscribed.",
+    },
+
+    copyright: "©2020 Accern Corporation. All Rights Reserved ",
     links: [
+      { name: "Terms of Use", link: "/terms_of_use" },
+      { name: "Privacy Statement", link: "/privacy" },
+      { name: "Cookie Policy", link: "/support_policy" },
     ]
   },
 
@@ -249,7 +306,7 @@ export const settings = {
     title: "Ready to get started?",
     label: "GET STARTED",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    link: {
+    button: {
       name: "GET STARTED",
       modal: "request"
     }
@@ -285,8 +342,8 @@ export const settings = {
       button: "Submit",
       formType: "requestTrial",
       fields: [
-        { name: "firstname", type: "text", placeholder: "First Name", className: "advanced", required: true, pattern: ".{2,}" },
-        { name: "lastname", type: "text", placeholder: "Last Name", className: "advanced", required: true, pattern: ".{2,}" },
+        { name: "first_name", type: "text", placeholder: "First Name", className: "advanced", required: true, pattern: ".{2,}" },
+        { name: "last_name", type: "text", placeholder: "Last Name", className: "advanced", required: true, pattern: ".{2,}" },
         { name: "email", type: "email", placeholder: "E-mail", className: "advanced", required: true },
         { name: "phone", type: "tel", placeholder: "Phone Number", className: "advanced" },
         { name: "company", type: "text", placeholder: "Company", className: "advanced" },
@@ -317,7 +374,7 @@ export const settings = {
       button: "Submit",
       formType: "requestAccess",
       fields: [
-        { name: "firstname", type: "text", placeholder: "Name", className: "advanced", required: true, pattern: ".{2,}" },
+        { name: "first_name", type: "text", placeholder: "Name", className: "advanced", required: true, pattern: ".{2,}" },
         { name: "company", type: "text", placeholder: "Company", className: "advanced" },
         { name: "email", type: "email", placeholder: "E-mail", className: "advanced", required: true },
         { name: "phone", type: "tel", placeholder: "Phone Number", className: "advanced" },
@@ -334,8 +391,8 @@ export const settings = {
       button: "Submit",
       formType: "file",
       fields: [
-        { name: "firstname", type: "text", placeholder: "First Name", className: "advanced", required: true, pattern: ".{2,}" },
-        { name: "lastname", type: "text", placeholder: "Last Name", className: "advanced", required: true, pattern: ".{2,}" },
+        { name: "first_name", type: "text", placeholder: "First Name", className: "advanced", required: true, pattern: ".{2,}" },
+        { name: "last_name", type: "text", placeholder: "Last Name", className: "advanced", required: true, pattern: ".{2,}" },
         { name: "email", type: "email", placeholder: "E-mail", className: "advanced", required: true },
         { name: "phone", type: "tel", placeholder: "Phone Number", className: "advanced" },
         { name: "company", type: "text", placeholder: "Company", className: "advanced" },
@@ -346,7 +403,7 @@ export const settings = {
   },
 
   downloadCaseStudy: {
-    title: "AI in Asset Management White Paper",
+    title: "AI in Asset Management Whitepaper",
     description: "This paper discusses the applications of using Natural Language Processing (NLP) within the investment decision and risk management processes, the challenges Asset Managers face in analyzing unstructured data and with building NLP models, and how no-code AI platforms are enabling a more efficient, economic, and quicker adoption of NLP",
     customers: {
       label: "Trusted By",
@@ -364,8 +421,8 @@ export const settings = {
       button: "Download",
       formType: "file",
       fields: [
-        { name: "firstname", type: "text", placeholder: "First Name", className: "advanced", required: true, pattern: ".{2,}" },
-        { name: "lastname", type: "text", placeholder: "Last Name", className: "advanced", required: true, pattern: ".{2,}" },
+        { name: "first_name", type: "text", placeholder: "First Name", className: "advanced", required: true, pattern: ".{2,}" },
+        { name: "last_name", type: "text", placeholder: "Last Name", className: "advanced", required: true, pattern: ".{2,}" },
         { name: "email", type: "email", placeholder: "E-mail", className: "advanced", required: true },
         { name: "phone", type: "tel", placeholder: "Phone Number", className: "advanced" },
         { name: "company", type: "text", placeholder: "Company", className: "advanced" },
@@ -413,6 +470,12 @@ export const settings = {
     Popular: "Popular",
     Workflow: "Workflow",
     ComingSoon: "Coming Soon",
+    by: "by",
+    AllSolutions: "All Solutions",
+    ByIndustry: "By Industry",
+    ByFunction: "By Function",
+    ByWorkflow: "By Workflow",
+    ByUsers: "By Users",
   },
 
   getInTouch: {
@@ -434,8 +497,8 @@ export const settings = {
       button: "Submit",
       formType: "getInTouch",
       fields: [
-        { name: "firstname", type: "text", placeholder: "First Name", className: "advanced", required: true, pattern: ".{2,}" },
-        { name: "lastname", type: "text", placeholder: "Last Name", className: "advanced", required: true, pattern: ".{2,}" },
+        { name: "first_name", type: "text", placeholder: "First Name", className: "advanced", required: true, pattern: ".{2,}" },
+        { name: "last_name", type: "text", placeholder: "Last Name", className: "advanced", required: true, pattern: ".{2,}" },
         { name: "email", type: "email", placeholder: "E-mail", className: "advanced", required: true },
         { name: "phone", type: "tel", placeholder: "Phone Number", className: "advanced" },
         { name: "country", type: "text", placeholder: "Country", className: "advanced" },
@@ -445,8 +508,29 @@ export const settings = {
       ]
     }
   },
+  downloadWhitepaper: {
+    label: "Whitepaper",
+    form: {
+      from: "Request Whitepaper",
+      message: "We’ll be in touch shortly!",
+      button: "Download Whitepaper",
+      variant: "bordered",
+      succesModal: {
+        name: "success",
+        title: "Thank you for selecting Accern!",
+        description: "One of our representatives will contact you within 24 hours with your login details and access to additional resources on how to build your AI use cases. "
+      },
+      fields: [
+        { name: "first_name", type: "text", placeholder: "Full Name", className: "advanced", required: true, pattern: ".{2,}", isFullWidth: true, },
+        { name: "email", type: "email", placeholder: "E-mail", className: "advanced", required: true, isFullWidth: true, },
+        { name: "phone", type: "tel", placeholder: "Phone Number", className: "advanced", isFullWidth: true, },
+        { name: "company", type: "text", placeholder: "Company", className: "advanced", isFullWidth: true, },
+        { name: "title", type: "text", placeholder: "Job Title", className: "advanced", isFullWidth: true, },
+      ]
+    },
+  },
   downloadReport: {
-    title: "AI in Asset Management White Paper",
+    title: "AI in Asset Management Whitepaper",
     description: "This paper discusses the applications of using Natural Language Processing (NLP) within the investment decision and risk management processes, the challenges Asset Managers face in analyzing unstructured data and with building NLP models, and how no-code AI platforms are enabling a more efficient, economic, and quicker adoption of NLP",
     customers: {
       label: "Trusted By",
@@ -464,8 +548,8 @@ export const settings = {
       button: "Download",
       formType: "file",
       fields: [
-        { name: "firstname", type: "text", placeholder: "First Name", className: "advanced", required: true, pattern: ".{2,}" },
-        { name: "lastname", type: "text", placeholder: "Last Name", className: "advanced", required: true, pattern: ".{2,}" },
+        { name: "first_name", type: "text", placeholder: "First Name", className: "advanced", required: true, pattern: ".{2,}" },
+        { name: "last_name", type: "text", placeholder: "Last Name", className: "advanced", required: true, pattern: ".{2,}" },
         { name: "email", type: "email", placeholder: "E-mail", className: "advanced", required: true },
         { name: "phone", type: "tel", placeholder: "Phone Number", className: "advanced" },
         { name: "company", type: "text", placeholder: "Company", className: "advanced" },
@@ -492,8 +576,8 @@ export const settings = {
       button: "Submit",
       formType: "requestQuote",
       fields: [
-        { name: "firstname", type: "text", placeholder: "First Name", className: "advanced", required: true, pattern: ".{2,}" },
-        { name: "lastname", type: "text", placeholder: "Last Name", className: "advanced", required: true, pattern: ".{2,}" },
+        { name: "first_name", type: "text", placeholder: "First Name", className: "advanced", required: true, pattern: ".{2,}" },
+        { name: "last_name", type: "text", placeholder: "Last Name", className: "advanced", required: true, pattern: ".{2,}" },
         { name: "email", type: "email", placeholder: "E-mail", className: "advanced", required: true },
         { name: "phone", type: "tel", placeholder: "Phone Number", className: "advanced" },
         { name: "company", type: "text", placeholder: "Company", className: "advanced" },
@@ -510,10 +594,10 @@ export const settings = {
   ],
 
   tags: [
-    {color: "#1063FE", cover: "shape-rect-md-primary.png"},
-    {color: "#75C919", cover: "shape-rect-md-secondary.png"},
-    {color: "#FB7F54", cover: "shape-rect-md-danger.png"},
-    {color: "#5E4BEF", cover: "shape-rect-md-advanced.png"},
+    { color: "#1063FE", cover: "shape-rect-md-primary.png" },
+    { color: "#75C919", cover: "shape-rect-md-secondary.png" },
+    { color: "#FB7F54", cover: "shape-rect-md-danger.png" },
+    { color: "#5E4BEF", cover: "shape-rect-md-advanced.png" },
   ],
 
   categories: [

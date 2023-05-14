@@ -10,12 +10,10 @@ header {
   display: flex !important;
   align-items: center;
   z-index: 10;
-  border-bottom: 1px solid $border-color;
   transition: all $transition * 2 cubic-bezier(0.175, 0.885, 0.32, 1.2);
 
   &.hide {
     transform: translateY(-100%) translateY(-30px);
-    box-shadow: $shadow-2;
   }
 
   &.down.sub-active,
@@ -55,16 +53,24 @@ header {
   }
 
   .nav {
+    flex-wrap: nowrap;
+
+    .text-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.093rem;
+    }
+
     .nav-item {
       .nav-link {
         position: relative;
         display: flex;
         align-items: center;
+        white-space: nowrap;
         font-size: 0.875rem;
         line-height: 1.5625rem;
         letter-spacing: 0.164375rem;
         text-transform: uppercase;
-        color: $dark;
+        color: $white;
         font-weight: 500;
         transition: color $transition ease;
 
@@ -123,7 +129,7 @@ header {
         padding-left: 2rem;
         padding-right: 2rem;
       }
-      &::after{
+      &::after {
         display: none;
       }
       .nav-sub {
@@ -135,7 +141,7 @@ header {
     }
 
     &.simple {
-      &::after{
+      &::after {
         display: none;
       }
 
@@ -146,7 +152,7 @@ header {
 
         &:hover {
           h4 {
-            color: $dark;
+            color: $primary;
           }
         }
       }
@@ -157,19 +163,13 @@ header {
         padding: 1.2rem 0;
         transform: translateX(-50%) translateY(-100%);
 
-        // &::after {
-        //   content: "";
-        //   display: block;
-        //   position: absolute;
-        //   background: url(../../assets/img/shape-nav.svg);
-        //   opacity: 1;
-        //   height: 10px;
-        //   background-position: center center;
-        //   background-repeat: no-repeat;
-        //   top: 0;
-        //   left: 0;
-        //   width: 100%;
-        // }
+        .column-link-cont {
+          .column-link {
+            .nav-sub-link-arrow {
+              display: block;
+            }
+          }
+        }
       }
     }
   }
@@ -180,18 +180,6 @@ header {
     transition: transform $transition * 3 $transition-timing, box-shadow $transition * 3 ease;
     transform: translateY(-100%);
     box-shadow: none;
-
-    // &::after {
-    //   content: "";
-    //   display: block;
-    //   position: absolute;
-    //   top: 0;
-    //   left: 0;
-    //   width: 100%;
-    //   height: 10px;
-    //   background: url(../../assets/img/shape-nav.svg);
-    //   background-position: center center;
-    // }
 
     .column-link-cont {
       opacity: 1;
@@ -207,6 +195,21 @@ header {
       transform: translateY(-50px);
       transition: all $transition ease;
       transition-delay: $transition * 2;
+
+      .nav-sub-link-arrow {
+        display: none;
+      }
+
+      .fixed-arrow {
+        justify-content: flex-start;
+
+        &:hover {
+          justify-content: flex-start;
+        }
+        .nav-sub-link-arrow {
+          display: block;
+        }
+      }
     }
   }
 
@@ -244,7 +247,8 @@ header {
 
     &.fixed-arrow {
       h4 {
-        color: $darker;
+        color: $primary;
+        font-size: 0.9375rem;
       }
       &:hover {
         justify-content: space-between;
@@ -275,7 +279,7 @@ header {
       align-items: center;
       margin-right: 1.2rem;
 
-      img{
+      img {
         height: 2rem;
         width: auto;
         max-width: 2rem;
@@ -295,7 +299,7 @@ header {
         transform: translateX(0);
       }
       h4 {
-        color: $dark;
+        color: $primary;
       }
     }
   }
@@ -372,6 +376,12 @@ header {
   }
 
   .nav-sub-link {
+
+    &.hide-link {
+      opacity: 0.3;
+      pointer-events: none;
+    }
+
     &.with-icon {
       display: flex;
 
@@ -396,7 +406,7 @@ header {
     &::after {
       content: "";
       display: block;
-      width:100%;
+      width: 100%;
       position: absolute;
       top: 0;
       left: 0;
@@ -637,6 +647,7 @@ header {
         .nav-link {
           display: flex;
           padding: 1.3rem 0;
+          color: $dark;
           justify-content: space-between;
 
           svg {

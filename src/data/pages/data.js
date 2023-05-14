@@ -13,8 +13,8 @@ export const page = {
     title: "Select Datasets for Your <strong>AI Solutions</strong>",
     titleCL: "mw-580",
     description: "Accern comes integrated with one of the largest unstructured news, reports, and social media data marketplaces. In addition, you can upload your internal documents or existing data subscriptions to Accern to build your AI solutions.",
-    img: "data-illustration.svg",
-    variant: "fluid",
+    variant: "simple-video",
+    video: "data-store-video.mp4",
     button: {
       name: "GET A DEMO",
       modal: "request"

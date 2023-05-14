@@ -7,11 +7,15 @@ import "./CoverBlock.scss"
 
 const CoverBlock = ({ isVisible, page }) => {
 
+  const renderEffect = () => {
+    return <div className={`${page.bgClassName ? page.bgClassName : `effect-bg ${page.variant ? page.variant : "primary"}`}`}></div>;
+  }
+
   const renderBlock = () => {
     switch (page.variant) {
       case "bio":
         return <Container fluid className="position-relative z-1">
-          <div className={`${page.bgClassName ? page.bgClassName : "effect-bg-2"}`}></div>
+          {renderEffect()}
           <Row>
             <Col>
               <Container className="p-ef-2">
@@ -45,7 +49,7 @@ const CoverBlock = ({ isVisible, page }) => {
 
       default:
         return <Container fluid className="position-relative z-1">
-          <div className={`${page.bgClassName ? page.bgClassName : "effect-bg-2"}`}></div>
+          {renderEffect()}
           <Row>
             <Col>
               <Container className="p-ef-2">
@@ -53,9 +57,9 @@ const CoverBlock = ({ isVisible, page }) => {
                   <Col className="position-relative text-center text-lg-left">
                     {!page.isDisableShape && <div className="shape-homehero-3"><img src="../../assets/img/dots-medium-4.svg" alt="" /></div>}
                     {!page.isIconRight && page.icon && <img className="cover-block-icon" src={`../assets/img/${page.icon}`} />}
-                    {page.label && <div className={`mb-2 text-center text-md-left ${page.labelCL ? page.labelCL : ""}`}><span className="text-label text-white">{page.label}</span></div>}
+                    {page.label && <div className={`mb-2 op-06 text-center text-md-left ${page.labelCL ? page.labelCL : ""}`}><span className="text-label text-white">{page.label}</span></div>}
                     {page.title && <h2 className={`text-light lh-1 mb-3 ${page.titleCL ? page.titleCL : ""}`} dangerouslySetInnerHTML={{ __html: page.title }}></h2>}
-                    {page.description && <p className="text-light op-07 mw-340 mb-4 mb-lg-0 mx-auto mx-lg-0">{page.description}</p>}
+                    {page.description && <p className={`text-light op-07 ${page.descriptionCL ? page.descriptionCL : "mw-340"} mb-4 mb-lg-0 mx-auto mx-lg-0`}>{page.description}</p>}
                     {page.button && <LinkAdv data={page.button} className="mt-4" variant="btn-light" />}
                   </Col>
                   {page.isIconRight &&

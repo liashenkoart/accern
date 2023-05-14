@@ -10,6 +10,8 @@ import RequestCaseStudy from "./requestcasestudy";
 import RequestAccess from "./requestAccess";
 import RequestQuote from "./requestquote";
 import AwsSuccess from "./success/awsSuccess";
+import DownloadWhitepaper from "./downloadWhitepaper";
+import Video from "./video";
 
 const Modals = () => {
 
@@ -26,6 +28,8 @@ const Modals = () => {
       {modals.isRequestAccess && <RequestAccess />}
       {modals.isRequestQuote && <RequestQuote />}
       {modals.isAwsSuccess && <AwsSuccess />}
+      {modals.isDownloadWhitepaper && <DownloadWhitepaper />}
+      {modals.isVideo && <Video />}
     </>
   );
 }

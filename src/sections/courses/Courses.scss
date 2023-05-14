@@ -1,0 +1,138 @@
+@import "../../styles/global/variables.scss";
+
+.courses {
+  &-inner {
+    display: flex;
+    border: 1px solid $border-color;
+    padding: 2rem;
+    margin-bottom: $gutter;
+    transition: all $transition ease;
+
+    &:hover {
+      box-shadow: $shadow-5;
+      cursor: pointer;
+    }
+  }
+
+  &-img {
+    margin-right: 1rem;
+
+    img {
+      height: 80px;
+      width: auto;
+    }
+  }
+
+  h4 {
+    font-size: 1.125rem;
+    color: $dark;
+    font-weight: 400;
+  }
+
+  p {
+    font-size: 0.875rem;
+    margin-bottom: 0;
+  }
+
+  @include media-breakpoint-down(md) {
+    h4 {
+      font-size: 1rem;
+    }
+
+    &-inner {
+      padding: 1rem;
+    }
+
+    &-img {
+      margin-right: 0.5rem;
+
+      img {
+        height: 60px;
+      }
+    }
+  }
+}
+
+.courses-block {
+  width: 100%;
+  display: block;
+  color: inherit;
+  margin-bottom: 2rem;
+
+  &:hover {
+    color: inherit;
+  }
+
+  &-img {
+    width: 100%;
+    height: 200px;
+    background-position: center center !important;
+    background-size: cover !important;
+  }
+
+  &-duration {
+    padding-top: 1rem;
+    border-top: 1px solid $border-color;
+    display: flex;
+    color: $dark;
+
+    .app-icon {
+      color: $primary;
+      font-size: 0.75rem;
+    }
+  }
+}
+
+.course-viewer {
+  &-thumb {
+    width: 100%;
+    height: 140px;
+    background-size: cover !important;
+    background-position: center center !important;
+  }
+
+  &-lesson {
+    background-color: $light;
+    position: relative;
+    padding: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    color: $dark;
+    transition: all $transition ease;
+
+    .app-icon {
+      color: $primary;
+      font-size: 1.4rem;
+      transition: all $transition ease;
+    }
+
+    &:hover {
+      background-color: $primary;
+      color: $white;
+      box-shadow: $shadow-3;
+      z-index: 1;
+
+      .app-icon {
+        color: $white;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    &-lesson {
+      font-size: 0.875rem;
+      flex-direction: column;
+    }
+  }
+}
+
+.courses-featured {
+  &-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

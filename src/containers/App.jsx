@@ -9,6 +9,7 @@ import reducerPages from "../context/reducerPages";
 import reducerNotifi from "../context/reducerNotifi";
 import reducerModals from "../context/reducerModals";
 import reducerUserMail from "../context/reducerUserMail";
+import reducerApp from "../context/reducerApp";
 import { settings } from "../data/settings";
 import Loader from "../components/loader/Loader";
 import Scrollbar from 'react-smooth-scrollbar';
@@ -38,6 +39,7 @@ const App = () => {
 
   const [modals, dispatchModals] = useReducer(reducerModals, { isRequestTrial: false });
   const [userMail, dispatchUserMail] = useReducer(reducerUserMail, "");
+  const [app, dispatchApp] = useReducer(reducerApp, {});
 
   const [components, setComponents] = useState([])
 
@@ -150,7 +152,7 @@ const App = () => {
   }
 
   return (
-    <Context.Provider value={{ dispatchLayout, pages, dispatchPages, notification, dispatchNotifi, modals, dispatchModals, userMail, dispatchUserMail, scroll, page, scrollB }}>
+    <Context.Provider value={{ app, dispatchApp, dispatchLayout, pages, dispatchPages, notification, dispatchNotifi, modals, dispatchModals, userMail, dispatchUserMail, scroll, page, scrollB }}>
       <Header state={state.headerState} isFluid={state.isFluid} />
       <Scrollbar className="scoll-bar" ref={e => { if (e) { setScrollB(e); e.scrollbar.track.xAxis.element.remove(); } }}>
         <div className="app">

@@ -11,8 +11,8 @@ import VisibilitySensor from '../utils/react-visibility-sensor';
 const Marketplace = ({path}) => {
 
   const sections = [
-    {component: CoverBlock, page: page.hero},
-    {component: UseCases, page: page.useCases},
+    {component: CoverBlock, props: {page: page.hero}},
+    {component: UseCases, props: {page: page.useCases}},
     {component: Footer},
   ]
 
@@ -22,7 +22,7 @@ const Marketplace = ({path}) => {
       {sections.map((section, i) => (
         <VisibilitySensor partialVisibility={true} once={true} key={`p-${i}`}>
           {({ isVisible }) =>
-            React.createElement(section.component, { key: `s-${i}`, isVisible: isVisible, page: section.page, isMinimal: section.isMinimal ? true : false, variant: section.variant })
+            React.createElement(section.component, { ...section.props, key: `s-${i}`, isVisible: isVisible})
           }
         </VisibilitySensor>
       ))}

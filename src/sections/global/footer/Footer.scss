@@ -1,8 +1,6 @@
 @import "../../../styles/global/variables.scss";
 
 .footer {
-  margin-top: $section-spacer;
-
   .footer-columns {
     display: flex;
     justify-content: space-between;
@@ -28,7 +26,7 @@
     font-size: 1.125rem;
 
     a {
-      margin-right: 0.5rem;
+      margin-left: 1rem;
       color: $primary;
 
       .app-icon {
@@ -50,6 +48,16 @@
     margin-bottom: 4rem;
   }
 
+  &-additional-links {
+    a {
+      color: inherit;
+
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+
   .footer-shape {
     position: absolute;
     left: 0;
@@ -66,7 +74,10 @@
     position: relative;
     background-color: $dark;
     padding-top: 4rem;
-    padding-bottom: 4rem;
+
+    &.without-get-started {
+      padding-top: 6rem;
+    }
 
     &::after {
       content: "";
@@ -81,10 +92,32 @@
     }
   }
 
+  &-bottom {
+    padding: 3rem 0;
+    display: flex;
+    align-items: center;
+    margin-top: 4rem;
+    border-top: 1px solid rgba($cover-adv, 0.1);
+  }
+
+  &-bottom-link {
+    color: $gray;
+    font-size: 0.875rem;
+    margin-left: 2rem;
+
+    &:hover {
+      color: $white;
+    }
+  }
+
   .footer-list {
     padding: 0;
     margin: 0;
     list-style: none;
+
+    p {
+      max-width: 240px;
+    }
 
     li {
       line-height: 2em;
@@ -108,9 +141,17 @@
   }
 
   @include media-breakpoint-down(md) {
-    .footer-inner {
-      padding-bottom: 9rem;
+
+    .footer-socials {
+      a {
+        margin: 0 0.5rem;
+      }
     }
+
+    &-bottom-link {
+      margin: 0 1rem;
+    }
+   
     .footer-columns {
       flex-wrap: wrap;
       justify-content: flex-start;

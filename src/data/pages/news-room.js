@@ -13,7 +13,6 @@ export const page = {
     description: "Let us know and we’ll put you on the right path.",
     descrCL: "mw-500",
     placeholder: "Email address",
-    className: "mb-0",
     link: {
       name: "GET IN TOUCH",
       modal: "getInTouch"

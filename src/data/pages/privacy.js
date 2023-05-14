@@ -8,7 +8,7 @@ export const page = {
   },
   hero: {
     label: "ACCERN",
-    title: "Privacy",
+    title: "Accern Corporation - Data Protection Policy and Information Security Policy",
     titleCL: "mw-800",
   },
   privacy: {

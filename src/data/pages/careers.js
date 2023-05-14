@@ -33,7 +33,6 @@ export const page = {
     description: "Interested in joining us? Please check out our open positions.",
     descrCL: "mw-500",
     placeholder: "Email address",
-    className: "mb-0",
     link: {
       name: "GET IN TOUCH",
       modal: "getInTouch"

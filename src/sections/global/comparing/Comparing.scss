@@ -1,0 +1,90 @@
+@import "../../../styles/global/variables.scss";
+
+.comparing {
+
+  &-table {
+    border: 1px solid $border-color;
+  }
+
+  &-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+
+    img {
+      height: 30px;
+      max-width: 100px;
+      width: auto;
+    }
+
+    &:nth-child(even) {
+      background: rgba($primary, 0.03);
+    }
+
+    > * {
+      width: 400px;
+      display: flex;
+      align-items: center;
+
+      > * {
+        width: 280px;
+      }
+
+      &:first-child {
+        width: 200px;
+        color: $dark;
+      }
+
+      &:not(:first-child) {
+        align-items: flex-start;
+        .comparing-list-item {
+          padding-left: 1em;
+          position: relative;
+          display: block;
+          font-size: 0.875rem;
+
+          &::before {
+            content: "•";
+            color: $secondary;
+            position: absolute;
+            width: 1em;
+            left: 0;
+          }
+
+          &.dot-color-danger {
+            &::before {
+              color: $danger;
+            }
+          }
+
+          &.dot-color-primary {
+            &::before {
+              color: $primary;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    &-row {
+      flex-wrap: wrap;
+
+      > * {
+        width: 50%;
+
+        &:first-child {
+          width: 100%;
+          padding-bottom: 1rem;
+        }
+
+        &:not(:first-child) {
+          .comparing-list-item {
+            font-size: 0.75rem;
+          }
+        }
+      }
+    }
+  }
+}

@@ -6,18 +6,19 @@ import LinkAdv from "../../components/linkadv";
 
 import "./Block.scss"
 
-const Block = ({ data, className }) => {
+const Block = ({ data, className, i, isNumbered }) => {
 
   return (
     <div className={`mudule-block sect-spacer ${className}`}>
       <Container>
         <Row className="flex-column-reverse flex-md-row">
           <Col md={7} lg={6} className="d-flex align-items-center">
-            <div>
-              <div className="text-label"><span>{data.label}</span></div>
-              <h2 className={`${data.titleCL ? data.titleCL : "mw-440"} mb-d`} dangerouslySetInnerHTML={{ __html: data.title }}></h2>
-              <p className="mb-5 mw-540  text-medium">{data.description}</p>
-              {data.link && <LinkAdv variant="link" data={data.link}/>}
+            <div className="position-relative">
+              {isNumbered && <div className="mudule-block-number">0{i+1}</div>}
+              {data.label && <div className={`text-label ${data.labelCL ? data.labelCL : ""}`}><span>{data.label}</span></div>}
+              {data.title && <h2 className={`${data.titleCL ? data.titleCL : "mw-440"} mb-d`} dangerouslySetInnerHTML={{ __html: data.title }}></h2>}
+              {data.description && <p className="mb-5 mw-540  text-medium" dangerouslySetInnerHTML={{ __html: data.description }}></p>}
+              {data.link && <LinkAdv variant={`${data.link.variant ? data.link.variant : "link"}`} data={data.link} />}
             </div>
           </Col>
           <Col md={5} lg={6} className="d-flex align-items-center">

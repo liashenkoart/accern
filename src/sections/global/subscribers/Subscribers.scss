@@ -1,0 +1,55 @@
+@import "../../../styles/global/variables.scss";
+
+.subscribers {
+
+  &-inner {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid $border-color;
+  }
+
+  &-users {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+  }
+
+  &-user {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    color: $white;
+    border: 3px solid $cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    font-weight: 500;
+
+    margin-left: -20px;
+
+    &:first-child{
+      margin-left: 0;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    &-inner {
+      flex-direction: column;
+    }
+
+    &-users {
+      margin-bottom: 1rem;
+    }
+
+    &-description {
+      text-align: center;
+      font-size: 1rem;
+    }
+  }
+}

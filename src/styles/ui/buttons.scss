@@ -17,6 +17,40 @@
   padding: $input-btn-padding-y $input-btn-padding-x;
   transition: all $transition ease;
 
+  &.btn-sm {
+    font-size: 0.75rem;
+    padding: $input-btn-padding-y*0.7 $input-btn-padding-x*0.7;
+
+  }
+
+  &.with-box-arrow {
+    padding-right: calc(#{$input-btn-padding-x} + 56px);
+  }
+
+  &.btn-primary {
+    .arrow-box {
+      background-color: $primary-spc;
+      .app-icon {
+        color: $white;
+      }
+    }
+  }
+
+  .arrow-box {
+    position: absolute;
+    right: -1px;
+    top: 0;
+    width: 56px;
+    height: calc(100% + 1px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .app-icon {
+      margin-left: 0;
+    }
+  }
+
   .app-icon {
     margin-left:1rem;
     font-size: 0.75rem;

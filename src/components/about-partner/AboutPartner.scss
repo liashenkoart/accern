@@ -1,0 +1,47 @@
+@import "../../styles/global/variables.scss";
+
+$about-partner-spacer: 2rem;
+
+.about-partner {
+
+  &-bg{
+    background-size: cover !important;
+    background-position: center center !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 140px;
+    width: calc(100% - 80px);
+
+    img {
+      max-height: 56px;
+      max-width: 200px;
+    }
+  }
+
+  &-description{
+    width: calc(100% - 80px);
+    margin-top: 2rem;
+    margin-bottom: 0;
+  }
+
+  @include media-breakpoint-down(lg) {
+    &-bg{
+      width: calc(100% - 40px);
+    }
+  
+    &-description{
+      width: calc(100% - 40px);
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    &-bg{
+      width: 100%;
+    }
+  
+    &-description{
+      width: 100%;
+    }
+  }
+}

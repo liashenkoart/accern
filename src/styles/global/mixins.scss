@@ -1,0 +1,6 @@
+@mixin gradient-angle($start, $end) {
+  background: $start;
+  background: -moz-linear-gradient(45deg, $start 0%,$end 100%);
+  background: -webkit-linear-gradient(45deg,$start 0%, $end 100%);
+  background: linear-gradient(45deg, $start 0%,$end 100%);
+}

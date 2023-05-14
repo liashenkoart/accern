@@ -1,0 +1,37 @@
+@import "../../styles/global/variables.scss";
+
+.author {
+  display: flex;
+  align-items: center;
+
+  img {
+    height: 64px;
+    width: auto;
+    margin-right: 1rem;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+    margin-bottom: 0;
+  }
+
+  p {
+    font-weight: 300;
+    margin-bottom: 0;
+  }
+
+  @include media-breakpoint-down(lg) {
+    p {
+      font-size: 0.875rem;
+    }
+    h4 {
+      font-size: 1rem;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+      img {
+        height: 50px;
+      }
+  }
+}

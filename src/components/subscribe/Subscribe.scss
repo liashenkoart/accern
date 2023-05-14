@@ -1,0 +1,84 @@
+@import "../../styles/global/variables.scss";
+
+.subscribe {
+  width: 100%;
+
+  &-input-container {
+    display: flex;
+    align-items: stretch;
+  }
+
+  &-form {
+    transition: opacity $transition ease;
+
+    &.hide {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+
+  &-notification {
+    font-size: 0.75rem;
+    position: absolute;
+    bottom: -40px;
+    color: $danger;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all $transition ease;
+
+    &.active {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  &-loader {
+    position: absolute;
+    top: 50%;
+    right: -50px;
+    transform: translateY(-50%);
+
+    .circular {
+      .path {
+        stroke: $white;
+      }
+    }
+  }
+
+  input {
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid rgba($cover-adv, 0.1);
+    outline: none;
+    color: $white;
+    padding-left: 1rem;
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus {
+      -webkit-text-fill-color: $white;
+      border: 1px solid $gray;
+      -webkit-box-shadow: 0 0 0px 1000px $black inset;
+      transition: background-color 5000s ease-in-out 0s;
+    }
+  }
+
+  &-message {
+    position: absolute;
+    top: 50%;
+    transform: translateY(20px);
+    color: $white;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all $transition ease;
+
+    &.show {
+      transform: translateY(-50%);
+      transition-delay: $transition * 2;
+      opacity: 1;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+  }
+}

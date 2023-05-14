@@ -1,0 +1,94 @@
+@import "../../../styles/global/variables.scss";
+
+.feedbacks {
+  padding-bottom: calc(#{$section-spacer - 1rem});
+
+  &-item {
+    padding: 4rem;
+    background-color: rgba($primary, 0.05);
+    margin-bottom: $gutter;
+    position: relative;
+
+    &.f-odd {
+      margin-top: -$gutter;
+    }
+
+    &::after{
+      content: '';
+      display: block;
+      width: 15%;
+      height: 60%;
+      background-color: rgba($primary, 0.06);
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    &.v-0 {
+      background-color: rgba($primary, 0.05);
+
+      &::after{
+        background-color: rgba($primary, 0.06);
+      }
+    }
+
+    &.v-1 {
+      background-color: rgba($danger, 0.05);
+
+      &::after{
+        background-color: rgba($danger, 0.06);
+      }
+    }
+
+    &.v-2 {
+      background-color: rgba($secondary, 0.05);
+
+      &::after{
+        background-color: rgba($secondary, 0.06);
+      }
+    }
+
+    &.v-3 {
+      background-color: rgba($advanced, 0.05);
+
+      &::after{
+        background-color: rgba($advanced, 0.06);
+      }
+    }
+  }
+
+  &-row  {
+    display: flex;
+    margin-top: 2rem;
+
+    h4 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin-bottom: 0rem;
+    }
+  } 
+
+  &-img {
+    width: 44px;
+    height: 44px;
+    background-size: contain !important;
+    background-position: center center !important;
+    margin-right: 1rem;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding-bottom: calc(#{$section-spacer - 1rem}/2);
+
+    &-item {
+      padding: 2rem;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    &-item {
+      &.f-odd {
+        margin-top: 0;
+      }
+    }
+  }
+}

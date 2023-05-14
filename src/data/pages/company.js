@@ -226,7 +226,7 @@ export const page = {
 
   coverCta: {
     description: "‘’Accern runs what’s known as a “no code” platform—it’s software that lets you build A.I. models without having to know how to program. The platform lets data scientists create and train models on vast quantities of unstructured text as well as other kinds of data.’",
-    cover: "cover-primary.svg",
+    cover: "cover-primary.png",
     logo: "fortune-logo-white.png",
     img: "fortune-img.jpg",
     button: {

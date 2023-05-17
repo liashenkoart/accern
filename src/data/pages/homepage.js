@@ -116,10 +116,10 @@ export const page = {
     description: "Our resources cover everything you need to start building your own AI use cases without code.",
     links: [
       {
-        title: "Blog",
-        description: "Discover the world of AI through thought leaderships articles and community content.",
+        title: "Newsroom",
+        description: "Stay up to date with Accern's company news and media coverage.",
         icon: "icon-blog-a.svg",
-        link: "/blog",
+        link: "/news-room",
         size: "4",
         theme: "t1"
       },
@@ -140,11 +140,11 @@ export const page = {
         theme: "t3"
       },
       {
-        title: "Accern University",
-        description: "Accern University is your guide to uncovering Accern. We cover everything you need — from navigating the platform to expert features.",
+        title: "Customers",
+        description: "Build and deploy AI use cases months faster for financial services.",
         descriptionCL: "mw-520",
         icon: "icon-accern-university-a.svg",
-        link: "/university",
+        link: "/customers",
         size: "8",
         theme: "t4"
       },

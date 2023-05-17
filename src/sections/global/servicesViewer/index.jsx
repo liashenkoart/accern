@@ -86,7 +86,7 @@ const ServicesViewer = ({ isVisible, page }) => {
 
     if (preContainerPosition < (containerBounding.height / 2) && !isDetectPause && containerBounding.top > (-1 * containerBounding.height / 2)) {
       if (!isDisabledScroll) {
-        setIsDisabledScroll(true);
+        //setIsDisabledScroll(true);
       }
     }
   }

@@ -15,6 +15,7 @@ const ServicesViewer = ({ isVisible, page }) => {
   const [isDisabledScroll, setIsDisabledScroll] = useState(false);
   const [isDetectPause, setIsDetectPause] = useState(false);
   const [isTouchStart, setIsTouchStart] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
   const preContainer = useRef();
   const container = useRef();
   const scrolsP = useRef(0);
@@ -26,25 +27,17 @@ const ServicesViewer = ({ isVisible, page }) => {
   const options = {
     speed: 500,
     slidesPerView: 1,
-    spaceBetween: page.variant == "columns" ? 500 : 30,
+    spaceBetween: 30,
     loop: false,
-
-    breakpoints: {
-      300: {
-        slidesPerView: 1,
-      },
-      767: {
-        slidesPerView: 1,
-      },
-      1500: {
-        slidesPerView: 1,
-      }
-    }
   }
 
   useEffect(() => {
     if (window.innerWidth < 1100) setIsDetectPause(true);
-
+    dispatchLayout({ type: "SET_LAYOUT", data: { isSelectFocus: true } })
+    setTimeout(() => {
+      setIsMounted(true);
+      dispatchLayout({ type: "SET_LAYOUT", data: { isSelectFocus: false } })
+    }, 1000)
   }, [])
 
   useEffect(() => {
@@ -116,7 +109,7 @@ const ServicesViewer = ({ isVisible, page }) => {
           scrolsP.current = 0;
           scrolsN.current = 0;
         } else {
-          scrolsP.current = scrolsP.current + e.deltaY;
+          scrolsP.current = scrolsP.current + (e.deltaY > 30 ? e.deltaY : 150);
         }
       } else {
         if (scrolsN.current < config.scrolsToNextN) {
@@ -134,7 +127,7 @@ const ServicesViewer = ({ isVisible, page }) => {
           scrolsN.current = 0;
           scrolsP.current = 0;
         } else {
-          scrolsN.current = scrolsN.current + e.deltaY;
+          scrolsN.current = scrolsN.current + (e.deltaY < -30 ? e.deltaY : -150);
         }
       }
     }
@@ -285,18 +278,21 @@ const ServicesViewer = ({ isVisible, page }) => {
 
   return (
     <div ref={preContainer} className={`services-viewer ${page.className ? page.className : ""} sect-spacer ${isVisible ? "active" : ''}`}>
-      <Container>
-        <Row>
-          <Col>
-            {page.label && <div className="text-label"><span>{page.label}</span></div>}
-            {page.title && <h2 dangerouslySetInnerHTML={{ __html: page.title }} className={`${page.titleCL ? page.titleCL : "mw-550"}`}></h2>}
-            {page.description && <p className={`mt-4 ${page.descrCL ? page.descrCL : "mw-550"}  text-medium`}>{page.description}</p>}
-          </Col>
-        </Row>
-      </Container>
-      <div ref={container} className={`services-viewer-slider s${step + 1} bg-dark sect-spacer`}>
-        {render()}
-      </div>
+      {isMounted && <>
+        <Container>
+          <Row>
+            <Col>
+              {page.label && <div className="text-label"><span>{page.label}</span></div>}
+              {page.title && <h2 dangerouslySetInnerHTML={{ __html: page.title }} className={`${page.titleCL ? page.titleCL : "mw-550"}`}></h2>}
+              {page.description && <p className={`mt-4 ${page.descrCL ? page.descrCL : "mw-550"}  text-medium`}>{page.description}</p>}
+            </Col>
+          </Row>
+        </Container>
+        <div ref={container} className={`services-viewer-slider s${step + 1} bg-dark sect-spacer`}>
+          {render()}
+        </div>
+      </>
+      }
     </div>
   );
 }

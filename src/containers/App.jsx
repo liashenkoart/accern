@@ -68,7 +68,7 @@ const App = () => {
     }, 100);
 
     setTimeout(() => {
-      document.querySelector("#loader-bg").remove();
+      if(document.querySelector("#loader-bg")) document.querySelector("#loader-bg").remove();
       setTimeout(() => {
         dispatchLayout({ type: "SET_LAYOUT", data: { loadderState: "loaded" } });
       }, 1000)

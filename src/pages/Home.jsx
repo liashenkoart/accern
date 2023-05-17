@@ -19,7 +19,7 @@ const Home = ({path}) => {
   const columns2 = [
     ...marketplace.useCases.workflows.options
     .filter(option => (option.value != "All"))
-    .map((item)=>({...item, by: "Workflows"})),
+    .map((item)=>({...item, by: "Workflow"})),
     ...marketplace.useCases.industries.options
     .filter(option => (option.value != "All"))
     .map((item)=>({...item, by: "Industry"}))

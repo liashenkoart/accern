@@ -18,9 +18,16 @@ const UseCases = ({ isVisible, page }) => {
   const [solution, setSolution] = useState({ ...page.solutions.options[0], label: `${page.solutions.options[0].label} (${page.list.length})` });
   const [searchValue, setSearchValue] = useState("");
   const [filtered, setFiltered] = useState(page.list);
-  const { dispatchModals, scrollB } = useContext(Context);
+  const { dispatchModals, scrollB, app } = useContext(Context);
   const [key, setKey] = useState('discover');
   const [position, setPosition] = useState(null);
+
+  useEffect(()=>{
+    if(app && app.linkAction && app.linkAction.name == "filter-marketplace") {
+      onFilterChange({ value: app.linkAction.data.value, label: app.linkAction.data.value }, app.linkAction.data.by.toLowerCase());
+      setKey("all");
+    }
+  }, [app])
 
   const onSearchChange = (value) => {
     setSearchValue(value.name);

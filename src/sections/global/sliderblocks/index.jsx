@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Swiper from 'react-id-swiper';
 import { settings } from "../../../data/settings";
 import Title from "../../../components/title";
+import { Context } from "../../../context/context";
 
 import 'swiper/swiper.scss'
 
 import "./SliderBlocks.scss"
+import { navigate } from "@reach/router";
 
 const SliderBlocks = ({ page }) => {
 
@@ -14,6 +16,7 @@ const SliderBlocks = ({ page }) => {
   const [swiper2, setSwiper2] = useState(null);
   const [dragable1, setDragable1] = useState(false);
   const [dragable2, setDragable2] = useState(false);
+  const { dispatchApp } = useContext(Context);
 
   const options = {
     slidesPerView: 6,
@@ -77,6 +80,14 @@ const SliderBlocks = ({ page }) => {
     }
   }
 
+  const setAction = (item) => {
+    if(item) dispatchApp({ type: "SET_APP_VALUES", data: { linkAction: {name: "filter-marketplace", data: item} } });
+
+    setTimeout(()=>{
+      dispatchApp({ type: "SET_APP_VALUES", data: { linkAction: {} } });
+    }, 2000)
+  }
+
   const renderBlock = (item, i) => {
     switch (page.variant) {
       case "case":
@@ -90,7 +101,7 @@ const SliderBlocks = ({ page }) => {
             </a>
           </div>
           :
-          <div key={`sb-${i}`} className={`case-block ${item.variant ? item.variant : "primary"}`}>
+          <div key={`sb-${i}`} className={`case-block cursor-pointer ${item.variant ? item.variant : "primary"}`} onClick={()=>{navigate("/marketplace");setAction(item)}}>
             {(item.logo || item.img) && <div className="simple-block-img"><img className={`${item.className ? item.className : "icon-carousel"}`} src={`../../assets/img/${item.logo || item.img}`} alt="" /></div>}
             {item.description && <p className="mb-0 text-small">{item.description}</p>}
             {item.label && <div className="text-medium text-dark"><span>{item.label}</span></div>}

@@ -53,6 +53,14 @@
     width: 100px;
     height: auto;
   }
+
+  @include media-breakpoint-down(lg) {
+    width: 80px;
+
+    img {
+      width: 80px;
+    }
+  }
 }
 
 .preset-img-4 {
@@ -62,6 +70,14 @@
     width: 130px;
     height: auto;
   }
+
+  @include media-breakpoint-down(lg) {
+    width: 100px;
+
+    img {
+      width: 100px;
+    }
+  }
 }
 
 .preset-img-6 {
@@ -69,6 +85,10 @@
 
   img {
     max-width: 100%;
+  }
+
+  @include media-breakpoint-down(lg) {
+    width: 60px;
   }
 }
 

@@ -654,11 +654,6 @@
 
       &.in-modal {
         background-color:$primary;
-        width: 40vw;
-        position: absolute;
-        height: 100%;
-        left: 0;
-        right: auto;
         background-position: left bottom !important;
         background-size: cover !important;
         background-repeat: no-repeat;
@@ -834,8 +829,8 @@
       align-items: stretch;
       margin-top: $app-top-padding/2;
 
-      .hero-bg {
-        position: static;
+      .hero-bg, .hero-bg.in-modal {
+        position: relative;
         margin-top: 2rem;
         height: auto;
         padding: 0;

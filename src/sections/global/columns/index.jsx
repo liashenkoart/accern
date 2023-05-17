@@ -32,7 +32,7 @@ const Columns = ({ page, isVisible }) => {
               <div className="h-100 pl-4">
                 <div><img className="icon-medium-2" src={`../../assets/img/${column.icon}`} alt="" /></div>
                 <h3 className="font-weight-normal text-sub-label mb-4 mt-4 mw-300 mw-lg-260">{column.title}</h3>
-                <p className="mw-260 mw-md-100 text-small mb-0">{column.description}</p>
+                <p className="mw-260 mw-md-100 text-regular mb-0">{column.description}</p>
               </div>
             </Col>
           ))}

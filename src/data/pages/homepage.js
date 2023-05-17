@@ -4,9 +4,9 @@ export const page = {
     label: "Powered by Artificial Intelligence",
     title: "Accelerate AI Workflows for <span class='text-special-primary'>Financial Services</span> with a No-Code AI Platform.",
     titleCL: "mw-620",
-    video: "https://www.youtube.com/embed/0hK7Rholb2c?autoplay=1",
+    video: "home-page-video.mp4",
+    url: "https://www.youtube.com/embed/0hK7Rholb2c?autoplay=1",
     isVideoModal: true,
-    img: "home-video-preview.png",
     button: {
       name: "Get Started",
       variant: "primary-arrow",

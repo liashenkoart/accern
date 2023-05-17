@@ -58,7 +58,7 @@ const Hero = ({ isVisible, page }) => {
                 </div>
                 {(page.additional || page.brands) &&
                   <div className="hero-bottom-section">
-                    <div className="text-center text-lg-left mt-5 mt-lg-0">{page.additional && <span dangerouslySetInnerHTML={{ __html: page.additional }}></span>}</div>
+                    <div className="text-center text-lg-left mt-5 mt-lg-0 text-medium">{page.additional && <span dangerouslySetInnerHTML={{ __html: page.additional }}></span>}</div>
                     <div className="blocks mobile-wrap mt-5">
                       {page.brands.map((brand, i) => (
                         <div key={`bc-${i}`} className="block d-flex align-items-center justify-content-center justify-content-lg-start mb-4 mb-lg-0">
@@ -70,12 +70,15 @@ const Hero = ({ isVisible, page }) => {
                 }
               </Col>
               {page.isVideoModal ?
-                <Col lg={4} className="position-relative">
                   <div className="hero-bg in-modal" style={{ backgroundImage: `${`url(/assets/img/${page.bg ? page.bg : "hero-bg.png"})`}` }}>
                     {page.img && <img src={`../../assets/img/${page.img}`} alt="" />}
-                    <div className="simple-video-play" onClick={()=>OpenModal("video", dispatchModals, {url:page.video})}><Icon variant="play" /></div>
+                    {page.video &&
+                      <video autoPlay={true} muted={true} loop={true}>
+                        <source src={`../../assets/img/${page.video}`} type="video/mp4" />
+                      </video>
+                    }
+                    <div className="simple-video-play" onClick={() => OpenModal("video", dispatchModals, { url: page.url })}><Icon variant="play" /></div>
                   </div>
-                </Col>
                 :
                 <div className="hero-bg" style={{ backgroundImage: `${`url(/assets/img/${page.bg ? page.bg : "hero-bg.png"})`}` }}>
                   {page.img && <img src={`../../assets/img/${page.img}`} alt="" />}

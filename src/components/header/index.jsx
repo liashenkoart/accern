@@ -216,7 +216,7 @@ const Header = ({ isFluid }) => {
                           <Nav.Item key={`nav-${i}`}>
                             {nav.link ? <Link onClick={() => hideAll(true)} className={`nav-link ${nav.isDisabled ? "disabled" : ""}`} to={nav.link}>{nav.name}</Link>
                               : <div className={`nav-link ${nav.isDisabled ? "disabled" : ""} cursor-pointer ${subs[i] ? "sub-active" : ""}`} onClick={(e) => nav.sub ? handleClickLink(i, e) : null}>
-                                {nav.name}{nav.sub && <Icon variant="chevron-down" />}
+                                {nav.name}
                               </div>}
                             {nav.sub && renderSub(nav.sub, i)}
                           </Nav.Item>

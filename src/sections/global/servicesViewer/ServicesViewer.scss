@@ -298,8 +298,8 @@
   }
 
   &-changer-title {
-    font-size: 1.125rem;
-    color: $white;
+    font-size: 1.225rem;
+    color: rgba($white, 0.6);
     margin-bottom: 0.5rem;
     transition: opacity $transition ease;
   }
@@ -348,7 +348,7 @@
 
   &-changer-description {
     height: 42px;
-    font-size: 0.875rem;
+    font-size: 1rem;
     color: rgba($white, 0.7);
     margin-bottom: 1rem;
     transition: all $transition/2 ease;
@@ -364,7 +364,7 @@
   }
 
   &-slider-title {
-    font-size: 3rem;
+    font-size: 3.2rem;
     color: $white;
     opacity: 0;
     transform: translateY(100px);
@@ -372,7 +372,7 @@
   }
 
   &-slider-subtitle {
-    font-size: 1.25rem;
+    font-size: 1.325rem;
     font-weight: 300;
     color: $white;
     margin-bottom: 2rem;
@@ -386,7 +386,7 @@
     border-top: 1px solid rgba($white, 0.3);
     font-size: 0.875rem;
     max-width: 370px;
-    line-height: 1.7;
+    line-height: 1.8;
     color: rgba($white, 0.7);
     opacity: 0;
     transform: translateY(100px);
@@ -523,6 +523,9 @@
 
       &.active {
         width: calc(40% - 20px);
+        .services-viewer-changer-title {
+          color: $white;
+        }
         .services-viewer-changer-description {
           transition-duration: $transition * 1.5;
           transition-delay: $transition;
@@ -627,6 +630,12 @@
   }
 
   @media (max-height: 800px) {
+    &-changer-title {
+      font-size: 1.125rem;
+    }
+    &-changer-description {
+      font-size: 0.875rem;
+    }
     &-slider {
       padding-top: $section-spacer * 0.3;
       padding-bottom: $section-spacer * 0.4;

@@ -2,17 +2,18 @@ export const page = {
   hero: {
     variant: "simple",
     label: "Become a partner",
-    title: "Help Democratize AI and Increase Data Accessibility with <span class='text-special-primary'>Accern</span>",
+    title: "Partner with us to accelerate AI for <span class='text-special-primary'>Financial Services</span>",
     titleCL: "mw-700",
-    description: "Accern partners with companies to supply and distribute clean data and generate financial insights to researchers, analysts, and data science teams around the world.",
+    description: "Accern partners with technology, data, cloud, and consulting firms to accelerate AI within Financial Services.",
     descriptionCL: "mw-600",
-    additional: "Enterprise teams can deploy AI-powered use cases <strong>3000x faster with Accern.</strong>",
+    additional: "Enterprise teams can deploy AI-powered use cases <strong>75x faster with Accern.</strong>",
     brandsCL: "mw-700",
     brands: [
       { link: "", logo: "logo-aws.png", className: "preset-img-6" },
-      { link: "", logo: "logo-crux.png", className: "preset-img-3" },
+      { link: "", logo: "logo-snowflake.png", className: "preset-img-4" },
       { link: "", logo: "morningstar.png", className: "preset-img-4" },
-      { link: "", logo: "naviga.png", className: "preset-img-4" },
+      { link: "", logo: "logo-factset.png", className: "preset-img-4" },
+      { link: "", logo: "logo-google-c.png", className: "preset-img-4" },
     ]
   },
 
@@ -20,14 +21,15 @@ export const page = {
     className: "mt-s",
     about: {
       label: "Partnership",
-      description: "A variety of financial companies partner with Accern to scale the operations and processes of data ingestion and research and NLP extraction and analysis.",
+      description: "A variety of companies partner with Accern to create new revenue streams, accelerate sales, and generate added value to their customers.",
       label_2: "Key Highlights",
-      description_2: "What are some of the ways that financial companies can partner with Accern?",
+      description_2: "Companies can partner with Accern in the following way. Contact us for more information on each partner's route.",
       list: [
-        {name: "Data Distribution"},
-        {name: "Data Supply"},
-        {name: "AI Use Cases"},
-        {name: "NLP Research and Extraction"}
+        {name: "Technology Partner"},
+        {name: "Data Partner"},
+        {name: "Cloud Partner"},
+        {name: "Consulting Partner"},
+        {name: "Referral Partner"}
       ]
     },
     form: {

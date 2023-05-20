@@ -29,7 +29,7 @@ const PrivateMarkets = ({ path }) => {
     { component: Rows, props: { page: page.features } },
     // { component: SliderBlocks, props: {page: {...page.marketPlace, columns:columns, columns2:columns2}} },
     { component: Related, props: { page: page.related } },
-    { component: CoverBlock, props: { page: page.whitepaper } },
+    // { component: CoverBlock, props: { page: page.whitepaper } },
     { component: Footer, props: { isMinimal: true, page:page } },
   ]
 

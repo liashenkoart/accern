@@ -209,12 +209,12 @@ const UseCases = ({ isVisible, page }) => {
               <Tab eventKey="discover" title={settings.texts.Discover}>
                 {renderFeatured("discover")}
               </Tab>
-              <Tab eventKey="popular" title={settings.texts.Popular}>
-                {renderFeatured("popular")}
-              </Tab>
-              <Tab eventKey="latest" title={settings.texts.Latest}>
-                {renderFeatured("latest")}
-              </Tab>
+              {/*<Tab eventKey="popular" title={settings.texts.Popular}>*/}
+              {/*  {renderFeatured("popular")}*/}
+              {/*</Tab>*/}
+              {/*<Tab eventKey="latest" title={settings.texts.Latest}>*/}
+              {/*  {renderFeatured("latest")}*/}
+              {/*</Tab>*/}
               <Tab eventKey="all" title={settings.texts.All}>
                 {renderFeatured("all")}
               </Tab>

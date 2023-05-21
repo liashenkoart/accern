@@ -20,7 +20,7 @@ const SmartSummaries = ({ path }) => {
     // { component: FeaturedUseCases, props: {page: {...page.useCases, useCases: marketplace.useCases}} },
     { component: FeaturedClient, props: {page: page.featuredClients} },
     { component: Related, props: { page: page.related } },
-    { component: CoverBlock, props: { page: page.whitepaper } },
+    // { component: CoverBlock, props: { page: page.whitepaper } },
     { component: Footer, props: { isMinimal: true, page:page } },
   ]
 

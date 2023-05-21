@@ -294,7 +294,7 @@ export const settings = {
 
   getstarted: {
     title: "Get started",
-    description: "Sign up for a Request Trial of our platform and start accelerating AI within your organization.",
+    description: "Sign up for a trial of our platform and start accelerating AI within your organization.",
     placeholder: "Email address",
     link: {
       name: "Request Trial",

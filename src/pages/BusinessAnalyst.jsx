@@ -33,8 +33,8 @@ const BusinessAnalyst = ({ path }) => {
     { component: SliderBlocks, props: {page: {...page.marketPlace, columns:columns, columns2:columns2}} },
     { component: Rows, props: { page: page.features } },
     { component: Related, props: { page: page.related } },
-    { component: Courses, props: { page: {...page.courses, list: filterIt(dataCourses, "free", "status").slice(0, 4)} } },
-    { component: CoverBlock, props: { page: page.whitepaper } },
+    // { component: Courses, props: { page: {...page.courses, list: filterIt(dataCourses, "free", "status").slice(0, 4)} } },
+    // { component: CoverBlock, props: { page: page.whitepaper } },
     { component: Footer, props: { isMinimal: true, page:page } },
   ]
 

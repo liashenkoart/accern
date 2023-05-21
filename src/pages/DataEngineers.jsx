@@ -38,8 +38,8 @@ const DataEngineers = ({ path }) => {
     // { component: Quote, props: { data: page.quote } },
     // { component: Subscribers, props: { page: page.subscribers } },
     { component: Related, props: { page: page.related } },
-    { component: Courses, props: { page: {...page.courses, list: filterIt(dataCourses, "free", "status").slice(0, 4)} } },
-    { component: CoverBlock, props: { page: page.whitepaper } },
+    // { component: Courses, props: { page: {...page.courses, list: filterIt(dataCourses, "free", "status").slice(0, 4)} } },
+    // { component: CoverBlock, props: { page: page.whitepaper } },
     { component: Footer, props: { isMinimal: true, page:page } },
   ]
 

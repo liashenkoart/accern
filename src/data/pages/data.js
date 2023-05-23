@@ -115,7 +115,8 @@ export const page = {
     description: "We’re always excited about new partnerships. Become one of our data partners.",
     button: {
       name: "Partner with us",
-      modal: "request"
+      // modal: "request"
+      link: "/become-partner"
     }
   }
 }

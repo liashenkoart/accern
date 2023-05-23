@@ -55,7 +55,7 @@ const Footer = ({ isVisible, isSimple, page, isMinimal }) => {
                 <div className={`footer-columns`}>
                   {
                     settings.footer.columns.map((column, i) => (
-                      <ul key={`fc-${i}`} className="footer-list mb-4">
+                      <ul key={`fc-${i}`} className={`footer-list mb-4 ${column.isFullWidthMobile ? "w-md-100" : ""}`}>
                         <li className="text-label mb-2">{column.title}</li>
                         {column.description &&
                           <p>{column.description}</p>

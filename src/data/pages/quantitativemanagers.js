@@ -9,7 +9,7 @@ export const page = {
     className: "mt-5",
     button: {
       name: "Get Started",
-      link: "/contact",
+      modal: "request",
       variant: "primary-arrow"
     }
   }, 

@@ -648,6 +648,7 @@
       position: absolute;
       width: auto;
       height: auto;
+      max-width: 40vw;
       right: 0;
       top: 0;
       align-items: center;
@@ -759,6 +760,30 @@
   }
 
   @include media-breakpoint-down(md) {
+
+    &.simple-video {
+      .hero-bg {
+        max-width: 100%;
+        justify-content: center;
+
+        video {
+          width: 100%;
+          height: auto;
+        }
+      }
+      .hero-bottom-section {
+        padding-right: 0;
+        width: 100%;
+
+        .blocks {
+          .block {
+            width: auto;
+            padding: 0 0.5rem;
+          }
+        }
+      }
+    }
+
     &-lines-columns {
       margin-top: 3rem;
       margin-bottom: 3rem;

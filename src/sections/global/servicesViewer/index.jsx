@@ -7,6 +7,7 @@ import Icon from "../../../components/icon";
 
 import "./ServicesViewer.scss";
 import { config } from "react-transition-group";
+import { settings } from "../../../data/settings";
 
 const ServicesViewer = ({ isVisible, page }) => {
 
@@ -27,9 +28,21 @@ const ServicesViewer = ({ isVisible, page }) => {
   const options = {
     speed: 500,
     slidesPerView: 1,
-    spaceBetween: 30,
+    spaceBetween: 150,
     loop: false,
   }
+
+  const goNext = () => {
+    if (swiper !== null) {
+      swiper.slideNext();
+    }
+  };
+
+  const goPrev = () => {
+    if (swiper !== null) {
+      swiper.slidePrev();
+    }
+  };
 
   useEffect(() => {
     if (window.innerWidth < 1100) setIsDetectPause(true);
@@ -213,17 +226,23 @@ const ServicesViewer = ({ isVisible, page }) => {
             <Swiper {...options} getSwiper={setSwiper}>
               {page.columns && page.columns.map((column, i) => (
                 <div className="services-viewer-slider-img" key={`im-${i}`}>
-                  {column.img && <img src={`./assets/img/${column.img}`} alt="" />}
-                  {column.video && <video autoPlay={true} muted={true} loop={true}>
-                    <source src={`../../assets/img/${column.video}`} type="video/mp4" />
-                  </video>}
+                  <div className="services-viewer-slider-cnt">
+                    {column.img && <img src={`./assets/img/${column.img}`} alt="" />}
+                    {column.video && <video autoPlay={true} muted={true} loop={true}>
+                      <source src={`../../assets/img/${column.video}`} type="video/mp4" />
+                    </video>}
+                  </div>
                 </div>
               ))}
             </Swiper>
           </div>
           <Container className="services-viewer-slider-inner">
             <Row>
-              <Col md={6}>
+              <Col md={7}>
+                <div className="services-viewer-slider-mobile-changer">
+                  <div className={`${step == 0 ? "disabled" : ""}`} onClick={()=>goPrev()}>{settings.texts.Previous}</div>
+                  <div className={`${step < page.columns.length-1 ? "" : "disabled"}`} onClick={()=>goNext()}>{settings.texts.Next}</div>
+                </div>
                 <div className="services-viewer-slider-num">0{step + 1}</div>
                 <div className="services-viewer-content">
                   {page.columns && page.columns.map((column, i) => (

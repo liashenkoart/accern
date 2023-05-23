@@ -162,7 +162,7 @@ export const page = {
   services: {
     label: "No-Code AI Platform",
     title: "Build and Deploy <span class='text-special-primary-dark'>AI Use</span> <span class='text-special-primary-dark'>Cases</span> Within Minutes",
-    className: "pt-0",
+    className: "pt-0 pb-0",
     columns: [
       {
         title: "Data Store",
@@ -187,7 +187,7 @@ export const page = {
       },
       {
         title: "Taxonomy",
-        subTitle: "Unstructured Data Compatibility",
+        subTitle: "AutoML Taxonomy for Finance",
         description: "Our Taxonomy generator uses AutoML to automate classifiers for your industry documents. Or, if you want a quicker start, you can use our pre-built classifiers or simply upload your own to Accern.",
         label: "Select Or Create Your Taxonomy",
         video: "taxonomy-feature.mp4",
@@ -240,7 +240,7 @@ export const page = {
       },
       {
         title: "Adaptive NLP Models",
-        subTitle: "Unstructured Data Compatibility",
+        subTitle: "Pre-Trained Models for Finance",
         description: "Browse one of the largest collections of adaptive NLP models for finance, which you can use immediately. In addition, you can retrain each of our models to fit your needs or simply upload your own NLP models.",
         label: "Select Or Trial Your Models",
         video: "nlp-feature.mp4",
@@ -265,7 +265,7 @@ export const page = {
       },
       {
         title: "Delivery",
-        subTitle: "Unstructured Data Compatibility",
+        subTitle: "Integrate Into Workflow Apps",
         description: "We have hundreds of integrations with popular business applications and databases, which allows for seamless import of your data to Accern and quick export of your AI solutions to your everyday workflow apps.",
         label: "Select or Connect Your Workflow Apps",
         video: "delivery-feature.mp4",

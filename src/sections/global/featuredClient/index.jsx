@@ -114,10 +114,10 @@ const FeaturedClient = ({ page, isVisible }) => {
             <div className={`featured-client-inner ${page.isCoverInner ? "with-cover" : ""}`}>
               <Container>
                 <Row className="mb-d-2">
-                  <Col md={6}>
+                  <Col lg={5}>
                     <div className="featured-client-img"><img src={`../../assets/img/${client.img}`} alt="" /></div>
                   </Col>
-                  <Col md={6} className="featured-client-content">
+                  <Col lg={7} className="featured-client-content">
                     <div>
                       {client.label && <div className="text-label"><span>{client.label}</span></div>}
                       {client.title && <h2 className="mw-1000">{client.title}</h2>}

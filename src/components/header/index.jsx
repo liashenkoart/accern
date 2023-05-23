@@ -7,6 +7,7 @@ import Icon from "../icon";
 import { OpenModal } from "../../services/modalsManager";
 import { filterIt } from "../../utils/scripts";
 import Shape10p from "../animations/shape10p";
+import LinkAdv from "../../components/linkadv";
 
 import "./Header.scss"
 
@@ -227,7 +228,7 @@ const Header = ({ isFluid }) => {
                           </Nav.Item>
                         ))}
                       </Nav>
-                      {settings.headerButton && settings.headerButton.isActive ? settings.headerButton.modal ? <Button className="ml-0 ml-xl-4 w-auto w-md-100" variant="neutral" onClick={() => OpenModal(settings.headerButton.modal, dispatchModals)}>{settings.headerButton.name} <Icon variant="arrow-right" /></Button> : <Link className="ml-0 ml-lg-4 w-auto w-md-100 btn btn-neutral" to={settings.headerButton.link}>{settings.headerButton.name}</Link> : null}
+                      {settings.headerButton && settings.headerButton.isActive ? settings.headerButton.modal ? <LinkAdv data={settings.headerButton} className="ml-0 ml-xl-4 w-auto w-md-100 btn-sm" variant="primary-arrow">{settings.headerButton.name}</LinkAdv> : <Link className="ml-0 ml-lg-4 w-auto w-md-100 btn btn-neutral" to={settings.headerButton.link}>{settings.headerButton.name}</Link> : null}
                     </Col>
                   </Row>
                 </Container>

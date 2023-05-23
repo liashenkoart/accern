@@ -1,14 +1,14 @@
 export const page = {
   hero: {
     label: "Our Solutions",
-    title: "<strong>AI-powered insights</strong> for Financial Services",
+    title: "<strong>AI-Powered Insights</strong> for Financial Services",
     titleCL: "mw-500",
     descriptionCL: "mw-400",
     variant: "lines",
     theme: "primary v2",
     button: {
       name: "Get Started",
-      link: "/contact",
+      modal: "request",
       variant: "primary-arrow"
     }
   },
@@ -22,7 +22,7 @@ export const page = {
         { label: "Insurance", link: "/insurance", value: "Insurance", description: "AI use cases built for Insurance.", variant: "primary", img: "spec-icon-shield.svg" },
         { label: "Asset Owners", link: "/asset-owners", value: "Asset Owners", description: "AI use cases built for Asset Owners.", variant: "primary", img: "icon-wealth-management.svg" },
         { label: "Private Markets", link: "/private-markets", value: "Private Markets", description: "AI use cases built for Banking", variant: "primary", img: "icon-private-markets.svg" },
-        { label: "Quantitative Management", link: "/quantitative-managers", value: "Quantitative Management", description: "AI use cases built for Quantitative Management", variant: "primary", img: "spec-icon-settings.svg" },
+        { label: "Quantitative Management", link: "/quantitative-managers", value: "Quantitative Management", description: "AI use cases built for Quantitative Management", variant: "primary", img: "quantitative-managers.svg" },
       ]
     },
     workflows: {

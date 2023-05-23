@@ -12,11 +12,18 @@ const TabsComp = ({ isVisible, page }) => {
   const renderNews = (filter) => {
     return <Container fluid className="p-0">
       <Row>
-        {filterIt(page.columns, filter, "filter").map((item, i) => (
-          <Col atr={`${i}`} key={`bai-${i}`} md={3} onClick={() => { }}>
-            <BlockCase variant="neutral" data={item} />
-          </Col>
-        ))}
+        {filter == "All" ?
+          page.columns.map((item, i) => (
+            <Col atr={`${i}`} key={`baai-${i}`} md={3} onClick={() => { }}>
+              <BlockCase variant="neutral" data={item} />
+            </Col>
+          ))
+          :
+          filterIt(page.columns, filter, "filter").map((item, i) => (
+            <Col atr={`${i}`} key={`bai-${i}`} md={3} onClick={() => { }}>
+              <BlockCase variant="neutral" data={item} />
+            </Col>
+          ))}
       </Row>
     </Container>
   }

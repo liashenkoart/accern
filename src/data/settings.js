@@ -197,6 +197,7 @@ export const settings = {
       {
         title: "Accern",
         description: "We are accelerating AI adoption for enterprises with a no-code development platform.",
+        isFullWidthMobile: true,
       },
       {
         title: "Product",
@@ -297,7 +298,7 @@ export const settings = {
 
   getstarted: {
     title: "Get started",
-    description: "Sign up to request a trial of our platform and start accelerating AI without your financial firm.",
+    description: "Request a trial of our platform and start accelerating AI for your organization.",
     placeholder: "Email address",
     link: {
       name: "Request Trial",
@@ -479,6 +480,8 @@ export const settings = {
     ByFunction: "By Function",
     ByWorkflow: "By Workflow",
     ByUsers: "By Users",
+    Previous: "Previous",
+    Next: "Next",
   },
 
   getInTouch: {

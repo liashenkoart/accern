@@ -96,6 +96,8 @@ export const page = {
       { title: "Kumesh Aroomoogan", description: "Co-founder and CEO", icon: "team-kumesh.svg", socials: [{type: "linked", link:"https://www.linkedin.com/in/kumesh/"}]},
       { title: "Dr. Anshul V. Pandey", description: "Co-founder and CTO", icon: "team-anshul.svg", socials: [{type: "linked", link:"https://www.linkedin.com/in/anshulvikrampandey"}]},
       { title: "Bradford Wilson Cook", description: "Chief Operating Officer", icon: "team-wilson.svg", socials: [{type: "linked", link:"https://www.linkedin.com/in/bradford-wilson-cook"}]},
+      { title: "Dheerendra Pandey", description: "Chief Information Officer", icon: "dheerendra-pandey.png", socials: [{type: "linked", link:"https://www.linkedin.com/in/d…dra-pandey-0152b982/"}]},
+      { title: "Emma Borochoff", description: "VP of Marketing", icon: "emma-borochoff.png", socials: [{type: "linked", link:"https://www.linkedin.com/in/emmaborochoff"}]},
       { title: "Riyaz Nakhooda", description: "VP of Strategic Partnerships", icon: "team-riyaz.svg", socials: [{type: "linked", link:"https://ca.linkedin.com/in/riyaz-nakhooda-928b3015"}]},
       { title: "Ahmed Shabbir", description: "VP of Engineering", icon: "team-ahmed.svg", socials: [{type: "linked", link:"https://www.linkedin.com/in/ahmedshabbir/"}]},
       { title: "Dr. Josua Krause", description: "VP of Data Science", icon: "team-josua.svg", socials: [{type: "linked", link:"https://www.linkedin.com/in/josuakrause"}]},
@@ -115,6 +117,7 @@ export const page = {
       { title: "Emily Reitan", description: "Allianz Life Ventures", icon: "team-emily.svg", socials: [{type: "linked", link:"https://www.linkedin.com/in/emily-reitan-57015520"}]},
       { title: "Jennifer Vancini", description: "Mighty Capital", icon: "team-jennifer.svg", socials: [{type: "linked", link:"https://www.linkedin.com/in/jennifer-vancini-2765b4"}]},
       { title: "Yuri Mostovoy", description: "TMT Investments", icon: "team-mostovoy.svg"},
+      { title: "Vadim Balashov", description: "Viaduct Ventures", icon: "vadim-balashov.png"},
     ]
   },
 

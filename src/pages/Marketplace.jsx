@@ -13,7 +13,7 @@ const Marketplace = ({path}) => {
   const sections = [
     {component: CoverBlock, props: {page: page.hero}},
     {component: UseCases, props: {page: page.useCases}},
-    {component: Footer},
+    {component: Footer, props: {page:page}},
   ]
 
   return (

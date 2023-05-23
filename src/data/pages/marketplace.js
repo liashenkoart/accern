@@ -7,6 +7,15 @@ export const page = {
     descriptionCL: "mw-400",
     img: "pricing-hero-illustration.svg",
   },
+  getstarted: {
+    title: "Get started",
+    description: "Request a trial of our platform and start accelerating AI for your organization.",
+    placeholder: "Email address",
+    link: {
+      name: "Request Trial",
+      modal: "request"
+    }
+  },
   useCases: {
     labelPopularInsurance: "Popular Insurance Use Cases",
     labelPopularAssetManagement: "Popular Asset Management Use Cases",

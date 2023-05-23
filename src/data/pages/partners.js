@@ -14,7 +14,7 @@ export const page = {
   },
 
   partners: {
-    filters: ["Technology Partner", "Data Partner", "Cloud Partner", "Consulting Partners",],
+    filters: ["All", "Technology Partner", "Data Partner", "Cloud Partner", "Consulting Partners",],
     columns: [
       {
         filter: "Technology Partner",

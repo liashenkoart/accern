@@ -38,7 +38,7 @@ export const settings = {
               { label: "BUILD" },
               { name: "AutoML Taxonomy", component: "AutoTaxonomy", link: "/auto-taxonomy", icon: "icon-automl.svg" },
               { name: "Adaptive NLP", component: "AdaptiveNLP", link: "/adaptive-nlp", icon: "icon-adaptive-nlp-n.svg" },
-              { name: "Adaptive Forecasting", component: "AdaptiveForecasting", link: "/adaptive-forecasting", icon: "icon-adaptive-forecasting.svg" },
+              // { name: "Adaptive Forecasting", component: "AdaptiveForecasting", link: "/adaptive-forecasting", icon: "icon-adaptive-forecasting.svg" },
               { label: "Operationalize" },
               { name: "Deploy", component: "Deployments", link: "/deployments", icon: "icon-deploy.svg" },
               { name: "Integrate", component: "Integrations", link: "/integrations", icon: "icon-integrate.svg" },
@@ -50,7 +50,9 @@ export const settings = {
             links: [
               { label: "DETAILS" },
               { name: "Pricing", component: "Pricing", link: "/pricing", icon: "icon-pricing.svg" },
-              { name: "Compare", component: "Compare", link: "/compare", icon: "icon-compare.svg" },
+              { name: "API Documentation", component: "Documentation", link: "/documentation", icon: "icon-compare.svg" },
+              { name: "Request Trial", modal: "request",  icon: "icon-trial-process.svg" },
+              // { name: "Compare", component: "Compare", link: "/compare", icon: "icon-compare.svg" },
               // { name: "Product Updates", component: "ProductUpdates", link: "/product-updates", icon: "icon-product-updates.svg" },
               // { name: "Trial Process", component: "TrialProcess", link: "/trial-process", icon: "icon-trial-process.svg" },
             ]
@@ -203,12 +205,13 @@ export const settings = {
           { name: "Data", link: "/data" },
           { name: "AutoML Taxonomy", link: "/auto-taxonomy" },
           { name: "Adaptive NLP", link: "/adaptive-nlp" },
-          { name: "Adaptive Forecasting", link: "/adaptive-forecasting" },
+          // { name: "Adaptive Forecasting", link: "/adaptive-forecasting" },
           { name: "Deploy", link: "/deployments" },
           { name: "Integrate", link: "/integrations" },
           { label: "Details" },
           { name: "Pricing", link: "/pricing" },
-          { name: "Compare", link: "/compare" },
+          { name: "API Documentation", link: "/documentation" },
+          // { name: "Compare", link: "/compare" },
           // { name: "Product Updates", link: "/product-updates" },
           { name: "Request Trial", modal: "request" },
         ]
@@ -221,8 +224,8 @@ export const settings = {
           { name: "Careers", link: "/careers" },
           { name: "Newsroom", link: "/newsroom" },
           { name: "Contact Us", link: "/contact" },
-          { name: "Terms & Conditions", link: "/terms_of_use" },
-          { name: "Privacy Policy", link: "/support_policy" },
+          // { name: "Terms & Conditions", link: "/terms_of_use" },
+          // { name: "Privacy Policy", link: "/support_policy" },
         ]
       },
       {
@@ -242,25 +245,25 @@ export const settings = {
           // { name: "By AI Apps", link: "/marketplace" },
         ]
       },
-      {
-        title: "AI University",
-        rows: [
-          { label: "Documentation" },
+      // {
+      //   title: "AI University",
+      //   rows: [
+      //     { label: "Documentation" },
           // { name: "Product", link: "/documentation" },
           // { name: "Integration", link: "/documentation" },
-          { name: "API", link: "/documentation" },
+          // { name: "API", link: "/documentation" },
           // { label: "Learn" },
           // { name: "Courses", link: "/courses" },
           // { name: "Webinars", link: "/webinars" },
           // { name: "Blog", link: "/blog" },
           // { name: "Whitepapers", link: "/whitepapers" },
           // { name: "Glossary", link: "/glossary" },
-          { label: "Community" },
+          // { label: "Community" },
           // { name: "Events", link: "/events" },
           // { name: "AI Tutorials", link: "/ai-tutorials" },
-          { name: "Become a Contributor", link: "/become-partner" },
-        ]
-      },
+          // { name: "Become a Contributor", link: "/become-partner" },
+        // ]
+      // },
     ],
     socials: [
       // { link: "#", icon: "icon-facebook-shape" },

@@ -57,7 +57,12 @@ const Header = ({ isFluid }) => {
       <div><h4 className={`text-medium-link ${!link.description ? "mb-0" : ""}`}>{link.name}</h4><p className="mb-0 mw-200">{link.description}</p></div>
       {link.isSimple ? <Icon variant="arrow-right" /> : null}
     </Link>
-      : <div className={`nav-sub-link ${!link.description ? "align-items-center" : ""} ${link.isHide ? "hide-link" : ""} cursor-pointer ${link.icon ? "with-icon" : ""}`}>
+      :link.modal ?  <div onClick={() => OpenModal(link.modal, dispatchModals)} className={`nav-sub-link cursor-pointer ${link.isHide ? "hide-link" : ""} ${!link.description ? "align-items-center" : ""} ${link.icon ? "with-icon" : ""}`}>
+              {link.icon && <div className="nav-sub-link-icon"><img src={`../../assets/img/${link.icon}`} alt="" /></div>}
+              <div><h4 className={`text-medium-link ${!link.description ? "mb-0" : ""}`}>{link.name}</h4><p className="mb-0 mw-200">{link.description}</p></div>
+              {link.isSimple ? <Icon variant="arrow-right" /> : null}
+            </div>
+            : <div className={`nav-sub-link ${!link.description ? "align-items-center" : ""} ${link.isHide ? "hide-link" : ""} cursor-pointer ${link.icon ? "with-icon" : ""}`}>
         {link.icon && <div className="nav-sub-link-icon"><img src={`../../assets/img/${link.icon}`} alt="" /></div>}
         <div><h4 className={`text-medium-link ${!link.description ? "mb-0" : ""}`}>{link.name}</h4><p className="mb-0 mw-200">{link.description}</p></div>
         {link.isSimple ? <Icon variant="arrow-right" /> : null}

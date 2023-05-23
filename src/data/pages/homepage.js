@@ -10,7 +10,7 @@ export const page = {
     button: {
       name: "Get Started",
       variant: "primary-arrow",
-      link: "/login"
+      modal: "request"
     },
     additional: "<span class='text-primary fw-500'>1,000+ AI Use Cases</span> Deployed By Enterprise Teams.",
     brands: [
@@ -149,7 +149,7 @@ export const page = {
         theme: "t4"
       },
       {
-        title: "Reference",
+        title: "Documentation",
         description: "Uncover each feature and interface component in Accern through detailed documentation.",
         icon: "icon-documentation-a.svg",
         link: "/documentation",

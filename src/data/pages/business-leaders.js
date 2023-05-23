@@ -1,7 +1,7 @@
 export const page = {
   hero: {
     label: "Accern for Business Leaders",
-    title: "3 ways Accern is helping to solve <strong>Business Leaders</strong> problem",
+    title: "How Accern helps solve <strong>Business Leaders'</strong> problems",
     titleCL: "mw-800",
     variant: "lines",
     theme: "success",
@@ -21,7 +21,7 @@ export const page = {
     columns: [
       {
         label: "NEXT Alpha",
-        description: "Accern Assists Next Alpha in Becoming one of the Best-Performing Hedge Funds.",
+        description: "Accern Assists Next Alpha in Becoming One of the Best-Performing Hedge Funds.",
         link: "/user-story-next-alpha",
       },
       {
@@ -39,7 +39,7 @@ export const page = {
     rows: [
       {
         label: "Business Leaders",
-        title: "What is a <span class='text-special-primary-dark'>Business Leaders</span> and what are they responsible for?",
+        title: "Who are <span class='text-special-primary-dark'>Business Leaders</span> and what are their responsibilities?",
         titleCL: "mw-600",
         description: "Business leaders use the data-driven insights, recommendations, and reports from analysts to aid in decision-making processes. These insights are especially used in client-facing roles to identify the best course of action based on client needs.",
         img: "wealth-management-img-2.svg",
@@ -55,22 +55,22 @@ export const page = {
     rows: [
       {
         label: "Problem",
-        title: "What <span class='text-special-primary-dark'>problem</span> are <span class='text-special-primary-dark'>Business Leaders</span> facing?",
+        title: "What <span class='text-special-primary-dark'>problems</span> do <span class='text-special-primary-dark'>Business Leaders</span> face?",
         titleCL: "mw-800",
-        description: "With unstructured content making up most of the data on the Internet today and growing at an alarming rate, long hours are spent on manual data research and extraction processes. Due to the volume and velocity of data today, not all data can be captured in a timely fashion, often resulting in inaccurate insights.",
+        description: "Business leaders are looking to transform their business units to remain competitive using automation and smart decision-making. However, this requires specialized data science and technology resources, which are not available.",
         img: "wealth-management-img-3.svg",
       },
       {
         label: "Solution",
-        title: "3 ways Accern is helping to solve <span class='text-special-primary-dark'>Business Leaders</span> problem",
+        title: "Accern's solutions for <span class='text-special-primary-dark'>Business Leaders</span>",
         titleCL: "mw-650",
-        description: "Accern’s no-code AI platform enables business leaders to empower their team with artificial intelligence in reducing hours of manual data research, extraction, and analysis processes. With ready-made financial use cases, a historic and real-time delivery system, and smart infrastructure business leaders can also monitor data and quickly generate insights, without having to code.",
+        description: "Accern’s No-Code AI Platform enables business leaders to empower their team with artificial intelligence by reducing hours of manual data research, extraction, and analysis processes. With ready-made financial use cases, a historic and real-time delivery system, and smart infrastructure business leaders can monitor data and quickly generate insights without having to code.",
         img: "wealth-management-img-2.svg",
       },
       {
-        title: "<span class='text-special-primary-dark'>Business Leaders</span> use Accern to accelerate workflows by:",
+        title: "<span class='text-special-primary-dark'>Business Leaders</span> use Accern to accelerate innovation by",
         titleCL: "mw-800",
-        description: "<ul class='list-primary'><li>Using AI-powered NLP models and automation to quickly generate insights for decision making without having to write a single line of code.</li><li>Applying smart insights, search, extraction, and summaries to internal documents and client meeting notes to provide client-personalized recommendations.</li><li>Integrating internal documents and client conversations and tagging meeting notes from CRM systems and emails to keep track of and monitor client relationships.</li></ul>",
+        description: "<ul class='list-primary'><li>Build and deploy prototypes of AI use cases at an accelerated pace for evaluation and production use.</li><li>Applying smart insight, search, extraction, and summary to internal documents and client meeting notes to provide client-personalized recommendations.</li><li>Empower entry-level team members to build powerful AI use cases to advance digital transformation across the business function.</li></ul>",
         img: "private-markets-img-2.svg",
       },
     ]
@@ -79,13 +79,13 @@ export const page = {
   whitepaper: {
     label: "OUR WHITEPAPER",
     isDisableShape: true,
-    title: "To learn more about how AI can be used to enhance financial workflows, view our whitepapers.",
+    title: "To learn how you can use AI to enhance your team's financial workflows, view our whitepapers.",
     className: "mb-s",
     titleCL: "mw-800",
     labelCL: "op-05",
     bgClassName: "effect-bg-3",
     button: {
-      name: "Report coming soon",
+      name: "Coming soon",
       link: "",
     }
   },

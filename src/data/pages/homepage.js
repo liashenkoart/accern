@@ -72,7 +72,7 @@ export const page = {
 
   ourmission: {
     label: "Our Mission",
-    title: "We accelerate innovation for financial enterprises with a no-code AI platform.",
+    title: "To accelerate innovation for financial enterprises with a no-code AI platform.",
     titleCL: "mw-580",
     description: "Some of the world's best data science teams are using Accern to accelerate their NLP and Predictive Modeling workflows.",
     className: "bg-primary-05",
@@ -85,7 +85,7 @@ export const page = {
       {
         icon: "icon-settings.svg",
         title: "Build in Minutes",
-        description: "Build AI solutions within minutes and deploy it by using our no-code AI platform."
+        description: "Build AI use cases within minutes and deploy them on our no-code AI platform."
       },
       {
         icon: "icon-secure-and-scalable.svg",
@@ -161,7 +161,7 @@ export const page = {
 
   services: {
     label: "No-Code AI Platform",
-    title: "Build and Deploy <span class='text-special-primary-dark'>AI Use</span> <span class='text-special-primary-dark'>Cases</span> In Minutes",
+    title: "Build and Deploy <span class='text-special-primary-dark'>AI Use</span> <span class='text-special-primary-dark'>Cases</span> Within Minutes",
     className: "pt-0",
     columns: [
       {

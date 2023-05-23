@@ -70,7 +70,7 @@ export const settings = {
               { name: "Careers", component: "Careers", link: "/careers", icon: "icon-careers.svg" },
               { name: "Newsroom", component: "NewsRoom", link: "/newsroom", icon: "icon-newsroom.svg" },
               { name: "Partners", component: "Partners", link: "/partners", icon: "icon-about.svg" },
-              { name: "Contact us", component: "Contact", link: "/contact", icon: "icon-contactus.svg" },
+              { name: "Contact Us", component: "Contact", link: "/contact", icon: "icon-contactus.svg" },
             ]
           },
         ]
@@ -93,7 +93,7 @@ export const settings = {
             ]
           },
           {
-            label: "BY SOLUTION",
+            label: "BY Function",
             size: 3,
             links: [
               { name: "Credit Risk", link: "/credit-risk", icon: "icon-credit-risk.svg" },
@@ -121,8 +121,8 @@ export const settings = {
             size: 3,
             links: [
               { name: "Business Leaders", component: "BusinessLeaders", link: "/business-leaders", icon: "icon-business-leaders.svg" },
-              { name: "Business Analyst", component: "BusinessAnalyst", link: "/business-analyst", icon: "icon-business-analyst.svg" },
-              { name: "Data Scientist", component: "DataScientist", link: "/data-scientist", icon: "icon-data-scientist-n.svg" },
+              { name: "Business Analysts", component: "BusinessAnalyst", link: "/business-analyst", icon: "icon-business-analyst.svg" },
+              { name: "Data Scientists", component: "DataScientist", link: "/data-scientist", icon: "icon-data-scientist-n.svg" },
               { name: "Data Engineers", component: "DataEngineers", link: "/data-engineers", icon: "icon-data-engineers.svg" },
               { name: "Software Developers", component: "SoftwareDevelopers", link: "/software-developers", icon: "icon-software-developers.svg" },
               { name: "View All Users", link: "/solutions", variant: "fixed-arrow", action: "solution-filter", data: "users" },
@@ -263,10 +263,10 @@ export const settings = {
       },
     ],
     socials: [
-      { link: "#", icon: "icon-facebook-shape" },
-      { link: "#", icon: "icon-twitter-shape" },
-      { link: "#", icon: "icon-linkedin-shape" },
-      { link: "#", icon: "icon-instagram-shape" },
+      // { link: "#", icon: "icon-facebook-shape" },
+      { link: "https://twitter.com/accerncorp", icon: "icon-twitter-shape" },
+      { link: "https://linkedin.com/company/accern", icon: "icon-linkedin-shape" },
+      { link: "https://www.instagram.com/accerncorp", icon: "icon-instagram-shape" },
     ],
 
     contacts: {
@@ -294,7 +294,7 @@ export const settings = {
 
   getstarted: {
     title: "Get started",
-    description: "Sign up for a trial of our platform and start accelerating AI within your organization.",
+    description: "Sign up to request a trial of our platform and start accelerating AI without your financial firm.",
     placeholder: "Email address",
     link: {
       name: "Request Trial",

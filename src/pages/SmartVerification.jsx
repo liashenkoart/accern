@@ -18,7 +18,7 @@ const SmartVerification = ({ path }) => {
     { component: CoverBlock,  props: { page: page.hero } },
     { component: Rows, props: { page: page.features } },
     // { component: FeaturedUseCases, props: {page: {...page.useCases, useCases: marketplace.useCases}} },
-    { component: FeaturedClient, props: {page: page.featuredClients} },
+    // { component: FeaturedClient, props: {page: page.featuredClients} },
     { component: Related, props: { page: page.related } },
     // { component: CoverBlock, props: { page: page.whitepaper } },
     { component: Footer, props: { isMinimal: true, page:page } },

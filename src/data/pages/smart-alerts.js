@@ -49,7 +49,7 @@ export const page = {
       {
         label: "WORKFLOW STEP 01",
         labelCL: "text-primary",
-        title: "Obtain Real-time Notifications",
+        title: "Obtain Real-Time Notifications",
         description: "Monitor important events that may affect your portfolio companies with real-time notifications.",
         img: "wealth-management-img-1.svg",
       },

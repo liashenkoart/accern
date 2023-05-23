@@ -60,7 +60,7 @@ export const page = {
   whitepaper: {
     label: "OUR WHITEPAPER",
     isDisableShape: true,
-    title: "Deployed AI Solutions 24x Faster for Large Wealth Manager.",
+    title: "Deployed AI Solutions 75x Faster for Private Investors.",
     className: "mb-s",
     titleCL: "mw-700",
     labelCL: "op-05",

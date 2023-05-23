@@ -1,7 +1,7 @@
 export const page = {
   hero: {
     label: "Accern for Business Analysts",
-    title: "3 ways Accern is helping to solve <strong>Business Analysts</strong> problem",
+    title: "How Accern helps solve <strong>Business Analysts'</strong> problems",
     titleCL: "mw-800",
     variant: "lines",
     theme: "light",
@@ -39,9 +39,9 @@ export const page = {
     rows: [
       {
         label: "Business Analysts",
-        title: "What is a <span class='text-special-primary-dark'>Business Analysts</span> and what are they responsible for?",
+        title: "Who are <span class='text-special-primary-dark'>Business Analysts</span> and what are their responsibilities?",
         titleCL: "mw-600",
-        description: "Business analysts gather and analyze large sets of structured and unstructured data. WIth data analytics, analysts deliver data-driven insights, recommendations, and reports to executives and stakeholders.",
+        description: "Business analysts gather and analyze large sets of structured and unstructured data. With data analytics, analysts deliver data-driven insights, recommendations, and reports to executives and stakeholders.",
         img: "wealth-management-img-2.svg",
       },
     ]
@@ -55,14 +55,14 @@ export const page = {
     rows: [
       {
         label: "Problem",
-        title: "What <span class='text-special-primary-dark'>problem</span> are <span class='text-special-primary-dark'>Business Analysts</span> facing?",
+        title: "What <span class='text-special-primary-dark'>problems</span> do <span class='text-special-primary-dark'>Business Analysts</span> face?",
         titleCL: "mw-800",
         description: "With unstructured content making up most of the data on the Internet today and growing at an alarming rate, long hours are spent on manual data research and extraction processes. Due to the volume and velocity of data today, not all data can be captured in a timely fashion, often resulting in inaccurate insights.",
         img: "wealth-management-img-3.svg",
       },
       {
         label: "Solution",
-        title: "3 ways Accern is helping to solve <span class='text-special-primary-dark'>Business Analysts</span> problem",
+        title: "Accern's solutions for <span class='text-special-primary-dark'>Business Analysts</span>",
         titleCL: "mw-650",
         description: "Accern’s no-code AI platform enables business analysts to reduce hours of manual labor in gathering and analyzing data to generate accurate recommendations for executives and stakeholders. With ready-made financial use cases and a historic and real-time delivery system, business analysts can monitor data and generate insights quickly, without having to code. Accern accelerates business analysts’ workflows with AI-powered NLP models, automation, and a no-code data science platform.",
         img: "wealth-management-img-2.svg",
@@ -70,7 +70,7 @@ export const page = {
       {
         title: "<span class='text-special-primary-dark'>Business Analysts</span> use Accern to accelerate workflows by:",
         titleCL: "mw-800",
-        description: "<ul class='list-primary'><li>Using AI-powered NLP models and automation to quickly research, extract, and analyze structured and unstructured data to generate insights and recommendations for executives and stakeholders.</li><li>Deploying ready-made financial use cases in a historic feed or in real-time to continuously monitor news and generate new, actionable insights.</li><li>Exporting data results through business intelligence and visualization tools that are already incorporated within existing workflows.</li></ul>",
+        description: "<ul class='list-primary'><li>Using AI-powered NLP models and automation to quickly research, extract, and analyze structured and unstructured data to generate insights and recommendations for executives and stakeholders.</li><li>Quickly build out prototypes of AI use cases for business functions to evaluate and deploy into production use.</li><li>Deploying AI use cases into pre-integrated business intelligence applications such as Kibana, PowerBI, Tableau, and more within Accern for accelerated data exploration.</li></ul>",
         img: "private-markets-img-2.svg",
       },
     ]
@@ -79,7 +79,7 @@ export const page = {
   whitepaper: {
     label: "OUR WHITEPAPER",
     isDisableShape: true,
-    title: "To learn more about how AI can be used to enhance financial workflows, view our whitepapers.",
+    title: "To learn how you can use AI to enhance your team's financial workflows, view our whitepapers.",
     className: "mb-s",
     titleCL: "mw-800",
     labelCL: "op-05",

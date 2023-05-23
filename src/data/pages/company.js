@@ -237,7 +237,7 @@ export const page = {
   footer: {
     getstarted: {
       title: "Careers",
-      description: "Interested in joining us?<br> Please visit our open positions.",
+      description: "Interested in joining us?<br> Please view our open positions.",
       placeholder: "Email address",
       isDisableForm: true,
       link: {

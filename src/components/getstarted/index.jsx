@@ -41,7 +41,7 @@ const GetStarted = ({page}) => {
               <Row>
                 <Col lg={6} className="text-center text-lg-left">
                   <h2 className="text-light lh-1 mb-3">{page ? page.getstarted.title : settings.getstarted.title}</h2>
-                  <p className="text-light op-07 mw-340 mb-4 mb-lg-0 mx-auto mx-lg-0" dangerouslySetInnerHTML={{__html: page ? page.getstarted.description : settings.getstarted.description}}></p>
+                  <p className="text-light op-07 mw-400 mb-4 mb-lg-0 mx-auto mx-lg-0" dangerouslySetInnerHTML={{__html: page ? page.getstarted.description : settings.getstarted.description}}></p>
                 </Col>
                 <Col lg={6} className="d-flex align-items-center justify-content-left justify-content-md-end">
                   <Form className="d-inline-flex w-480">

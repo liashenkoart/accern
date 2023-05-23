@@ -63,8 +63,8 @@ export const page = {
       {
         label: "WORKFLOW STEP 03",
         labelCL: "text-primary",
-        title: "Edit and expand Smart Insights Use Cases",
-        description: "Scale your use of Accern’s Smart Insights use cases with additional data sources, taxonomy, and adaptive NLP models.",
+        title: "Edit and Expand Smart Insights Use Cases",
+        description: "Scale your use of Accern’s Smart Insights use cases with additional data sources, taxonomies, and adaptive NLP models.",
         img: "wealth-management-img-3.svg",
       },
     ]

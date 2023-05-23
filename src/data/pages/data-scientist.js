@@ -1,7 +1,7 @@
 export const page = {
   hero: {
     label: "Accern for Data scientists",
-    title: "3 ways Accern is helping to solve <strong>data scientists</strong> problem",
+    title: "How Accern helps solve <strong>data scientists'</strong> problems",
     titleCL: "mw-800",
     variant: "lines",
     theme: "advanced",
@@ -39,7 +39,7 @@ export const page = {
     rows: [
       {
         label: "data scientist",
-        title: "What is a <span class='text-special-primary-dark'>data scientist</span> and what are they responsible for?",
+        title: "Who are <span class='text-special-primary-dark'>Data Scientists</span> and what are their responsibilities?",
         titleCL: "mw-600",
         description: "Data scientists gather and analyze large sets of structured and unstructured data by combining computer science, statistics, and mathematics. They analyze, process, and model data to create actionable insights for financial service companies.",
         img: "wealth-management-img-2.svg",
@@ -55,22 +55,22 @@ export const page = {
     rows: [
       {
         label: "Problem",
-        title: "What <span class='text-special-primary-dark'>problem</span> are <span class='text-special-primary-dark'>data scientists</span> facing?",
+        title: "What <span class='text-special-primary-dark'>problems</span> do <span class='text-special-primary-dark'>Data Scientists</span> face?",
         titleCL: "mw-800",
         description: "With unstructured content making up most of the data on the Internet today and growing at an alarming rate, long hours are spent on manual data research and extraction processes. Due to the volume and velocity of data today, not all data can be captured in a timely fashion, often resulting in inaccurate insights.",
         img: "wealth-management-img-3.svg",
       },
       {
         label: "Solution",
-        title: "3 ways Accern is helping to solve <span class='text-special-primary-dark'>data scientists</span> problem",
+        title: "Accern's solutions for <span class='text-special-primary-dark'>Data Scientists</span>",
         titleCL: "mw-650",
         description: "Accern’s no-code AI platform enables data scientists to reduce hours of manual labor in analyzing data, building predictive models, and interpreting results. With ready-made financial use cases, data scientists can generate insights quickly and automate these manual processes. Accern accelerates data scientists’ workflows with AI-powered NLP models and a no-code data science platform.",
         img: "wealth-management-img-2.svg",
       },
       {
-        title: "<span class='text-special-primary-dark'>Data scientists</span> use Accern to accelerate workflows by:",
+        title: "<span class='text-special-primary-dark'>Data Scientists</span> use Accern to accelerate workflows by:",
         titleCL: "mw-800",
-        description: "<ul class='list-primary'><li>Using AI-powered NLP models and automation to quickly research, extract, and analyze structured and unstructured data to create actionable insights.</li><li>Accessing an integrated data store with over 1 billion public and premium news sources and deploying ready-made NLP models for quick insights, without having to code.</li><li>Validating existing predictive and backtesting models for greater accuracy rates.</li></ul>",
+        description: "<ul class='list-primary'><li>Using AI-powered NLP models and automation to quickly research, extract, and analyze structured and unstructured data to create actionable insights.</li><li>Accessing an integrated data store with over 1 billion public and premium news sources and deploying ready-made NLP models for quick insights, without having to code.</li><li>Select from over 400 pre-built AI use cases for financial services to activate, evaluate, and deploy immediately, saving months of work from building use cases from scratch.</li></ul>",
         img: "private-markets-img-2.svg",
       },
     ]
@@ -79,7 +79,7 @@ export const page = {
   whitepaper: {
     label: "OUR WHITEPAPER",
     isDisableShape: true,
-    title: "To learn more about how AI can be used to enhance financial workflows, view our whitepapers.",
+    title: "To learn how you can use AI to enhance your team's financial workflows, view our whitepapers.",
     className: "mb-s",
     titleCL: "mw-800",
     labelCL: "op-05",

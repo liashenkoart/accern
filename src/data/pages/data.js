@@ -10,7 +10,7 @@ export const page = {
   },
   hero: {
     label: "Data Store",
-    title: "Select Datasets for Your <strong>AI Solutions</strong>",
+    title: "Select Datasets for Your <strong>AI Use Case</strong>",
     titleCL: "mw-580",
     description: "Accern comes integrated with one of the largest unstructured news, reports, and social media data marketplaces. In addition, you can upload your internal documents or existing data subscriptions to Accern to build your AI solutions.",
     variant: "simple-video",
@@ -111,10 +111,10 @@ export const page = {
   },
 
   dataPartner: {
-    title: "Data Partner",
-    description: "We’re always excited about new partnerships. Become Our Data Partner!",
+    title: "Become a Data Partner",
+    description: "We’re always excited about new partnerships. Become one of our data partners.",
     button: {
-      name: "Become Our Data Partner",
+      name: "Partner with us",
       modal: "request"
     }
   }

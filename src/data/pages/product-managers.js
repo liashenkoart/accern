@@ -1,7 +1,7 @@
 export const page = {
   hero: {
     label: "Accern for Product Managers",
-    title: "3 ways Accern is helping to solve <strong>Product Managers</strong> problem",
+    title: "How Accern helps solve <strong>Product Managers'</strong> problems",
     titleCL: "mw-800",
     variant: "lines",
     theme: "error",
@@ -39,7 +39,7 @@ export const page = {
     rows: [
       {
         label: "Product Managers",
-        title: "What is a <span class='text-special-primary-dark'>Product Managers</span> and what are they responsible for?",
+        title: "Who are <span class='text-special-primary-dark'>Product Managers</span> and what are their responsibilities?",
         titleCL: "mw-600",
         description: "Product managers plan and assist in the development, marketing, and distribution of a product. Their responsibilities include researching competitors and their products and using data-driven insights, recommendations, and reports to create a product development and marketing strategy.",
         img: "wealth-management-img-2.svg",
@@ -55,22 +55,22 @@ export const page = {
     rows: [
       {
         label: "Problem",
-        title: "What <span class='text-special-primary-dark'>problem</span> are <span class='text-special-primary-dark'>Product Managers</span> facing?",
+        title: "What <span class='text-special-primary-dark'>problems</span> do <span class='text-special-primary-dark'>Product Managers</span> face?",
         titleCL: "mw-800",
         description: "With unstructured content making up most of the data on the Internet today and growing at an alarming rate, long hours are spent on manual data research and extraction processes. Due to the volume and velocity of data today, not all data can be captured in a timely fashion, often resulting in inaccurate insights.",
         img: "wealth-management-img-3.svg",
       },
       {
         label: "Solution",
-        title: "3 ways Accern is helping to solve <span class='text-special-primary-dark'>Product Managers</span> problem",
+        title: "Accern's solutions for <span class='text-special-primary-dark'>Product Managers</span>",
         titleCL: "mw-650",
-        description: "Accern’s no-code AI platform enables product managers to reduce hours of manual labor in researching, analyzing, and extracting data to take the critical information that can assist in product development and management. With an integrated data store and ready-made NLP models, product managers can access over 1 billion public and premium news sources including blogs, reviews, social media, and more in one place and quickly obtain the most critical data.",
+        description: "Accern’s no-code AI platform enables product managers to reduce hours of manual labor in researching, analyzing, and extracting data and assist in product development and management. With an integrated data store and ready-made NLP models, product managers can access over 1 billion public and premium news sources including blogs, reviews, social media, and more in one place to quickly obtain the most critical data.",
         img: "wealth-management-img-2.svg",
       },
       {
-        title: "<span class='text-special-primary-dark'>Product Managers</span> use Accern to accelerate workflows by:",
+        title: "<span class='text-special-primary-dark'>Product Managers</span> use Accern to accelerate product roadmaps by:",
         titleCL: "mw-800",
-        description: "<ul class='list-primary'><li>Using AI-powered NLP models and automation to quickly generate insights for product management without having to write a single line of code.</li><li>AApplying smart insights, search, extraction, and summaries to gain insights on competitors and their products, analyze sentiment around products, and more for product recommendations.</li><li>Integrating internal documents and client conversations and tagging meeting notes from CRM systems and emails to gain real-time alerts on client churn.</li></ul>",
+        description: "<ul class='list-primary'><li>Using AI-powered NLP models to enhance existing product offerings with machine-learning capabilities and offer new features to customers.</li><li>Applying smart insight, search, extraction, and summary to analyze competitors and their products, sentiment around products, and uncover product recommendations.</li><li>Empowering entry-level team members to use Accern to meet and exceed internal product development timelines without coding.</li></ul>",
         img: "private-markets-img-2.svg",
       },
     ]
@@ -79,7 +79,7 @@ export const page = {
   whitepaper: {
     label: "OUR WHITEPAPER",
     isDisableShape: true,
-    title: "To learn more about how AI can be used to enhance financial workflows, view our whitepapers.",
+    title: "To learn how you can use AI to enhance your team's financial workflows, view our whitepapers.",
     className: "mb-s",
     titleCL: "mw-800",
     labelCL: "op-05",

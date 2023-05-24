@@ -196,7 +196,7 @@ export const page = {
           { name: "Entity Extraction Accuracy", value: 99.7 },
           { name: "Relevancy Identification Accuracy", value: 99.7 },
           { name: "Event Extraction Precision", value: 96.55 },
-          { name: "Sentiment Analysis Accuracy", value: 80.3 },
+          { name: "Sentiment Analysis Accuracy", value: 93.5 },
         ]
       },
     ]

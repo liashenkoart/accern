@@ -5,7 +5,7 @@ import { ApiService } from "../../services/ApiService";
 import { OpenModal } from "../../services/modalsManager";
 import { Context } from "../../context/context";
 import { settings } from "../../data/settings";
-import LinkAdv from "../linkadv";
+import Icon from "../icon";
 
 import "./Form.scss";
 
@@ -73,17 +73,19 @@ const FormComp = ({ data, from, onCompleted }) => {
             </Col>
           ))}
           <Col>
-            <LinkAdv
-              data={{ name: data.button }}
+            <Button
               disabled={isButtonDisabled ? true : false}
               className="mt-4 w-100"
-              variant="primary-arrow"
+              variant="primary with-box-arrow"
               type="submit"
-            />
+            >
+              {data.button}
+              <div className="arrow-box"><Icon variant="arrow-right" /></div>
+            </Button>
           </Col>
         </Row>
       </Container>
-    </Form>
+    </Form >
   }
 
   const renderFormContainer = () => {

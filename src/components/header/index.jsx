@@ -220,7 +220,10 @@ const Header = ({ isFluid }) => {
                         {settings.navigation.map((nav, i) => (
                           !nav.excludeNav &&
                           <Nav.Item key={`nav-${i}`}>
-                            {nav.link ? <Link onClick={() => hideAll(true)} className={`nav-link ${nav.isDisabled ? "disabled" : ""}`} to={nav.link}>{nav.name}</Link>
+                            {nav.link ? (nav.link.indexOf('http') != -1) || (nav.link.indexOf('mailto') != -1) ?
+                                  <a target={`${nav.isNewWindow ? "blank" : ""}`} className={`nav-link ${nav.isDisabled ? "disabled" : ""}`} href={nav.link}>{nav.name}</a>
+                                  :
+                                  <Link onClick={() => hideAll(true)} className={`nav-link ${nav.isDisabled ? "disabled" : ""}`} to={nav.link}>{nav.name}</Link>
                               : <div className={`nav-link ${nav.isDisabled ? "disabled" : ""} cursor-pointer ${subs[i] ? "sub-active" : ""}`} onClick={(e) => nav.sub ? handleClickLink(i, e) : null}>
                                 {nav.name}
                               </div>}

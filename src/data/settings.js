@@ -134,7 +134,7 @@ export const settings = {
       }
     },
     { name: "AI MARKETPLACE", component: "Marketplace", link: "/marketplace" },
-    { name: "Login", component: "Login", link: "/login" },
+    { name: "Login", isNewWindow: true, link: "https://app.accern.com/" },
     { name: "API & Docs", component: "Documentation", link: "/documentation", excludeNav: true },
     { name: "Terms of Use", link: "/terms_of_use", component: "Terms", excludeNav: true },
     { name: "Support policy", link: "/support_policy", component: "Policy", excludeNav: true },

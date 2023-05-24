@@ -12,6 +12,7 @@ import RequestQuote from "./requestquote";
 import AwsSuccess from "./success/awsSuccess";
 import DownloadWhitepaper from "./downloadWhitepaper";
 import Video from "./video";
+import FindYourIdea from "./findYourIdea";
 
 const Modals = () => {
 
@@ -29,6 +30,7 @@ const Modals = () => {
       {modals.isRequestQuote && <RequestQuote />}
       {modals.isAwsSuccess && <AwsSuccess />}
       {modals.isDownloadWhitepaper && <DownloadWhitepaper />}
+      {modals.isFindYourIdea && <FindYourIdea />}
       {modals.isVideo && <Video />}
     </>
   );

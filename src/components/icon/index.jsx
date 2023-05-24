@@ -287,6 +287,11 @@ const Icon = ({ variant, className }) => {
           <path d="M10,14.8c-0.1,0-0.2,0-0.3-0.1c-0.3-0.1-0.4-0.4-0.4-0.7V8c0-0.3,0.2-0.5,0.4-0.7c0.3-0.1,0.6-0.1,0.8,0.1l4,3c0.2,0.1,0.3,0.4,0.3,0.6s-0.1,0.5-0.3,0.6l-4,3C10.3,14.7,10.2,14.8,10,14.8z M10.8,9.5v3l2-1.5L10.8,9.5z" />
         </svg>
 
+      case "zap":
+        return <svg className={`app-icon ${className ? className : ""}`} xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20px" height="22px" viewBox="0 0 20 22">
+          <path d="M19.9,8.6C19.7,8.2,19.4,8,19,8h-7.9L12,1.1c0.1-0.4-0.2-0.9-0.6-1C11-0.1,10.5,0,10.2,0.4l-10,12c-0.2,0.3-0.3,0.7-0.1,1.1C0.3,13.8,0.6,14,1,14h7.9L8,20.9c-0.1,0.4,0.2,0.9,0.6,1C8.7,22,8.9,22,9,22c0.3,0,0.6-0.1,0.8-0.4l10-12C20,9.3,20.1,8.9,19.9,8.6z" />
+        </svg>
+
       case "loader":
         return (<svg className={`circular`} viewBox="25 25 50 50"><circle className={`path`} cx="50" cy="50" r="20" fill="none" strokeWidth="4" strokeMiterlimit="10" /></svg>)
     }

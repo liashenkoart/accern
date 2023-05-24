@@ -164,13 +164,13 @@ const UseCases = ({ isVisible, page }) => {
     <div className={`use-cases ${page.className ? page.className : ""} mb-5 ${isVisible ? "active" : ''}`}>
       <Container>
         <Row className="mt-2 mt-md-5 pt-3">
-          <Col md={6} className="d-flex align-items-center">
-            <div className="pb-2 pb-md-0 h-100 w-100">
+          <Col lg={5} className="d-flex align-items-center">
+            <div className="pb-2 pb-lg-0 h-100 w-100">
               <Search value={searchValue} onChange={onSearchChange} onSetValue={(value) => { setSearchValue(value.name); value.name && OpenModal("requestAccess", dispatchModals, value) }} data={page.list.map((item) => ({ ...item, ...getDetails(item.workflow) }))} onClear={onClearSearch} placeholder={page.search.label} searchField="name" variant="usecases" />
             </div>
           </Col>
-          <Col md={2}>
-            <div className="mb-2 mb-md-0">
+          <Col lg={2}>
+            <div className="mb-2 mb-lg-0">
               <Select
                 value={industry}
                 onChange={(e) => onFilterChange(e, "industry")}
@@ -180,8 +180,8 @@ const UseCases = ({ isVisible, page }) => {
               />
             </div>
           </Col>
-          <Col md={2}>
-            <div className="mb-2 mb-md-0">
+          <Col lg={2}>
+            <div className="mb-2 mb-lg-0">
               <Select
                 value={solution}
                 onChange={(e) => onFilterChange(e, "solution")}
@@ -191,15 +191,16 @@ const UseCases = ({ isVisible, page }) => {
               />
             </div>
           </Col>
-          <Col md={2}>
-            <div className="mb-2 mb-md-0">
+          <Col lg={3}>
+            <div className="mb-2 mb-lg-0 filter-actions">
               <Select
                 value={workflow}
                 onChange={(e) => onFilterChange(e, "workflow")}
                 options={generateOptions(page.workflows.options, "workflow")}
                 label={page.workflows.label}
-                className="select-small"
+                className="select-small w-100"
               />
+              <Button variant="primary" onClick={()=>OpenModal("findYourIdea", dispatchModals, page)}><Icon variant="zap"/></Button>
             </div>
           </Col>
         </Row>

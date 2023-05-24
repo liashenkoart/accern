@@ -18,6 +18,19 @@ input:-webkit-autofill:active  {
   -webkit-animation-fill-mode: both !important;
 }
 
+.acr-select.select {
+  padding-bottom: 0;
+  .acr-select__control{
+    border-color: transparent;
+  }
+
+  &:hover {
+    .acr-select__control{
+      border-color: transparent;
+    }
+  }
+}
+
 .select-code{
   font-size: 0.75rem;
   color: $black;

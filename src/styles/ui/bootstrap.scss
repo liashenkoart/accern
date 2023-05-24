@@ -705,6 +705,30 @@ h4 {
   background-color: rgba($primary, 0.05);
 }
 
+.filter-actions {
+  display: flex;
+
+  > .btn {
+    margin-left: $gutter;
+    flex-shrink: 0;
+
+    .app-icon {
+      font-size: 1.4rem;
+      margin: 0;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    flex-direction: column;
+
+    > .btn {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 0.5rem;
+    }
+  }
+}
+
 @include media-breakpoint-down(lg) {
   .list-dark {
     font-size: 1rem;

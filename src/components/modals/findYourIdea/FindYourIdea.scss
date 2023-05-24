@@ -1,0 +1,11 @@
+@import "../../../styles/global/variables.scss";
+
+.filter-steps {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+
+  .btn-primary {
+    margin: 0 1rem;
+  }
+}

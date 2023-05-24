@@ -1,0 +1,32 @@
+@import "../../styles/global/variables.scss";
+
+.steps {
+  width: calc(100% + 10px);
+  margin-left: -5px;
+  display: flex;
+
+  &-step {
+    width: 100%;
+    height: 3px;
+    cursor: pointer;
+    padding: 0 5px;
+
+    &::after{
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: $lgray-adv;
+      transition: background-color $transition ease;
+    }
+
+    &.active {
+      &::after{
+        background-color: $primary;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+  }
+}

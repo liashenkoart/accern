@@ -13,6 +13,7 @@ export const OpenModal = (modal, dispatch, data) => {
       isAwsSuccess: false,
       isDownloadWhitepaper: false,
       isVideo: false,
+      isFindYourIdea: false,
       data: null,
     }
   })
@@ -50,6 +51,9 @@ export const OpenModal = (modal, dispatch, data) => {
       break;
     case "video":
       dispatch({ type: "SET_MODALS", data: { isVideo: true, data: data } })
+      break;
+    case "findYourIdea":
+      dispatch({ type: "SET_MODALS", data: { isFindYourIdea: true, data: data } })
       break;
   }
 }

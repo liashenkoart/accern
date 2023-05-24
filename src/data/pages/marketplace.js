@@ -20,6 +20,20 @@ export const page = {
     labelPopularInsurance: "Popular Insurance Use Cases",
     labelPopularAssetManagement: "Popular Asset Management Use Cases",
     labelPopularBanking: "Popular Banking Use Case",
+    findUseCase: {
+      label: "Use case recommendation",
+      title: "Find Your Ideal Use Case",
+      button: "Continue",
+      steps: [
+        {plahecolder: "I work at a(an)", label: "Company"},
+        {plahecolder: "I am part of the", label: "Function"},
+        {plahecolder: "My role is a"},
+        {plahecolder: "I am looking for use cases that can"},
+      ],
+      form: {
+
+      }
+    },
     search: {
       label: "Find a use case",
     },

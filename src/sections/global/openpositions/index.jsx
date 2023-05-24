@@ -38,9 +38,8 @@ const OpenPositions = ({ isVisible, page }) => {
               value={location}
               onChange={(e) => setLocation(e)}
               options={page.locations}
-              className={`acr-select`}
               classNamePrefix={"acr-select"}
-              className="select mt-2"
+              className="acr-select select mt-2"
             />
           </Col>
           <Col md={4}>
@@ -48,9 +47,8 @@ const OpenPositions = ({ isVisible, page }) => {
               value={department}
               onChange={(e) => setDepartment(e)}
               options={page.departments}
-              className={`acr-select`}
               classNamePrefix={"acr-select"}
-              className="select mt-2"
+              className="acr-select select mt-2"
             />
           </Col>
         </Row>

@@ -6,6 +6,35 @@
   padding-bottom: 0.3rem;
   font-size: 1.125rem;
   color: $black;
+  position: relative;
+
+  .select-additiona-label {
+    position: absolute;
+    right: 2.4rem;
+    bottom: 0.875rem;
+    font-size: 0.875rem;
+    color: $dark;
+    z-index: 1;
+  }
+
+  &.select-small-text {
+    font-size: 0.875rem;
+    color: $dark;
+
+    .acr-select-c__menu-list {
+      font-size: 0.875rem;
+    }
+  }
+
+  &.label-uppercase {
+    label {
+      color: $darker;
+      margin-bottom: 0.5rem;
+      font-size: 0.75rem;
+      letter-spacing: 0.164rem;
+      text-transform: uppercase;
+    }
+  }
 
   &.input-spacing {
     padding-bottom: 0;
@@ -34,6 +63,25 @@
 
   &.simple {
     border: none;
+
+    .acr-select-c__control {
+      .acr-select-c__indicators {
+        margin-top: 0;
+
+        .acr-select-c__indicator {
+          color: rgba($dark, 0.5);
+          svg {
+            width: 18px;
+            height: 18px;
+          }
+        }
+      }
+    }
+  }
+
+  &.simple-border-bottom {
+    border: none;
+    border-bottom: 1px solid $border-color;
 
     .acr-select-c__control {
       .acr-select-c__indicators {
@@ -138,11 +186,25 @@
     }
   }
 
+  .acr-select-c__menu-list::-webkit-scrollbar {
+    display: block;
+    width: 3px;
+    height: 0px;
+  }
+  .acr-select-c__menu-list::-webkit-scrollbar-track {
+    background: $cover-2;
+  }
+  .acr-select-c__menu-list::-webkit-scrollbar-thumb {
+    background: $primary;
+  }
+  .acr-select-c__menu-list::-webkit-scrollbar-thumb:hover {
+    background: $primary;
+  }
+
   .acr-select-c__menu-list {
     padding: 0;
     border:none;
     box-shadow: none;
-    max-height: 500px;
     font-size: 1rem;
   }
 

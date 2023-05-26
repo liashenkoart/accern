@@ -408,6 +408,16 @@ h4 {
 
 .modal-custom {
 
+  .modal-body {
+    border-radius: $modal-content-border-radius;
+  }
+
+  &.overflow-visible {
+    .modal-content {
+      overflow: visible;
+    }
+  }
+
   &.video {
     .modal-content {
       overflow: visible;

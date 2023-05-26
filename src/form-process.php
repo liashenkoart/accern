@@ -136,6 +136,14 @@ switch ( $type ) {
     $Body .= $additional;
     $Body .= '<br>';
     break;
+    case 'findUseCase':
+    $Subject = 'New message from the Accern Find Use Case';
+    $Body .= '<b>Company:</b> ';
+    $Body .= $company;
+    $Body .= '<br>';
+    $Body .= $additional;
+    break;
+
 }
 
 // Instantiation and passing `true` enables exceptions

@@ -25,13 +25,20 @@ export const page = {
       title: "Find Your Ideal Use Case",
       button: "Continue",
       steps: [
-        {plahecolder: "I work at a(an)", label: "Company"},
-        {plahecolder: "I am part of the", label: "Function"},
-        {plahecolder: "My role is a"},
-        {plahecolder: "I am looking for use cases that can"},
+        { plahecolder: "I work at a(an)", label: "Company" },
+        { plahecolder: "I am part of the", label: "Function" },
+        { plahecolder: "My role is a" },
+        { plahecolder: "I am looking for use cases that can" },
       ],
       form: {
-
+        message: "That's All, thank you!",
+        button: "Find use case",
+        formType: "findUseCase",
+        fields: [
+          { name: "first_name", type: "text", placeholder: "Full Name", isFullWidth: true, className: "advanced", required: true, pattern: ".{2,}" },
+          { name: "company", type: "text", placeholder: "Company", isFullWidth: true, className: "advanced" },
+          { name: "email", type: "email", placeholder: "E-mail", isFullWidth: true, className: "advanced", required: true },
+        ]
       }
     },
     search: {
@@ -43,7 +50,7 @@ export const page = {
       options: [
         { label: "All", value: "All" },
         { label: "Asset Management", value: "Asset Management", variant: "primary", description: "AI use cases built for Asset Management.", img: "spec-icon-settings.svg" },
-        { label: "Banks", value: "Banks", description: "AI use cases built for Banking", variant: "primary", img: "spec-icon-bank.svg"},
+        { label: "Banks", value: "Banks", description: "AI use cases built for Banking", variant: "primary", img: "spec-icon-bank.svg" },
         { label: "Insurance", value: "Insurance", description: "AI use cases built for Insurance.", variant: "primary", img: "spec-icon-shield.svg" },
       ]
     },
@@ -71,16 +78,16 @@ export const page = {
         { label: "Customer Experience", value: "Customer Experience", variant: "danger", description: "AI use cases built for", img: "solution-icon-9.svg" },
         { label: "Customer Retention", value: "Customer Retention", variant: "red", description: "AI use cases built for", img: "solution-icon-8.svg" },
         { label: "Equity Research", value: "Equity Research", variant: "secondary", description: "AI use cases built for", img: "solution-icon-12.svg" },
-        { label: "ESG Investing", value: "ESG Investing", variant:"primary", description: "AI use cases built for", img: "solution-icon-3.svg" },
-        { label: "Event-Driven Investing", value: "Event-Driven Investing", variant:"advanced", description: "AI use cases built for", img: "solution-icon-2.svg" },
-        { label: "Financial Crimes", value: "Financial Crimes", variant:"danger", description: "AI use cases built for", img: "solution-icon-7.svg" },
-        { label: "Fundamental Research", value: "Fundamental Research", variant:"pink", description: "AI use cases built for", img: "solution-icon-6.svg" },
-        { label: "Long/Short Equity", value: "Long/Short Equity", variant:"danger", description: "AI use cases built for", img: "solution-icon-5.svg" },
-        { label: "Merger Arbitrage", value: "Merger Arbitrage", variant:"red", description: "AI use cases built for", img: "solution-icon-4.svg" },
-        { label: "Mergers & Acquisitions", value: "Mergers & Acquisitions", variant:"danger", description: "AI use cases built for", img: "solution-icon-13.svg" },
-        { label: "Product Recommendations", value: "Product Recommendations", variant:"secondary", description: "AI use cases built for", img: "solution-icon-10.svg" },
-        { label: "Quantitative Research", value: "Quantitative Research", variant:"primary", description: "AI use cases built for", img: "solution-icon-1.svg" },
-        { label: "Underwriting", value: "Underwriting", variant:"primary", description: "AI use cases built for", img: "solution-icon-1.svg" },
+        { label: "ESG Investing", value: "ESG Investing", variant: "primary", description: "AI use cases built for", img: "solution-icon-3.svg" },
+        { label: "Event-Driven Investing", value: "Event-Driven Investing", variant: "advanced", description: "AI use cases built for", img: "solution-icon-2.svg" },
+        { label: "Financial Crimes", value: "Financial Crimes", variant: "danger", description: "AI use cases built for", img: "solution-icon-7.svg" },
+        { label: "Fundamental Research", value: "Fundamental Research", variant: "pink", description: "AI use cases built for", img: "solution-icon-6.svg" },
+        { label: "Long/Short Equity", value: "Long/Short Equity", variant: "danger", description: "AI use cases built for", img: "solution-icon-5.svg" },
+        { label: "Merger Arbitrage", value: "Merger Arbitrage", variant: "red", description: "AI use cases built for", img: "solution-icon-4.svg" },
+        { label: "Mergers & Acquisitions", value: "Mergers & Acquisitions", variant: "danger", description: "AI use cases built for", img: "solution-icon-13.svg" },
+        { label: "Product Recommendations", value: "Product Recommendations", variant: "secondary", description: "AI use cases built for", img: "solution-icon-10.svg" },
+        { label: "Quantitative Research", value: "Quantitative Research", variant: "primary", description: "AI use cases built for", img: "solution-icon-1.svg" },
+        { label: "Underwriting", value: "Underwriting", variant: "primary", description: "AI use cases built for", img: "solution-icon-1.svg" },
       ]
     },
     list: [

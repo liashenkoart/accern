@@ -482,6 +482,8 @@ export const settings = {
     ByUsers: "By Users",
     Previous: "Previous",
     Next: "Next",
+    Function: "Function",
+    Looking: "Looking",
   },
 
   getInTouch: {
@@ -605,6 +607,26 @@ export const settings = {
     { color: "#FB7F54", cover: "shape-rect-md-danger.png" },
     { color: "#5E4BEF", cover: "shape-rect-md-advanced.png" },
   ],
+
+  role: {
+    options: [
+      { value: "Business Leader", label: "Business Leader", },
+      { value: "Business Analyst", label: "Business Analyst"},
+      { value: "Data Scientist", label: "Data Scientist",},
+      { value: "Data Engineer", label: "Data Engineer",},
+      { value: "Software Developer", label: "Software Developer"},
+    ]
+  },
+
+  looking: {
+    options: [
+      { value: "Stay up-to-date on with real-time alerts on important information.", label: "Stay up-to-date on with real-time alerts on important information.", },
+      { value: "Option 2", label: "Option 2"},
+      { value: "Option 3", label: "Option 3",},
+      { value: "Option 4", label: "Option 4",},
+      { value: "Option 5", label: "Option 5"},
+    ]
+  },
 
   categories: [
     {

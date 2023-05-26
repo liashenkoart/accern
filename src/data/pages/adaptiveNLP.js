@@ -44,7 +44,7 @@ export const page = {
             "doc_content": "String, Content of the original document",
             "published_at": "DateTime, The time the original doc was published on"
           },
-          link: { modal: "request", name: "Request Documentation" }
+          link: { modal: "request", name: "Request Trial" }
         }
       },
       {
@@ -61,7 +61,7 @@ export const page = {
             "entity_source": "String, Identifies which knowledge graph was used for this entity (primary or custom)",
             "entity_text": "String Array, Text where the entity was tagged",
           },
-          link: { modal: "request", name: "Request Documentation" }
+          link: { modal: "request", name: "Request Trial" }
         }
       },
       {
@@ -79,7 +79,7 @@ export const page = {
             "event_hits": "String Array, Text where the event was tagged",
             "event_text": "String Array, Text where the event was tagged",
           },
-          link: { modal: "request", name: "Request Documentation" }
+          link: { modal: "request", name: "Request Trial" }
         }
       },
       {
@@ -97,7 +97,7 @@ export const page = {
             "doc_sentiment": "Float, Average sentiment of all entities and events in document.",
             "signal_sentiment": "Float, Average sentiment of entity event pair"
           },
-          link: { modal: "request", name: "Request Documentation" }
+          link: { modal: "request", name: "Request Trial" }
         }
       },
       {
@@ -115,7 +115,7 @@ export const page = {
             "event_relevance": "Float, Location and occurrence score for an event",
             "signal_relevance": "Float, Average of location and occurrence score for entity and event in a signal",
           },
-          link: { modal: "request", name: "Request Documentation" }
+          link: { modal: "request", name: "Request Trial" }
         }
       },
       {
@@ -128,7 +128,7 @@ export const page = {
           title: "Summarization",
           description: "Accern’s proprietary sentiment has been trained for finance. We are able to scan and interpret content that has a positive or negative connotation in financial documents.",
           data: {},
-          link: { modal: "request", name: "Request Documentation" }
+          link: { modal: "request", name: "Request Trial" }
         }
       },
       {
@@ -141,7 +141,7 @@ export const page = {
           description: "Accern’s proprietary sentiment has been trained for finance. We are able to scan and interpret content that has a positive or negative connotation in financial documents.",
           isText: true,
           data: "Afrikaans,Albanian,Amharic,Arabic,Armenian,Azerbaijani,Basque,Belarusian,Bengali,Bosnian,Bulgarian,Catalan,Cebuano,Chichewa,Chinese,Corsican,Croatian,Czech,Danish,Dutch,English,Esperanto,Estonian,Filipino,Finnish,French,Frisian,Galician,Georgian,German,Greek,Gujarati,Haitian Creole,Hausa,Hawaiian,Hebrew,Hindi,Hmong,Hungarian,Icelandic,Igbo,Indonesian,Irish,Italian,Japanese,Javanese,Kannada,Kazakh,Khmer,Kinyarwanda,Korean,Kurdish (Kurmanji),Kyrgyz,Lao,Latin,Latvian,Lithuanian,Luxembourgish,Macedonian,Malagasy,Malay,Malayalam,Maltese,Maori,Marathi,Mongolian,Myanmar (Burmese),Nepali,Norwegian,Odia (Oriya),Pashto,Persian,Polish,Portuguese,Punjabi,Romanian,Russian,Samoan,Scots Gaelic,Serbian,Sesotho,Shona,Sindhi,Sinhala,Slovak,Slovenian,Somali,Spanish,Sundanese,Swahili,Swedish,Tajik,Tamil,Tatar,Telugu,Thai,Turkish,Turkmen,Ukrainian,Urdu,Uyghur,Uzbek,Vietnamese,Welsh,Xhosa,Yiddish,Yoruba,Zulu",
-          link: { modal: "request", name: "Request Documentation" }
+          link: { modal: "request", name: "Request Trial" }
         }
       },
       {
@@ -164,7 +164,7 @@ export const page = {
             "entity_share_class": "String, Share class Fiji code for entity (asset class)",
             "entity_type": "String, Entity classification "
           },
-          link: { modal: "request", name: "Request Documentation" }
+          link: { modal: "request", name: "Request Trial" }
         }
       },
       {
@@ -177,7 +177,7 @@ export const page = {
           title: "PDF Parsing & OCR",
           description: "",
           data: { },
-          link: { modal: "request", name: "Request Documentation" }
+          link: { modal: "request", name: "Request Trial" }
         }
       },
     ]

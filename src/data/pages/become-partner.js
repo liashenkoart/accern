@@ -7,7 +7,7 @@ export const page = {
     description: "Accern partners with technology, data, cloud, and consulting firms to accelerate AI within Financial Services.",
     descriptionCL: "mw-600",
     additional: "Enterprise teams can deploy AI-powered use cases <strong>75x faster with Accern.</strong>",
-    brandsCL: "mw-700",
+    brandsCL: "mw-900",
     brands: [
       { link: "", logo: "logo-aws.png", className: "preset-img-6" },
       { link: "", logo: "logo-snowflake.png", className: "preset-img-4" },

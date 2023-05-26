@@ -59,10 +59,10 @@ export const page = {
     titleCL: "mw-440",
     className: "bg-light mb-spacer",
     columns: [
-      { title: "Data Store", description: "Choose from a wide collection of datasets or simply connect your own for analysis.", icon: "icon-data.svg" },
-      { title: "AutoML Taxonomy", description: "Build custom taxonomy at scale with our AutoML taxonomy generator. ", icon: "icon-taxonomy.svg" },
-      { title: "Adaptive NLP Models", description: "Check out various NLP models that you can use out-of-the-box or retrain for your needs.", icon: "icon-adaptive-nlp.svg" },
-      { title: "Integrations", description: "Import your data and export solutions seamlessly into your everyday workflows.", icon: "icon-integrations.svg" },
+      { title: "Data Store", description: "Choose from a wide collection of datasets or simply connect your own for analysis.", link: "/data", icon: "icon-data.svg" },
+      { title: "AutoML Taxonomy", description: "Build custom taxonomy at scale with our AutoML taxonomy generator. ", link: "/auto-taxonomy", icon: "icon-taxonomy.svg" },
+      { title: "Adaptive NLP Models", description: "Check out various NLP models that you can use out-of-the-box or retrain for your needs.", link: "/adaptive-nlp", icon: "icon-adaptive-nlp.svg" },
+      { title: "Integrations", description: "Import your data and export solutions seamlessly into your everyday workflows.", link: "/integrations", icon: "icon-integrations.svg" },
     ]
   },
 }

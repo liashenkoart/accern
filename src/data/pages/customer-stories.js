@@ -66,7 +66,7 @@ export const page = {
         title: "Fundomate Case Study",
         description: "Accern helps Fundomate automate business funding and assess credit risk",
         img: "case-studie-cover-2.svg",
-        logo: "fundoMate.png",
+        logo: "fundomate.png",
         button: {
           name: "Continue Reading",
           link: "/user-story-fundomate",

@@ -14,6 +14,7 @@ const TabsComp = ({ isVisible, page }) => {
       <Row>
         {filter == "All" ?
           page.columns.map((item, i) => (
+            !item.isExcludeAll &&
             <Col atr={`${i}`} key={`baai-${i}`} md={3} onClick={() => { }}>
               <BlockCase variant="neutral" data={item} />
             </Col>

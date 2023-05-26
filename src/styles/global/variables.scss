@@ -123,11 +123,12 @@ $transition:                    300ms;
 
 $yiq-contrasted-threshold:      200;
 
-$app-top-padding:               6.125rem;
-
-$app-padding:                   $app-top-padding 0 0 0;
 $header-height:                 70px;
 $header-height-md:              60px;
+
+$app-top-padding:               $header-height;
+
+$app-padding:                   $app-top-padding 0 0 0;
 
 $gutter:                        30px;
 

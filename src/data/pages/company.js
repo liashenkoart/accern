@@ -8,7 +8,7 @@ export const page = {
     img: "company-illustration.svg",
     button: {
       name: "JOIN OUR TEAM",
-      link: "mailto:careers@accern.com"
+      link: "/careers"
     },
     form: {
       isActive: false,

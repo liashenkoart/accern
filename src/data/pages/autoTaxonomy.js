@@ -47,10 +47,10 @@ export const page = {
     titleCL: "mw-440",
     className: "bg-light mb-spacer",
     columns: [
-      { title: "Data Store", description: "Choose from a wide collection of datasets or simply connect your own for analysis.", icon: "icon-data.svg" },
-      { title: "Adaptive NLP Models", description: "Check out various NLP models that you can use out-of-the-box or retrain for your needs.", icon: "icon-adaptive-nlp.svg" },
-      { title: "Deployments", description: "Select from a list of secured deployment options.", icon: "icon-deployment.svg" },
-      { title: "Integrations", description: "Import your data and export solutions seamlessly into your everyday workflows.", icon: "icon-integrations.svg" },
+      { title: "Data Store", description: "Choose from a wide collection of datasets or simply connect your own for analysis.", link: "/data", icon: "icon-data.svg" },
+      { title: "Adaptive NLP Models", description: "Check out various NLP models that you can use out-of-the-box or retrain for your needs.", link: "/adaptive-nlp", icon: "icon-adaptive-nlp.svg" },
+      { title: "Deployments", description: "Select from a list of secured deployment options.", link: "/deployments", icon: "icon-deployment.svg" },
+      { title: "Integrations", description: "Import your data and export solutions seamlessly into your everyday workflows.", link: "/integrations", icon: "icon-integrations.svg" },
     ]
   },
 
@@ -62,7 +62,7 @@ export const page = {
         description: "Using Named Entity Recognition (NER), we are able to automate multiple variations from a list of entities such as companies, people, places, and more. You can use our existing data corpus or upload your own industry-specific corpus as a training set to build your entity's taxonomy.",
         img: "adaptive-learning-illustration.svg",
         link: {
-          name: "Request Whitepaper",
+          name: "Request Trial",
           modal: "request"
         }
       },
@@ -72,7 +72,7 @@ export const page = {
         description: "Using Latent Dirichlet Allocation (LDA), we are able to automate multiple important themes related to your set of industry documents. Using adaptive learning models, we can keep generating new themes as they appear in documents.",
         img: "adaptive-learning-theme-illustration.svg",
         link: {
-          name: "Request Whitepaper",
+          name: "Request Trial",
           modal: "request"
         }
       },

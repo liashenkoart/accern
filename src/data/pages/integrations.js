@@ -26,10 +26,10 @@ export const page = {
     title: "Check Out Our Additional Features",
     titleCL: "mw-440",
     columns: [
-      { title: "Data Store", description: "Choose from a wide collection of datasets or simply connect your own for analysis.", icon: "icon-data.svg" },
-      { title: "AutoML Taxonomy", description: "Build custom taxonomy at scale with our AutoML taxonomy generator.", icon: "icon-taxonomy.svg" },
-      { title: "Adaptive NLP Models", description: "Check out various NLP models that you can use out-of-the-box or retrain for your needs.", icon: "icon-adaptive-nlp.svg" },
-      { title: "Deployments", description: "Select from a list of secured deployment options.", icon: "icon-deployment.svg" },
+      { title: "Data Store", description: "Choose from a wide collection of datasets or simply connect your own for analysis.", link:"/data", icon: "icon-data.svg" },
+      { title: "AutoML Taxonomy", description: "Build custom taxonomy at scale with our AutoML taxonomy generator.", link:"/auto-taxonomy", icon: "icon-taxonomy.svg" },
+      { title: "Adaptive NLP Models", description: "Check out various NLP models that you can use out-of-the-box or retrain for your needs.", link:"/adaptive-nlp", icon: "icon-adaptive-nlp.svg" },
+      { title: "Deployments", description: "Select from a list of secured deployment options.", link:"/deployments", icon: "icon-deployment.svg" },
     ]
   },
 

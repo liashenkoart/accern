@@ -125,14 +125,15 @@ export const page = {
         filter: "Cloud Partner",
         img: "logo-crux.png",
         link: {
-          link: "/"
+          link: "https://www.cruxinformatics.com/"
         }
       },
       {
         filter: "Cloud Partner",
         img: "logo-ibm-c.png",
+        isExcludeAll: true,
         link: {
-          link: "/"
+          link: "https://www.ibm.com/"
         }
       },
       {
@@ -146,7 +147,7 @@ export const page = {
         filter: "Consulting Partners",
         img: "logo-ibm-c.png",
         link: {
-          link: "/"
+          link: "https://www.ibm.com/"
         }
       },
       {
@@ -160,7 +161,7 @@ export const page = {
         filter: "Consulting Partners",
         img: "logo-algami.png",
         link: {
-          link: "/"
+          link: "https://www.alqami.com/"
         }
       },
       {

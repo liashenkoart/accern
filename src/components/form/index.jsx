@@ -40,6 +40,8 @@ const FormComp = ({ data, from, to, onCompleted }) => {
 
     json.fields = fields;
 
+    if (onCompleted) onCompleted();  // remove on production
+
     ApiService.post(data).then(result => {
       if (result.data = "success") {
         ApiService.post(JSON.stringify(json), `https://api.hsforms.com/submissions/v3/integration/submit/${settings.hubspotID}/${settings.formID}`, {

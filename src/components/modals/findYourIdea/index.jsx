@@ -103,7 +103,7 @@ const FindYourIdea = ({ }) => {
                 <h2 className="text-title-light-sm mb-4">{title}</h2>
                 {isCompletedNotFound ?
                   <>
-                    {isCompletedNotFound && <h3 dangerouslySetInnerHTML={{ __html: form.message }}></h3>}
+                    {isCompletedNotFound && <h3 className="border-top pt-4" dangerouslySetInnerHTML={{ __html: form.message }}></h3>}
                   </>
                   :
                   <>
@@ -152,7 +152,7 @@ const FindYourIdea = ({ }) => {
                       !isEnterUseCase ?
                         <Select
                           value={useCase ? { value: useCase.value, label: useCase.value } : ''}
-                          onChange={(e) => { if (e.value == settings.texts.Enternew) { setIsEnterUseCase(true); setUseCase(""); } else { setUseCase(e); OpenModal("requestAccess", dispatchModals, { ...e, ...getDetails(e.workflow) }) } }}
+                          onChange={(e) => { if (e.value == settings.texts.Enternew) { setIsEnterUseCase(true); setUseCase(""); } else { setUseCase(e); } }}
                           options={useCases}
                           label={steps[step].plahecolder}
                           className="simple-border-bottom label-uppercase select-small-text"
@@ -168,10 +168,6 @@ const FindYourIdea = ({ }) => {
 
                     {step == 4 &&
                       <FormComp from="Find Your Idea" to={send} data={{ ...form, additional: `<b>${settings.texts.Industry}</b>: ${industry}<br><b>${settings.texts.Function}</b>: ${solution}<br><b>${settings.texts.Role}</b>: ${role}<br><b>${settings.texts.Looking}</b>: ${useCase}<br>` }} onCompleted={onCompleted} />
-                    }
-
-                    {step == 5 &&
-                      <div dangerouslySetInnerHTML={{ __html: form.message }}></div>
                     }
 
                     {step < 4 && <>
@@ -190,6 +186,8 @@ const FindYourIdea = ({ }) => {
                           </Button>}
                         {(!isEnterIndustry && !isEnterFunction && !isEnterUseCase) && step > 0 && <Button onClick={() => setStep(step > 0 ? step - 1 : step)} variant="neutral"><Icon className="m-0" variant="arrow-left" /></Button>}
                         <Button onClick={() => {
+                          if(step == 3 && useCase && typeof useCase != 'string') OpenModal("requestAccess", dispatchModals, { ...useCase, ...getDetails(useCase.workflow) })
+                          
                           setStep(step < 4 ? step + 1 : step);
                           setIsEnterUseCase(false);
                           setIsEnterIndustry(false);

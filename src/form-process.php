@@ -34,7 +34,7 @@ $additional = $_POST['additional'];
 
 $type = $_POST['form-type'];
 
-$EmailTo = 'info@accern.com';
+$EmailTo = $_POST['to'];
 
 $Body = '';
 $Body .= '<b>First Name:</b> ';

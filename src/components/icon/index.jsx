@@ -244,6 +244,13 @@ const Icon = ({ variant, className }) => {
           </svg>
         )
 
+      case "plus":
+        return (<svg className={`app-icon ${className ? className : ""}`} xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="54.9px" height="56.6px" viewBox="0 0 54.9 56.6">
+          <g>
+            <path d="M30.9,0v25h24.1v6.4H30.9v25.2h-6.8V31.4H0V25h24.1V0H30.9z" />
+          </g>
+        </svg>)
+
       case "play":
         return <svg className={`app-icon ${className ? className : ""}`} xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40px" height="50px" viewBox="0 0 40 50">
           <path d="M2,50c-0.3,0-0.7-0.1-1-0.2c-0.6-0.4-1-1-1-1.8V2c0-0.7,0.4-1.4,1-1.8c0.6-0.4,1.4-0.3,2,0.1l35.8,23c0.6,0.4,0.9,1,0.9,1.7s-0.3,1.3-0.9,1.7l-35.8,23C2.8,49.9,2.4,50,2,50z M4,5.7v38.7L34.1,25L4,5.7z" />

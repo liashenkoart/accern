@@ -31,9 +31,11 @@ export const page = {
         { plahecolder: "I am looking for use cases that can" },
       ],
       form: {
-        message: "That's All, thank you!",
+        message: "We currently don’t have any pre-built use cases for you, however, someone from Accern will reach out to you directly to get the process started.",
         button: "Find use case",
         formType: "findUseCase",
+        send: "solutions@accern.com",
+        isDisableSuccessModal: true,
         fields: [
           { name: "first_name", type: "text", placeholder: "Full Name", isFullWidth: true, className: "advanced", required: true, pattern: ".{2,}" },
           { name: "company", type: "text", placeholder: "Company", isFullWidth: true, className: "advanced" },

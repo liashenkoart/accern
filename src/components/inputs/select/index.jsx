@@ -4,7 +4,7 @@ import { Context } from "../../../context/context";
 
 import "./Select.scss";
 
-const SelectAdv = ({ value, options, onChange, label, variant, components, className, defaultValue, menuPlacement, name, additionalLabel, maxMenuHeight }) => {
+const SelectAdv = ({ value, options, onChange, label, variant, components, className, defaultValue, menuPlacement, name, additionalLabel, maxMenuHeight, placeholder }) => {
 
   const [val, setVal] = useState(value);
   const { dispatchLayout } = useContext(Context);
@@ -28,6 +28,7 @@ const SelectAdv = ({ value, options, onChange, label, variant, components, class
         menuPlacement={menuPlacement ? menuPlacement : "bottom"}
         maxMenuHeight={maxMenuHeight ? maxMenuHeight : 300 }
         name={name}
+        placeholder={placeholder}
         onFocus={() => dispatchLayout({ type: "SET_LAYOUT", data: { isSelectFocus: true } })}
         onBlur={() => dispatchLayout({ type: "SET_LAYOUT", data: { isSelectFocus: false } })}
       />

@@ -9,7 +9,7 @@ import Icon from "../icon";
 
 import "./Form.scss";
 
-const FormComp = ({ data, from, onCompleted }) => {
+const FormComp = ({ data, from, to, onCompleted }) => {
 
   const [isCompleted, setIsCompleted] = useState(false);
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
@@ -49,7 +49,7 @@ const FormComp = ({ data, from, onCompleted }) => {
           }
         }).then(result => {
           setIsCompleted(true);
-          OpenModal(data.succesModal ? data.succesModal.name : "request-success", dispatchModals, data.succesModal)
+          if(!isDisableSuccessModal) OpenModal(data.succesModal ? data.succesModal.name : "request-success", dispatchModals, data.succesModal)
           if (gtag) gtag('event', 'Form Submitted');
           if (onCompleted) onCompleted();
         }, error => {
@@ -65,6 +65,7 @@ const FormComp = ({ data, from, onCompleted }) => {
     return <Form className={data.variant != "bordered" ? "mt-2 mt-lg-5" : ""} onSubmit={onSubmit}>
       <input type="hidden" name="form-type" value={data.formType ? data.formType : "getInTouch"} />
       <input type="hidden" name="additional" value={data.additional ? data.additional : ""} />
+      <input type="hidden" name="to" value={to ? to : settings.defaultFormMail} />
       <Container fluid className="p-0">
         <Row>
           {data.fields.map((field, i) => (

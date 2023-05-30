@@ -1,6 +1,5 @@
 @import "../../../styles/global/variables.scss";
 
-
 .select{
   border: 1px solid $border-color;
   padding-bottom: 0.3rem;
@@ -175,13 +174,15 @@
     border-radius: 0;
     box-shadow: $shadow-4;
 
-    .exclude {
+    .exclude, .primary {
       background-color: $primary !important;
       color: $white;
       cursor: pointer;
 
       .app-icon {
         color: $white;
+        font-size: 0.875rem;
+        margin-right: 0.5rem;
       }
     }
   }

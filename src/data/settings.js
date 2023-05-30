@@ -10,6 +10,7 @@ export const settings = {
   ghostVersion: "v3",
   subscribe: "https://accern.us2.list-manage.com/subscribe/post?u=062b50add44565946faa2e749&id=9412e07dd3",
   isGetStarted: false,
+  defaultFormMail: "info@accern.com",
   headerButton: {
     isActive: true,
     name: "GET STARTED",
@@ -484,6 +485,11 @@ export const settings = {
     Next: "Next",
     Function: "Function",
     Looking: "Looking",
+    Enternew: "Enter new",
+    EnternewIndustry: "Enter new Industry",
+    EnternewFunction: "Enter new Function",
+    EnternewUseCase: "Enter new Use Case",
+    NotFound: "Not Found"
   },
 
   getInTouch: {
@@ -615,16 +621,6 @@ export const settings = {
       { value: "Data Scientist", label: "Data Scientist",},
       { value: "Data Engineer", label: "Data Engineer",},
       { value: "Software Developer", label: "Software Developer"},
-    ]
-  },
-
-  looking: {
-    options: [
-      { value: "Stay up-to-date on with real-time alerts on important information.", label: "Stay up-to-date on with real-time alerts on important information.", },
-      { value: "Option 2", label: "Option 2"},
-      { value: "Option 3", label: "Option 3",},
-      { value: "Option 4", label: "Option 4",},
-      { value: "Option 5", label: "Option 5"},
     ]
   },
 

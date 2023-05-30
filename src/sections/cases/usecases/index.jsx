@@ -27,6 +27,15 @@ const UseCases = ({ isVisible, page }) => {
       onFilterChange({ value: app.linkAction.data.value, label: app.linkAction.data.value }, app.linkAction.data.by.toLowerCase());
       setKey("all");
     }
+    if(app && app.linkAction && app.linkAction.name == "filter-marketplace-multiple") {
+      app.linkAction.data.map((item, i)=>{
+        setTimeout(()=>{
+          onFilterChange({ value: item.value, label: item.value }, item.by.toLowerCase());
+        }, 100*(i*3))
+      })
+      
+      setKey("all");
+    }
   }, [app])
 
   const onSearchChange = (value) => {

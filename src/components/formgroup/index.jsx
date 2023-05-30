@@ -7,7 +7,7 @@ import Icon from "../icon";
 import "./FormGroup.scss"
 import { useEffect } from "react";
 
-const FormGroup = ({ className, controlId, as, type, placeholder, required, name, pattern, equal }) => {
+const FormGroup = ({ className, controlId, as, type, placeholder, required, name, pattern, equal, onChange }) => {
 
   const [active, setActive] = useState(false);
   const [value, setValue] = useState("");
@@ -64,7 +64,7 @@ const FormGroup = ({ className, controlId, as, type, placeholder, required, name
         name={name} required={required ? true : false}
         value={name == "email" ? userMail : value}
         {...patterns}
-        onChange={(e) => { name == "email" ? dispatchUserMail({ type: "SET_USER_MAIL", data: e.target.value }) : setValue(e.target.value) }}
+        onChange={(e) => { name == "email" ? dispatchUserMail({ type: "SET_USER_MAIL", data: e.target.value }) : setValue(e.target.value);if(onChange) onChange(e.target.value) }}
         onFocus={() => setActive(true)}
         onBlur={() => setActive(false)}
       />

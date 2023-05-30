@@ -103,7 +103,7 @@ export const settings = {
               { name: "Quantitative Research", link: "/quantitative-research", icon: "icon-quantititive-research.svg" },
               { name: "Fundamental Research", link: "/fundamental-research", icon: "icon-fundamental-research.svg" },
               { name: "Financial Crimes", link: "/financial-crimes", icon: "icon-financial-crimes.svg" },
-              { name: "View All Solutions", link: "/solutions", variant: "fixed-arrow", action: "solution-filter", data: "function" },
+              { name: "View All Functions", link: "/solutions", variant: "fixed-arrow", action: "solution-filter", data: "function" },
             ]
           },
           {

@@ -47,7 +47,7 @@ $seo .= '<meta property="og:url" content="'.$siteURL.$p.'">';
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico">
   <?php echo $seo; ?>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -67,7 +67,7 @@ $seo .= '<meta property="og:url" content="'.$siteURL.$p.'">';
   <noscript>
     You need to enable JavaScript to run this app.
   </noscript>
-  <script src="../assets/bundle.js"></script>
+  <script src="/assets/bundle.js"></script>
 </body>
 
 </html>

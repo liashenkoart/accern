@@ -23,7 +23,7 @@ export const OpenModal = (modal, dispatch, data) => {
       dispatch({ type: "SET_MODALS", data: { isRequestTrial: true } })
       break;
     case "request-success":
-      dispatch({ type: "SET_MODALS", data: { isRequestSuccess: true } })
+      dispatch({ type: "SET_MODALS", data: { isRequestSuccess: true, data: data } })
       break;
     case "getInTouch":
       dispatch({ type: "SET_MODALS", data: { isGetInTouch: true } })

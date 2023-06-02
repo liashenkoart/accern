@@ -1,23 +1,25 @@
 export const page = {
   hero: {
-    logo: "morningstar.png",
+    logo: "dowjones.png",
+    logoCL: "preset-img-7",
     label: "Request more info",
-    title: "<strong>Morningstar's</strong> Global Equity Research Data Sets",
+    title: "<strong>Dow Jones</strong> Institutional News Service",
+    titleCL: "mw-600",
     variant: "lines",
-    theme: "error",
+    theme: "light",
     className: "mb-5 mt-5"
   },
 
   requestForm: {
     about: {
-      logo: "morningstar-white.png",
-      bg: "bg-error.png",
-      description: "Morningstar is a financial services firm that provides a variety of investment research services. Over 150 analysts compile these data sets by analyzing funds, stock, and general market data.",
-      label: "morningstar"
+      logo: "dowjones-white.png",
+      bg: "bg-light.png",
+      description: "Obtain broad, real-time coverage of equities, fixed income, foreign exchange, commodities, and energy markets from the reporting teams of Newswires, The Wall Street Journal, and Barron’s.",
+      label: "Dow Jones"
     },
     form: {
       label: "Request Access",
-      from: "Request Access Morningstorm",
+      from: "Request Access Dow Jones",
       message: "We’ll be in touch shortly!",
       button: "Request Access",
       variant: "bordered",

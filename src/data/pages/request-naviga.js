@@ -22,7 +22,7 @@ export const page = {
       button: "Request Access",
       variant: "bordered",
       succesModal: {
-        name: "requestAccessNaviga",
+        name: "request-success",
         title: "Thank you for selecting Accern!",
         description: "One of our representatives will contact you within 24 hours with your login details and access to additional resources on how to build your AI use cases. "
       },

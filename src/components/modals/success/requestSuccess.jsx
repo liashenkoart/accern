@@ -18,8 +18,8 @@ const RequestSuccess = ({ }) => {
           <Row>
             <Col lg={12} className="modal-padding">
               <div className={`success-animated-icon ${modals.isRequestSuccess ? "active" : ""}`}><Icon variant="icon-success" /></div>
-              <h2 className="text-large text-primary text-center">{settings.texts.Thankyou}</h2>
-              <p className="text-large text-center fw-300">{settings.texts.Wewillbeintouch}</p>
+              <h2 className="text-large text-primary text-center">{modals?.data?.title ? modals.data.title : settings.texts.Thankyou}</h2>
+              <p className="text-title-light-sm text-center">{modals?.data?.description ? modals.data.description : settings.texts.Wewillbeintouch}</p>
             </Col>
           </Row>
         </Container>

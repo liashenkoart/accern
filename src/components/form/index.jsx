@@ -20,11 +20,11 @@ const FormComp = ({ data, from, to, onCompleted }) => {
     e.stopPropagation();
     setIsButtonDisabled(true);
 
-    const data = new FormData(e.target);
+    const formData = new FormData(e.target);
 
     let fields = [];
 
-    data.forEach(function (value, key) {
+    formData.forEach(function (value, key) {
       fields.push({ "name": key, "value": value });
     });
 
@@ -40,9 +40,11 @@ const FormComp = ({ data, from, to, onCompleted }) => {
 
     json.fields = fields;
 
-    if (onCompleted) onCompleted();  // remove on production
+    console.log(data)
 
-    ApiService.post(data).then(result => {
+    OpenModal(data.succesModal ? data.succesModal.name : "request-success", dispatchModals, data.succesModal)
+
+    ApiService.post(formData).then(result => {
       if (result.data = "success") {
         ApiService.post(JSON.stringify(json), `https://api.hsforms.com/submissions/v3/integration/submit/${settings.hubspotID}/${settings.formID}`, {
           headers: {

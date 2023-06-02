@@ -153,7 +153,7 @@ const Hero = ({ isVisible, page }) => {
                     {page.isSmallShape ? <div className="shape-homehero-4"><img src="../../assets/img/dots-medium-3.svg" alt="" /></div> : <div className="shape-homehero-2"><img src="../../assets/img/dots-medium-4.svg" alt="" /></div>}
                     <div className={`${page.img ? "hero-lines-c" : ""}`}>
                       {page.icon && <img className="hero-icon" src={`../assets/img/${page.icon}`} />}
-                      {page.logo && <img className="hero-logo" src={`../assets/img/${page.logo}`} />}
+                      {page.logo && <img className={`hero-logo ${page.logoCL ? page.logoCL : ""}`} src={`../assets/img/${page.logo}`} />}
                       {page.label && <div className="mb-2 text-center text-md-left"><span className="text-label">{page.label}</span></div>}
                       {page.for && <div className="mt-4 mb-2 text-center text-md-left text-gray"><span className="text-light-gray">{page.for}</span></div>}
                       {page.title && <h1 className={`mb-4 text-center text-md-left ${page.titleCL ? page.titleCL : "mw-700"}`} dangerouslySetInnerHTML={{ __html: page.title }}></h1>}

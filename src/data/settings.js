@@ -151,6 +151,7 @@ export const settings = {
     { name: "Credit Risk", component: "UserStory", link: "/user-story-fundomate", data: "fundomate", icon: "icon-link-data.svg", excludeNav: true },
     { name: "Request Morningstar", component: "RequestMorningstar", link: "/request-morningstar", excludeNav: true },
     { name: "Request Naviga", component: "RequestNaviga", link: "/request-naviga", excludeNav: true },
+    { name: "Request Dow Jones", component: "RequestDowJones", link: "/request-dowjones", excludeNav: true },
     { name: "WhitePapers", link: "/whitepapers", component: "WhitePapers", excludeNav: true },
     { name: "Request Whitepaper", link: "/request-whitepaper", component: "RequestWhitepaper", excludeNav: true },
     { name: "Become Partner", link: "/become-partner", component: "BecomePartner", excludeNav: true },

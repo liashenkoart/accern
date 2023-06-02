@@ -92,6 +92,20 @@
   }
 }
 
+.preset-img-7 {
+  width: 215px;
+  max-height: none !important;
+  max-width: none !important;
+
+  img {
+    max-width: 100%;
+  }
+
+  @include media-breakpoint-down(lg) {
+    width: 180;
+  }
+}
+
 .preset-icon-lg {
   font-size: 2.875rem;
   height: 92px;

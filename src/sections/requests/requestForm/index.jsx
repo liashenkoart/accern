@@ -8,7 +8,7 @@ import "./RequestForm.scss"
 const RequestForm = ({ isVisible, page }) => {
 
   return (
-    <div className={`request-form ${isVisible ? "active" : ''}`}>
+    <div className={`request-form sect-spacer pt-0 ${isVisible ? "active" : ''}`}>
       <Container>
         <Row>
           <Col lg={7} className="pb-5 pb-lg-0">

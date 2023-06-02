@@ -48,11 +48,11 @@ const FindYourIdea = ({ }) => {
       f = filterIt(f, solution, "solution");
     }
 
-    dispatchApp({ type: "SET_APP_VALUES", data: { linkAction: { name: "filter-marketplace-multiple", data: [{ value: industry, by: "industry" }, { value: solution, by: "solution" }] } } });
+    // dispatchApp({ type: "SET_APP_VALUES", data: { linkAction: { name: "filter-marketplace-multiple", data: [{ value: industry, by: "industry" }, { value: solution, by: "solution" }] } } });
 
-    setTimeout(() => {
-      dispatchApp({ type: "SET_APP_VALUES", data: { linkAction: {} } });
-    }, 2000)
+    // setTimeout(() => {
+    //   dispatchApp({ type: "SET_APP_VALUES", data: { linkAction: {} } });
+    // }, 2000)
 
     f = f.map((uc) => ({ ...uc, value: uc.name, label: uc.name }));
 
